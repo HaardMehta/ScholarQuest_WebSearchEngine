@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="coveoDate" content="2016-05-06T12:03:10Z">
+  <link rel="icon" sizes="192x192" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-192x192.png.lt_52d8b16a1d0bc6e6e2f65bda92d6c7fa.res/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-180x180.png.lt_0769fa00e34e46c4d1386dc7853ec114.res/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-167x167.png.lt_96c78712ff221466887c36a6900b4720.res/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-152x152.png.lt_e2fc5ffdbb67d4dafbf41c0162fb0f33.res/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-120x120.png.lt_a2a46a9537b9255c5c750a3ad0350c09.res/apple-touch-icon-120x120.png">
+  <meta name="msapplication-square310x310logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-310x310.png">
+  <meta name="msapplication-wide310x150logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-310x150.png">
+  <meta name="msapplication-square150x150logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-150x150.png">
+  <meta name="msapplication-square70x70logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-70x70.png">
+  <meta property="og:title" content="Search">
+  <meta property="og:type" content="school">
+  <meta property="og:url" content="https://www.dal.ca/search.html">
+  <meta property="og:image" content="https://cdn.dal.ca/_jcr_content/og_image.adaptive.full.high.jpg/1655131802257.jpg">
+  <meta property="og:image:alt" content="Dal horizontal logo">
+  <meta property="og:site_name" content="Dalhousie University">
+  <meta property="og:description" content="">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:site" content="@dalhousieu">
+  <meta name="twitter:creator" content="@dalhousieu">
+  <title>Search - Dalhousie University</title>
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery-ui.lt_39f0d37a60fbd501f32c59f84fd34f75.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/jquery-ui.lt_d15c3c2fe8bb0b57e2fd329b0ba8ab7c.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/selectNav.lt_5135b360db8e63ccf56b2a5b98325d90.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default.lt_d1ffb378fdfb2645b954f3ae6d711df6.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/themes/default-theme.lt_d2a466252c6d5b7b09cad65e9e909f9f.min.css" type="text/css">
+  <script src="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery.lt_1fc733054ddb2e2fcd4a0f763671047b.min.js"></script>
+  <script src="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery-ui.lt_99d8b552b0168e049b4d8a2d5568e57e.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/jquery.uniform.lt_7dc7bb06854120382202ad7d19325443.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/selectNav.lt_84c84a606a4e81f8b597406bf7043c5d.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/purl.lt_53badcd063ce67004f6c8ed95110a740.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default.lt_41cfd59d5a7becfcdec68fdaf716a9df.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!--  Analytics -->
+  <script type="text/javascript">
+    dataLayer = [{
+        'Full Page Path': window.location.host + window.location.pathname,
+        'Site' : 'www.dal.ca/'
+    }];
+
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({
+            'gtm.start': new Date().getTime(),event:'gtm.js'
+        });
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MXNRGKP');
+
+    </script>
+ </head>
+ <body>
+  <div class="tool-navigation-menu iparsys parsys">
+   <div class="section">
+    <div class="new"></div>
+   </div>
+   <div class="iparys_inherited">
+    <div class="tool-navigation-menu iparsys parsys">
+     <div class="aaPlainText parbase section">
+      <div id="AppArmorAlertID_15"></div>
+      <script type="text/javascript" src="https://dal.apparmor.com/Notifications/Feeds/Javascript/?AlertID=15" async></script>
+     </div>
+     <div class="toolsNavigationHeader section">
+      <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/toolsNavigationHeader/toolsNavigationHeader.lt_eef32f46f7e250ab2d22a8001ce2384e.min.css" type="text/css">
+      <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/toolsNavigationHeader/toolsNavigationHeader.lt_1c0a22b9445571ff7dc9f81e09c8d86f.min.js"></script>
+      <div class="blk-menu">
+       <div class="ctn-boundary">
+        <ul class="navbar navbar-desktop">
+         <li class=""><a href="https://alumniapps2.dal.ca/giving/index">Support Dal</a></li>
+         <li class=""><a href="https://www.dal.ca/current_students.html">Current Students</a></li>
+         <li class=""><a href="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</a></li>
+         <li class=""><a href="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</a></li>
+         <li class="navbar_submenu"><a href="#">Campuses</a>
+          <ul>
+           <li><a href="https://www.dal.ca/about-dal/agricultural-campus.html">Agricultural Campus (Truro)</a></li>
+           <li><a href="https://www.dal.ca/about-dal/campus-experience/halifax-campuses.html">Halifax Campuses</a></li>
+          </ul></li>
+         <li class=""><a href="https://directory.dal.ca/">Directory</a></li>
+         <li class=""><a href="http://campusmap.dal.ca/">Campus Maps</a></li>
+         <li class=""><a href="https://my.dal.ca"><i>my</i>Dal</a></li>
+         <li class=""><a href="https://dalonline.dal.ca">Dal Online</a></li>
+         <li class=""><a href="http://www.dal.ca/brightspace">Brightspace</a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="blk-menu mobile">
+       <div class="ctn-boundary">
+        <ul class="navbar navbar-mobile">
+         <li><a href="https://my.dal.ca"><i>my</i>Dal</a></li>
+         <li><a href="https://directory.dal.ca/">Directory</a></li>
+         <li><a href="http://campusmap.dal.ca/">Maps</a></li>
+         <ul class="navbar-mobile-dropdown">
+          <li><a href="http://www.dal.ca/brightspace">Brightspace</a></li>
+          <li><a href="https://dalonline.dal.ca">Dal Online</a></li>
+          <li><a href="https://www.dal.ca/current_students.html">Students</a></li>
+          <li><a href="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</a></li>
+          <li><a href="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</a></li>
+          <li><a href="https://alumniapps2.dal.ca/giving/index">Support Dal</a></li>
+         </ul>
+        </ul>
+        <div class="selector">
+         <span>&nbsp;</span> <select class="mobile-more nofancy"> <option value="#" class="empty_menu_item">&nbsp;</option> <option value="http://www.dal.ca/brightspace">Brightspace</option> <option value="https://dalonline.dal.ca">Dal Online</option> <option value="https://www.dal.ca/current_students.html">Students</option> <option value="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</option> <option value="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</option> <option value="https://alumniapps2.dal.ca/giving/index">Support Dal</option> </select>
+        </div>
+       </div>
+      </div>
+      <div class="clearfloat"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="header">
+   <div class="ctn-boundary">
+    <div class="mainLogo">
+     <h2><a href="https://www.dal.ca/" title="Back to Dalhousie University Home Page">Dalhousie University</a></h2>
+    </div>
+    <div class="siteSearch">
+     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4710/css/CoveoFullSearch.css">
+     <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/search/search.lt_27c602bb703d5050d14b73299e90d330.min.css" type="text/css">
+     <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/search/search.lt_b540e34729769208bc6f31e58aea040c.min.js"></script>
+     <div id="searchbox" class="siteSearchBox" data-organization="dalhousieuniversityproductionqax94e5b" data-key="xxdf863a33-5689-4a01-bbee-828fae6c81f5" data-endpoint="https://platform.cloud.coveo.com/rest/search" data-search-page="//www.dal.ca/search.html">
+      <div class="CoveoAnalytics"></div><!-- The `coveo-search-section` class is for alignment purpose only -->
+      <div class="coveo-search-section">
+       <!-- Setting `data-enable-omnibox` and `data-enable-query-suggest-addon` to `true` is not necessary in version 2.x -->
+       <div class="CoveoSearchbox" data-enable-omnibox="true" data-enable-query-suggest-addon="true" data-placeholder="Search Dal.ca"></div>
+      </div>
+     </div>
+     <style>
+    div#searchbox .coveo-search-section {
+        margin: initial;
+    }
+</style>
+    </div>
+    <div class="mobile_site_search_wrapper">
+     <div class="mobile_site_search"></div>
+    </div>
+    <div class="mobileMainNav">
+     <div class="selector">
+      <span>&nbsp;</span> <select class="mobile_dal_menu nofancy" id="mobile_dal_menu"> <option value="https://www.dal.ca/about-dal.html">About</option> <option value="https://www.dal.ca/admissions.html">Admissions</option> <option value="https://www.dal.ca/academics.html">Academics</option> <option value="https://www.dal.ca/campus_life.html">Campus Life</option> <option value="https://www.dal.ca/libraries.html">Libraries</option> <option value="https://www.dal.ca/research.html">Research &amp; Innovation</option> <option value="https://www.dal.ca/alumni.html">Alumni</option> <option value="https://www.dal.ca/news.html">News &amp; Events</option> <option value="https://www.dal.ca/search.html" selected>Search Dal.ca</option> </select>
+     </div>
+    </div>
+   </div><!-- end-of ctn-boundary -->
+  </div><!-- Header -->
+  <div class="mainnav">
+   <div class="mn-wrapper">
+    <nav class="ctn-boundary" aria-label="Main Navigation">
+     <a href="https://www.dal.ca/about-dal.html">About</a> <a href="https://www.dal.ca/admissions.html">Admissions</a> <a href="https://www.dal.ca/academics.html">Academics</a> <a href="https://www.dal.ca/campus_life.html">Campus Life</a> <a href="https://www.dal.ca/libraries.html">Libraries</a> <a href="https://www.dal.ca/research.html">Research &amp; Innovation</a> <a href="https://www.dal.ca/alumni.html">Alumni</a> <a href="https://www.dal.ca/news.html">News &amp; Events</a> <a href="https://www.dal.ca/search.html" class="active">Search Dal.ca</a>
+    </nav>
+   </div>
+  </div><!-- Main Navigation -->
+  <div id="wrapper">
+   <div class="banner">
+    <div class="background-adaptive-image backgroundAdaptiveImage">
+     <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/backgroundAdaptiveImage/clientlibs.lt_46bd1424ade08286c64f45ae06759fc3.min.css" type="text/css">
+     <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/adaptiveImages.lt_255c26b17911c49aa9cebe541dfa21b7.min.js"></script><img src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/defaultBackground1280x566.png.lt_5748677e2393e218d0630384abc12a96.res/defaultBackground1280x566.png" alt="">
+    </div>
+   </div><!-- Banner -->
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/page/searchLanding/searchLanding.lt_cc7126447f4caec5982401b2628eba07.min.css" type="text/css">
+   <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/page/searchLanding/searchLanding.lt_dc267dd79578d753e185e575c77cb466.min.js"></script>
+   <div class="content" id="skipContent">
+    <div class="ctn-boundary">
+     <div class="ctn-wrapper">
+      <div class="subsite-header">
+       <div class="subsiteHeader">
+        <div class="subsiteHeader-content">
+         <h2 class="subsiteHeader-title"><a href="https://www.dal.ca/" title="Back to Dalhousie University ‑ Nova Scotia, Canada">Search Dal.ca</a></h2>
+        </div>
+       </div>
+       <div class="subsite-mainnav" id="search_mainnav">
+        <ul class="search-nav">
+        </ul>
+       </div>
+      </div>
+      <div class="subsite-content">
+       <div class="breadcrumb"></div>
+       <div class="maincontent-full">
+        <div class="search">
+         <div class="siteSearchWrapper" data-ad-lookup="https://www.dal.ca/search/_jcr_content/search.adLookup.json">
+          <div id="search" class="CoveoSearchInterface" data-expression="" data-auto-trigger-query="true" data-enable-duplicate-filtering="true" data-enable-history="true">
+           <div class="CoveoAnalytics"></div>
+           <div class="coveo-search-section">
+            <div class="CoveoSearchbox" data-enable-omnibox="true" data-placeholder="Search Dal.ca"></div>
+           </div>
+           <div class="coveo-main-section">
+            <div class="coveo-facet-column">
+             <div class="CoveoFacet" data-title="Source" data-field="@host" data-enable-settings="false"></div>
+             <div class="CoveoFacet" data-title="Type" data-field="@filetype" data-enable-settings="false"></div>
+            </div>
+            <div class="coveo-results-column">
+             <div class="CoveoShareQuery"></div>
+             <div class="CoveoPreferencesPanel">
+              <div class="CoveoResultsPreferences"></div>
+              <div class="CoveoResultsFiltersPreferences"></div>
+             </div>
+             <div class="CoveoTriggers"></div>
+             <div class="CoveoBreadcrumb"></div>
+             <div class="CoveoSearchAlerts"></div>
+             <div class="coveo-results-header">
+              <div class="coveo-summary-section">
+               <span class="CoveoQuerySummary"></span> <span class="CoveoQueryDuration"></span>
+              </div>
+              <div class="coveo-result-layout-section">
+               <span class="CoveoResultLayout"></span>
+              </div>
+              <div class="coveo-sort-section">
+               <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance"></span> <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date"></span>
+              </div>
+             </div>
+             <div class="CoveoHiddenQuery"></div>
+             <div class="CoveoDidYouMean"></div>
+             <div class="CoveoErrorReport" data-pop-up="false"></div>
+             <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll="false" data-infinite-scroll-container="div.footerComp footer">
+              <script type="text/html" data-condition="raw['filetype']=='twitter2tweet'" class="result-template" id="Twitter Tweet" data-fields="@twidstr">
+    <div class="coveo-result-frame">
+        <div class="coveo-result-row">
+            <div class="coveo-result-cell" style="">
+                <div class="coveo-result-row">
+                    <div class="coveo-result-cell" style="font-size:18px;">
+                        <a class="CoveoResultLink">
+                        </a>
+                    </div>
+                    <div class="coveo-result-cell" style="width:120px; text-align:right; font-size:12px">
+                        <span class="CoveoFieldValue" data-field="@date" data-helper="date"></span>
+                    </div>
+                </div>
+                <div class="coveo-result-row">
+                    <div class="coveo-result-cell">
+                        <span class="CoveoExcerpt"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coveo-result-row"></div>
+    </div>
+</script>
+              <script type="text/underscore" data-condition="raw['profileexists']=='true'" class="result-template" id="profile" data-fields="@profileexists">
+    <div class="coveo-result-frame">
+        <div class="coveo-result-row">
+            <div class="coveo-result-row">
+                <div class="coveo-result-cell" style="width:120px;">
+                    <% if (raw['profileimage'])  {%>
+                    <img width="100" height="100" alt="image"  src="<%=raw['profileimage']%>" />
+                    <% } else  { %>
+                    <img width="100" alt="image"  src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/DALSocialMediaMark-Blk.png" />
+                    <% } %>
+                </div>
+                <div class="coveo-result-cell" style="font-size:13px">
+                    <a class="CoveoResultLink" style="font-size:18px">
+                      <% if (raw['profilehonorificprefix']) {%><span><%=raw['profilehonorificprefix']%></span>&nbsp;<%}%>
+                      <%=raw['profilegivenname']%> <%=raw['profilefamilyname']%>
+                      <% if (raw['profilehonorificsuffix']) {%><span>&nbsp;<%=raw['profilehonorificsuffix']%></span><%}%>
+                    </a><br />
+                    <span><%=raw['profilejobtitle']%></span><br />
+                    <% if (raw['profileemail'])  {%><b>Email:</b>&nbsp;<a href="mailto:<%=raw['profileemail']%>"><span><%=raw['profileemail']%></span></a><br /><% } %>
+                    <% if (raw['profiletelephone'])  {%><b>Phone:</b>&nbsp;<span><%=raw['profiletelephone']%></span><br /><% } %>
+                    <% if (raw['profilefaxNumber'])  {%><b>Fax:</b>&nbsp;<span><%=raw['profilefaxNumber']%></span><br /><% } %>
+                    <% if (raw['profiledepartmentlinks'])  {%><div class="profiledepartmentlinks"><%=raw['profiledepartmentlinks']%></div><% } %>
+                </div>
+            </div>
+            <div class="coveo-result-row">
+                <div class="coveo-result-cell">
+                    <span class="CoveoExcerpt"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+              <script type="text/html" data-field-filetype="image" class="result-template" id="image template">
+    <div class="coveo-result-frame">
+        <div class="coveo-result-row">
+            <div class="coveo-result-cell" style="padding-left:15px;">
+                <div class="coveo-result-row">
+                    <div class="coveo-result-cell" style="font-size:18px;">
+                        <a class="CoveoResultLink">
+                        </a>
+                    </div>
+                    <div class="coveo-result-cell" style="width:120px; text-align:right; font-size:12px">
+                        <span class="CoveoFieldValue" data-field="@date" data-helper="date"></span>
+                    </div>
+                </div>
+                <div class="coveo-result-row"></div>
+                <img class="CoveoThumbnail"/>
+            </div>
+        </div>
+        <div class="coveo-result-row"></div>
+    </div>
+</script>
+              <script id="YouTubePlaylistItem" class="result-template" type="text/html" data-layout="list" data-field-filetype="YouTubePlaylistItem">
+    <div class="coveo-result-frame">
+        <div class="coveo-result-row">
+            <div class="coveo-result-cell" style="width:220px; padding-top:4px">
+                <span class="CoveoYouTubeThumbnail"></span>
+            </div>
+            <div class="coveo-result-cell" style="font-size:18px">
+                <a class="CoveoResultLink"></a>
+            </div>
+            <div class="coveo-result-cell" style="text-align:right; width:120px;font-size:12px">
+                <span class="CoveoFieldValue" data-field="@date" data-helper="dateTime"></span>
+            </div>
+        </div>
+    </div>
+</script>
+              <script id="YouTubeVideo" class="result-template" type="text/html" data-layout="list" data-field-filetype="YouTubeVideo">
+    <div class="coveo-result-frame" style="padding: 0">
+        <div class="coveo-result-row">
+            <div class="coveo-result-cell" style="text-align:right; width:120px;font-size:12px">
+                <span class="CoveoFieldValue" data-field="@date" data-helper="dateTime"></span>
+            </div>
+        </div>
+        <div class="CoveoBackdrop coveo-result-row" data-image-field="@ytthumbnailurl" data-overlay-color="#000000" data-overlay-gradient="true" style="margin:0;">
+            <div style="padding: 20px">
+                <div class="coveo-result-row" style="margin-bottom: 15px">
+                    <div class="coveo-result-cell" style="width: 32px; flex-grow:0">
+                        <span class="CoveoIcon" data-small="true" data-with-label="false"></span>
+                    </div>
+                    <div class="coveo-result-cell" style="padding-left: 10px; ">
+                        <span class="CoveoResultLink" style="color: white; font-weight: bold;"></span>
+                    </div>
+                </div>
+                <div class="coveo-result-row" style="margin-bottom: 20px">
+                    <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px">
+                        <div class="CoveoExcerpt" style="color: white;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="coveo-result-row" style="display: flex; justify-content: space-between; margin: 0; color: white;">
+                <div class="coveo-result-cell" style="background-color: rgba(0,0,0,0.6); padding: 10px; display: inline-block;">
+                    <span class="CoveoFieldValue" data-field="@ytviewcount" data-helper="number" data-helper-options-format="n"></span>
+                    <span class="CoveoText" data-value="views"></span>
+                </div>
+                <div class="coveo-result-cell" style="background-color: rgba(0,0,0,0.6); padding: 10px; display: inline-block;">
+                    <span class="CoveoFieldValue" data-field="@ytvideoduration" data-helper="timeSpan" data-helper-options-is-milliseconds="false"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+              <script id="document" class="result-template" type="text/html" data-layout="list" data-field-filetype="pdf,ppt,xls,txt,rtf,doc">
+    <div class="coveo-result-frame">
+        <div class="coveo-result-row">
+            <div class="coveo-result-cell" style="width:85px;text-align:center;padding-top:7px;">
+                <span class="CoveoIcon" data-small="false" data-with-label="false"></span>
+                <div class="CoveoQuickview"></div>
+            </div>
+            <div class="coveo-result-cell" style="padding-left:15px;">
+                <div class="coveo-result-row">
+                    <div class="coveo-result-cell" style="font-size:18px;">
+                        <a class="CoveoResultLink"></a>
+                    </div>
+                    <div class="coveo-result-cell" style="width:120px; text-align:right; font-size:12px">
+                        <span class="CoveoFieldValue" data-field="@date" data-helper="date"></span>
+                    </div>
+                </div>
+                <div class="coveo-result-row">
+                    <div class="coveo-result-cell">
+                        <span class="CoveoExcerpt"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+              <script id="Default" class="result-template" type="text/html" data-layout="list">
+    <div class="coveo-result-frame">
+        <div class="coveo-result-row">
+            <div class="coveo-result-cell" style="">
+                <div class="coveo-result-row">
+                    <div class="coveo-result-cell" style="font-size:18px;">
+                        <a class="CoveoResultLink"></a>
+                    </div>
+                    <div class="coveo-result-cell" style="width:120px; text-align:right; font-size:12px">
+                        <span class="CoveoFieldValue" data-field="@date" data-helper="date"></span>
+                    </div>
+                </div>
+                <div class="coveo-result-row">
+                    <div class="coveo-result-cell">
+                        <span class="CoveoExcerpt"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+             </div>
+             <div class="CoveoPager"></div>
+             <div class="CoveoResultsPerPage"></div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));</script>
+        </div>
+       </div><!-- Main Content -->
+      </div><!-- Subsite Content -->
+     </div><!-- Wrapper -->
+    </div><!-- Boundary -->
+   </div><!-- Content -->
+  </div><!-- end-of wrapper -->
+  <div class="footerComp footer">
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/nlc/components/content/containerTwoColumn/containerTwoColumn.lt_9fd0a600fa39094b6454080eef4e9114.min.css" type="text/css">
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/foundation/components/content/footer/footerClientLib.lt_478d088086840a1bc1d76de662a1ef10.min.css" type="text/css">
+   <div id="main_footer">
+    <div class="ctn-boundary">
+     <div class="cols2">
+      <div class="col-first">
+       <div class="col-content">
+        <h4>Dalhousie University</h4>
+        <p>Halifax, Nova Scotia, Canada&nbsp; B3H 4R2<br>
+          1-902-494-2211</p>
+        <p><b>Agricultural Campus </b><br>
+          Truro, Nova Scotia, Canada&nbsp; B2N 5E3<br>
+          1-902-893-6600</p>
+       </div>
+      </div>
+      <div class="col-last">
+       <div class="col-content">
+        <ul>
+         <li style="text-align: right;"><a href="/contact_us.html">Contact Us</a></li>
+         <li style="text-align: right;"><a href="http://directory.dal.ca">Campus Directory</a></li>
+         <li style="text-align: right;"><a href="/campus_life/career-and-leadership.html">Student Career Services</a></li>
+         <li style="text-align: right;"><a href="/dept/hr/careers_dalhousie.html">Employment with Dalhousie<br></a></li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+         <li style="text-align: right;"><a href="/campus_life/orientation/family.html">For Parents</a></li>
+         <li style="text-align: right;"><a href="/hire-dal.html">For Employers</a></li>
+         <li style="text-align: right;"><a href="/news/media.html">Media Centre</a></li>
+         <li style="text-align: right;"><a href="/terms_of_use/privacy-statement.html">Privacy Statement</a></li>
+         <li style="text-align: right;"><a href="/terms_of_use.html">Terms of Use</a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="responsive_footer">
+    <div class="ctn-boundary">
+     <ul>
+      <li><a href="/contact_us.html">Contact Us</a></li>
+      <li><a href="/current_students.html">Current Students</a></li>
+      <li><a href="/faculty_staff.html">Faculty &amp; Staff</a></li>
+     </ul>
+     <p><b>Dalhousie University</b><br>
+       Halifax, Nova Scotia, Canada B3H 4R2<br>
+       1.902.494.2211</p>
+    </div>
+   </div><!-- Footer -->
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/feedback.lt_0da98b229a26e86d440689f37bf4b53d.min.css" type="text/css">
+   <div class="feedback_container">
+    <div id="kampyle_button">
+     <div id="kampyle_container">
+      <a href="//www.dal.ca/contact_us.html" id="kampylink" title="Contact us"> <span id="kampyle_span"> &nbsp; </span> </a>
+     </div>
+    </div>
+    <div id="kampyle_button_responsive">
+     <a href="//www.dal.ca/contact_us.html" id="kampylelink_responsive" title="Contact us"></a>
+    </div>
+   </div>
+  </div>
+  <noscript>
+   <div style="display: inline;">
+    <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1027188514/?value=0&amp;label=Ceo_CMqN_wUQos7m6QM&amp;guid=ON&amp;script=0">
+   </div>
+  </noscript>
+ </body>
+</html>

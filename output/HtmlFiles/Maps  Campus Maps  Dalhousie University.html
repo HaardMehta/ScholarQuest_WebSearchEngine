@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="Dalhousie University has three campuses in Halifax and one near Truro.
+">
+  <meta name="coveoDate" content="2014-08-15T12:07:18Z">
+  <link rel="icon" sizes="192x192" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-192x192.png.lt_52d8b16a1d0bc6e6e2f65bda92d6c7fa.res/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-180x180.png.lt_0769fa00e34e46c4d1386dc7853ec114.res/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-167x167.png.lt_96c78712ff221466887c36a6900b4720.res/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-152x152.png.lt_e2fc5ffdbb67d4dafbf41c0162fb0f33.res/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-120x120.png.lt_a2a46a9537b9255c5c750a3ad0350c09.res/apple-touch-icon-120x120.png">
+  <meta name="msapplication-square310x310logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-310x310.png">
+  <meta name="msapplication-wide310x150logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-310x150.png">
+  <meta name="msapplication-square150x150logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-150x150.png">
+  <meta name="msapplication-square70x70logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-70x70.png">
+  <meta property="og:title" content="Dalhousie University Campus Maps">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.dal.ca/campus-maps/maps.html">
+  <meta property="og:image" content="https://cdn.dal.ca/_jcr_content/og_image.adaptive.full.high.jpg/1655131802257.jpg">
+  <meta property="og:image:alt" content="Dal horizontal logo">
+  <meta property="og:site_name" content="Dalhousie University">
+  <meta property="og:description" content="Dalhousie University has three campuses in Halifax and one near Truro. ">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="Dalhousie University has three campuses in Halifax and one near Truro. ">
+  <meta name="twitter:site" content="@dalhousieu">
+  <meta name="twitter:creator" content="@dalhousieu">
+  <title>Maps - Campus Maps - Dalhousie University</title>
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery-ui.lt_39f0d37a60fbd501f32c59f84fd34f75.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/jquery-ui.lt_d15c3c2fe8bb0b57e2fd329b0ba8ab7c.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/selectNav.lt_5135b360db8e63ccf56b2a5b98325d90.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default.lt_d1ffb378fdfb2645b954f3ae6d711df6.min.css" type="text/css">
+  <script src="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery.lt_1fc733054ddb2e2fcd4a0f763671047b.min.js"></script>
+  <script src="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery-ui.lt_99d8b552b0168e049b4d8a2d5568e57e.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/jquery.uniform.lt_7dc7bb06854120382202ad7d19325443.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/selectNav.lt_84c84a606a4e81f8b597406bf7043c5d.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/purl.lt_53badcd063ce67004f6c8ed95110a740.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default.lt_41cfd59d5a7becfcdec68fdaf716a9df.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/themes/default-theme.lt_d2a466252c6d5b7b09cad65e9e909f9f.min.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!--  Analytics -->
+  <script type="text/javascript">
+    dataLayer = [{
+        'Full Page Path': window.location.host + window.location.pathname,
+        'Site' : 'www.dal.ca/campus-maps.html'
+    }];
+
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({
+            'gtm.start': new Date().getTime(),event:'gtm.js'
+        });
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MXNRGKP');
+
+    </script>
+ </head>
+ <body>
+  <div class="tool-navigation-menu iparsys parsys">
+   <div class="section">
+    <div class="new"></div>
+   </div>
+   <div class="iparys_inherited">
+    <div class="tool-navigation-menu iparsys parsys">
+     <div class="aaPlainText parbase section">
+      <div id="AppArmorAlertID_15"></div>
+      <script type="text/javascript" src="https://dal.apparmor.com/Notifications/Feeds/Javascript/?AlertID=15" async></script>
+     </div>
+     <div class="toolsNavigationHeader section">
+      <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/toolsNavigationHeader/toolsNavigationHeader.lt_eef32f46f7e250ab2d22a8001ce2384e.min.css" type="text/css">
+      <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/toolsNavigationHeader/toolsNavigationHeader.lt_1c0a22b9445571ff7dc9f81e09c8d86f.min.js"></script>
+      <div class="blk-menu">
+       <div class="ctn-boundary">
+        <ul class="navbar navbar-desktop">
+         <li class=""><a href="https://alumniapps2.dal.ca/giving/index">Support Dal</a></li>
+         <li class=""><a href="https://www.dal.ca/current_students.html">Current Students</a></li>
+         <li class=""><a href="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</a></li>
+         <li class=""><a href="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</a></li>
+         <li class="navbar_submenu"><a href="#">Campuses</a>
+          <ul>
+           <li><a href="https://www.dal.ca/about-dal/agricultural-campus.html">Agricultural Campus (Truro)</a></li>
+           <li><a href="https://www.dal.ca/about-dal/campus-experience/halifax-campuses.html">Halifax Campuses</a></li>
+          </ul></li>
+         <li class=""><a href="https://directory.dal.ca/">Directory</a></li>
+         <li class=""><a href="http://campusmap.dal.ca/">Campus Maps</a></li>
+         <li class=""><a href="https://my.dal.ca"><i>my</i>Dal</a></li>
+         <li class=""><a href="https://dalonline.dal.ca">Dal Online</a></li>
+         <li class=""><a href="http://www.dal.ca/brightspace">Brightspace</a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="blk-menu mobile">
+       <div class="ctn-boundary">
+        <ul class="navbar navbar-mobile">
+         <li><a href="https://my.dal.ca"><i>my</i>Dal</a></li>
+         <li><a href="https://directory.dal.ca/">Directory</a></li>
+         <li><a href="http://campusmap.dal.ca/">Maps</a></li>
+         <ul class="navbar-mobile-dropdown">
+          <li><a href="http://www.dal.ca/brightspace">Brightspace</a></li>
+          <li><a href="https://dalonline.dal.ca">Dal Online</a></li>
+          <li><a href="https://www.dal.ca/current_students.html">Students</a></li>
+          <li><a href="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</a></li>
+          <li><a href="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</a></li>
+          <li><a href="https://alumniapps2.dal.ca/giving/index">Support Dal</a></li>
+         </ul>
+        </ul>
+        <div class="selector">
+         <span>&nbsp;</span> <select class="mobile-more nofancy"> <option value="#" class="empty_menu_item">&nbsp;</option> <option value="http://www.dal.ca/brightspace">Brightspace</option> <option value="https://dalonline.dal.ca">Dal Online</option> <option value="https://www.dal.ca/current_students.html">Students</option> <option value="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</option> <option value="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</option> <option value="https://alumniapps2.dal.ca/giving/index">Support Dal</option> </select>
+        </div>
+       </div>
+      </div>
+      <div class="clearfloat"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="header">
+   <div class="ctn-boundary">
+    <div class="mainLogo">
+     <h2><a href="https://www.dal.ca/" title="Back to Dalhousie University Home Page">Dalhousie University</a></h2>
+    </div>
+    <div class="siteSearch">
+     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4710/css/CoveoFullSearch.css">
+     <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/search/search.lt_27c602bb703d5050d14b73299e90d330.min.css" type="text/css">
+     <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/search/search.lt_b540e34729769208bc6f31e58aea040c.min.js"></script>
+     <div id="searchbox" class="siteSearchBox" data-organization="dalhousieuniversityproductionqax94e5b" data-key="xxdf863a33-5689-4a01-bbee-828fae6c81f5" data-endpoint="https://platform.cloud.coveo.com/rest/search" data-search-page="//www.dal.ca/search.html">
+      <div class="CoveoAnalytics"></div><!-- The `coveo-search-section` class is for alignment purpose only -->
+      <div class="coveo-search-section">
+       <!-- Setting `data-enable-omnibox` and `data-enable-query-suggest-addon` to `true` is not necessary in version 2.x -->
+       <div class="CoveoSearchbox" data-enable-omnibox="true" data-enable-query-suggest-addon="true" data-placeholder="Search Dal.ca"></div>
+      </div>
+     </div>
+     <style>
+    div#searchbox .coveo-search-section {
+        margin: initial;
+    }
+</style>
+    </div>
+    <div class="mobile_site_search_wrapper">
+     <div class="mobile_site_search"></div>
+    </div>
+    <div class="mobileMainNav">
+     <div class="selector">
+      <span>&nbsp;</span> <select class="mobile_dal_menu nofancy" id="mobile_dal_menu"> <option value="#" class="empty_menu_item">&nbsp;</option> <option value="https://www.dal.ca/about-dal.html">About</option> <option value="https://www.dal.ca/admissions.html">Admissions</option> <option value="https://www.dal.ca/academics.html">Academics</option> <option value="https://www.dal.ca/campus_life.html">Campus Life</option> <option value="https://www.dal.ca/libraries.html">Libraries</option> <option value="https://www.dal.ca/research.html">Research &amp; Innovation</option> <option value="https://www.dal.ca/alumni.html">Alumni</option> <option value="https://www.dal.ca/news.html">News &amp; Events</option> <option value="https://www.dal.ca/search.html">Search Dal.ca</option> </select>
+     </div>
+    </div>
+   </div><!-- end-of ctn-boundary -->
+  </div><!-- Header -->
+  <div class="mainnav">
+   <div class="mn-wrapper">
+    <nav class="ctn-boundary" aria-label="Main Navigation">
+     <a href="https://www.dal.ca/about-dal.html">About</a> <a href="https://www.dal.ca/admissions.html">Admissions</a> <a href="https://www.dal.ca/academics.html">Academics</a> <a href="https://www.dal.ca/campus_life.html">Campus Life</a> <a href="https://www.dal.ca/libraries.html">Libraries</a> <a href="https://www.dal.ca/research.html">Research &amp; Innovation</a> <a href="https://www.dal.ca/alumni.html">Alumni</a> <a href="https://www.dal.ca/news.html">News &amp; Events</a> <a href="https://www.dal.ca/search.html">Search Dal.ca</a>
+    </nav>
+   </div>
+  </div><!-- Main Navigation -->
+  <div id="wrapper">
+   <div class="banner">
+    <div class="background-adaptive-image backgroundAdaptiveImage">
+     <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/backgroundAdaptiveImage/clientlibs.lt_46bd1424ade08286c64f45ae06759fc3.min.css" type="text/css">
+     <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/adaptiveImages.lt_255c26b17911c49aa9cebe541dfa21b7.min.js"></script><picture title="" class="">
+      <!--[if IE 9]><video style="display: none;"><![endif]--> <!--[if lte IE 8]><source srcset="https://cdn.dal.ca/campus-maps/_jcr_content/bgBanner.adaptive.full.high.jpg/1406904343061.jpg" media="(min-width : 0px)" /><![endif]-->
+      <source srcset="https://cdn.dal.ca/campus-maps/_jcr_content/bgBanner.adaptive.full.high.jpg/1406904343061.jpg" media="(min-width : 641px)"><!--[if IE 9]></video><![endif]-->
+      <img srcset="https://cdn.dal.ca/campus-maps/_jcr_content/bgBanner.adaptive.full.high.jpg/1406904343061.jpg" alt="" title="" class="">
+     </picture>
+    </div>
+   </div><!-- Banner -->
+   <div class="content" id="skipContent">
+    <div class="ctn-boundary">
+     <div class="ctn-wrapper">
+      <div class="subsite-header">
+       <div class="subsiteHeader">
+        <div class="subsiteHeader-content">
+         <h2 class="subsiteHeader-title"><a href="https://www.dal.ca/campus-maps.html" title="Back to Campus Maps">Campus Maps</a></h2>
+        </div>
+       </div>
+       <div class="subsite-mainnav">
+        <ul>
+         <li class="active "><a href="https://www.dal.ca/campus-maps/maps.html">Maps</a></li>
+         <li class=""><a href="https://www.dal.ca/campus-maps/building-directory.html">Building Directory</a></li>
+         <li class=""><a href="https://www.dal.ca/campus-maps/parking.html">Parking</a></li>
+         <li class=""><a href="https://www.dal.ca/campus-maps/accessibility.html">Accessibility</a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="subsite-content">
+       <div class="breadcrumb">
+        <nav aria-label="Breadcrumb">
+         <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumb_pre_nav" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.dal.ca/" itemprop="item"><span itemprop="name">Dal.ca Home</span></a>
+           <meta itemprop="position" content="1"></li>
+          <li class="breadcrumb_nav_home_mobile"><a href="https://www.dal.ca/campus-maps.html">Home</a></li>
+          <li class="breacrumb_nav_home_hidden" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.dal.ca/campus-maps.html" itemprop="item"><span itemprop="name">Campus Maps</span></a>
+           <meta itemprop="position" content="2"></li>
+          <li class="breadcrumb_current_page" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="name">Maps</span>
+           <meta itemprop="position" content="3"></li>
+         </ol>
+        </nav>
+       </div>
+       <h1 class="pageTitle">Maps</h1>
+       <div class="maincontent-full">
+        <div class="contentPar parsys">
+         <div class="shareThis section">
+          <script>
+        var addthis_config = addthis_config||{};
+        addthis_config.pubid = 'ra-5452677525be364e';
+    </script>
+          <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/shareThis/shareThis.lt_84b9ee6468a32fb42f62a50a2fa75bbb.min.css" type="text/css">
+          <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/shareThis/shareThis.lt_8b72f7d3593ec450ba2a400edbfadc73.min.js"></script><!-- AddThis Button BEGIN -->
+          <div class="addthis_toolbox addthis_default_style addthis_20x20_style rightAlign noBottomMargin">
+           <a class="addthis_button_compact" data-service="compact"></a> <a class="addthis_button_print" data-service="print"></a> <a class="addthis_button_email" data-service="email"></a> <a class="addthis_button_pinterest_share" data-service="pinterest"></a> <a class="addthis_button_linkedin" data-service="linkedin"></a> <a class="addthis_button_twitter" data-service="twitter"></a> <a class="addthis_button_facebook" data-service="facebook"></a>
+          </div>
+          <style>
+    div#kampyle_button_responsive {
+        margin-bottom: 50px !important;
+    }
+</style>
+         </div>
+         <div class="text parbase section">
+          <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/wcm/foundation/clientlibs/accessibility.lt_7f64d7918e126c44b6d7cafa10b85ef1.min.css" type="text/css">
+          <p>Dalhousie University has three campuses in <b>Halifax</b> and one near <b>Truro</b>.<a href="/campus-maps/building-directory.html"><br>
+             View specific building locations and information.</a><br></p>
+         </div>
+         <div class="tabContainer parbase section">
+          <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/tabContainer/tabContainer.lt_471801311c6d52e3f51449f1fe91b443.min.css" type="text/css">
+          <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/tabContainer/tabContainer.lt_972daccbf2a7823647eccf0723ccd5b0.min.js"></script>
+          <div class="tabs white " data-nodepath="">
+           <ul>
+            <li data-nodename=""><a href="#node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_1">Studley (Halifax)</a></li>
+            <li data-nodename=""><a href="#node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_2">Sexton (Halifax)</a></li>
+            <li data-nodename=""><a href="#node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry">Carleton (Halifax)</a></li>
+            <li data-nodename=""><a href="#node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_0">Agricultural (Truro)</a></li>
+           </ul>
+           <div class="tabEntry parbase section">
+            <div id="node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_1">
+             <div class="tabEntry parbase section">
+              <div class="tabContent parsys">
+               <div class="text parbase section">
+                <p>&nbsp;</p>
+                <p><iframe width="800" height="600" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d2839.053622567448!2d-63.591832!3d44.636821000000005!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1sen!2sus!4v1408104133022" style="border: 0;">&amp;amp;amp;nbsp;</iframe></p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="tabEntry parbase section">
+            <div id="node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_2">
+             <div class="tabEntry parbase section">
+              <div class="tabContent parsys">
+               <div class="text parbase section">
+                <p>&nbsp;</p>
+                <p><iframe width="800" height="600" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1419.389154961088!2d-63.57315329234314!3d44.64244777366408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1sen!2sus!4v1408104208752" style="border: 0;">&amp;amp;amp;nbsp;</iframe></p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="tabEntry parbase section">
+            <div id="node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry">
+             <div class="tabEntry parbase section">
+              <div class="tabContent parsys">
+               <div class="text parbase section">
+                <p>&nbsp;</p>
+                <p><iframe width="800" height="600" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d2838.9730893116352!2d-63.58224022090148!3d44.63846697722745!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1sen!2sus!4v1408104335227" style="border: 0;">&amp;amp;amp;nbsp;</iframe></p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="tabEntry parbase section">
+            <div id="node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_0">
+             <div class="tabEntry parbase section">
+              <div class="tabContent parsys">
+               <div class="text parbase section">
+                <p>&nbsp;</p>
+                <p><iframe width="800" height="600" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2802.872363691537!2d-63.26162534526061!3d45.371570599558375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1sen!2sus!4v1408104400264" style="border: 0;">&amp;amp;amp;nbsp;</iframe></p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="accord">
+           <div class="tabEntry parbase section">
+            <h3><span class="tabHeader">Studley (Halifax)</span></h3>
+            <div id="node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_1">
+             <div class="tabEntry parbase section">
+              <div class="tabContent parsys">
+               <div class="text parbase section">
+                <p>&nbsp;</p>
+                <p><iframe width="800" height="600" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d2839.053622567448!2d-63.591832!3d44.636821000000005!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1sen!2sus!4v1408104133022" style="border: 0;">&amp;amp;amp;nbsp;</iframe></p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="tabEntry parbase section">
+            <h3><span class="tabHeader">Sexton (Halifax)</span></h3>
+            <div id="node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_2">
+             <div class="tabEntry parbase section">
+              <div class="tabContent parsys">
+               <div class="text parbase section">
+                <p>&nbsp;</p>
+                <p><iframe width="800" height="600" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1419.389154961088!2d-63.57315329234314!3d44.64244777366408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1sen!2sus!4v1408104208752" style="border: 0;">&amp;amp;amp;nbsp;</iframe></p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="tabEntry parbase section">
+            <h3><span class="tabHeader">Carleton (Halifax)</span></h3>
+            <div id="node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry">
+             <div class="tabEntry parbase section">
+              <div class="tabContent parsys">
+               <div class="text parbase section">
+                <p>&nbsp;</p>
+                <p><iframe width="800" height="600" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d2838.9730893116352!2d-63.58224022090148!3d44.63846697722745!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1sen!2sus!4v1408104335227" style="border: 0;">&amp;amp;amp;nbsp;</iframe></p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="tabEntry parbase section">
+            <h3><span class="tabHeader">Agricultural (Truro)</span></h3>
+            <div id="node_0c5ee2a4e63345119ee34ea14b6d6ccdcontentPartabcontainerentriestabentry_0">
+             <div class="tabEntry parbase section">
+              <div class="tabContent parsys">
+               <div class="text parbase section">
+                <p>&nbsp;</p>
+                <p><iframe width="800" height="600" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2802.872363691537!2d-63.26162534526061!3d45.371570599558375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1sen!2sus!4v1408104400264" style="border: 0;">&amp;amp;amp;nbsp;</iframe></p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="aaPlainText parbase section">
+          <div id="loadStyle">
+           <style>
+        div.accord,
+        div.ui-accordion div.ui-accordion-content,
+        div.ui-tabs div.ui-tabs-hide {
+            display: block !important;
+        }
+    </style>
+           <script type="text/javascript">
+        $j(window).load(function () {
+            $j("#loadStyle").remove();
+            var windowHeight = $j( window ).height();
+            $j('div.ui-accordion div.ui-accordion-content iframe').css("max-height", windowHeight / 2 + "px");
+        });
+    </script>
+          </div>
+          <style>
+div.tabContainer iframe {
+    display:block; width:100%!important;
+}
+
+div.tabContainer p {
+    margin: 0;
+}
+</style>
+         </div>
+         <div class="highlightedFooter section">
+          <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/nlc/components/content/highlightedFooter/highlightedFooter-responsive.lt_a9f44bdeaf65318e6f4236d11a518fea.min.css" type="text/css">
+          <div class="footnote-feature noimage">
+           <dl class="dl-feature">
+            <dt>
+             Help us keep up to date!
+            </dt>
+            <dd>
+             <p>Your corrections to building information or maps will help us ensure an accurate representation of our campus. Please submit suggested revisions to <a href="mailto:www@dal.ca">www@dal.ca</a>. Thank you!</p>
+            </dd>
+           </dl>
+          </div>
+         </div>
+        </div>
+       </div><!-- Main Content -->
+      </div><!-- Subsite Content -->
+     </div><!-- Wrapper -->
+    </div><!-- Boundary -->
+   </div><!-- Content -->
+  </div><!-- end-of wrapper -->
+  <div class="footerComp footer">
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/nlc/components/content/containerTwoColumn/containerTwoColumn.lt_9fd0a600fa39094b6454080eef4e9114.min.css" type="text/css">
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/foundation/components/content/footer/footerClientLib.lt_478d088086840a1bc1d76de662a1ef10.min.css" type="text/css">
+   <div id="main_footer">
+    <div class="ctn-boundary">
+     <div class="cols2">
+      <div class="col-first">
+       <div class="col-content">
+        <h4>Dalhousie University</h4>
+        <p>Halifax, Nova Scotia, Canada&nbsp; B3H 4R2<br>
+          1-902-494-2211</p>
+        <p><b>Agricultural Campus </b><br>
+          Truro, Nova Scotia, Canada&nbsp; B2N 5E3<br>
+          1-902-893-6600</p>
+       </div>
+      </div>
+      <div class="col-last">
+       <div class="col-content">
+        <ul>
+         <li style="text-align: right;"><a href="/contact_us.html">Contact Us</a></li>
+         <li style="text-align: right;"><a href="http://directory.dal.ca">Campus Directory</a></li>
+         <li style="text-align: right;"><a href="/campus_life/career-and-leadership.html">Student Career Services</a></li>
+         <li style="text-align: right;"><a href="/dept/hr/careers_dalhousie.html">Employment with Dalhousie<br></a></li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+         <li style="text-align: right;"><a href="/campus_life/orientation/family.html">For Parents</a></li>
+         <li style="text-align: right;"><a href="/hire-dal.html">For Employers</a></li>
+         <li style="text-align: right;"><a href="/news/media.html">Media Centre</a></li>
+         <li style="text-align: right;"><a href="/terms_of_use/privacy-statement.html">Privacy Statement</a></li>
+         <li style="text-align: right;"><a href="/terms_of_use.html">Terms of Use</a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="responsive_footer">
+    <div class="ctn-boundary">
+     <ul>
+      <li><a href="/contact_us.html">Contact Us</a></li>
+      <li><a href="/current_students.html">Current Students</a></li>
+      <li><a href="/faculty_staff.html">Faculty &amp; Staff</a></li>
+     </ul>
+     <p><b>Dalhousie University</b><br>
+       Halifax, Nova Scotia, Canada B3H 4R2<br>
+       1.902.494.2211</p>
+    </div>
+   </div><!-- Footer -->
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/feedback.lt_0da98b229a26e86d440689f37bf4b53d.min.css" type="text/css">
+   <div class="feedback_container">
+    <div id="kampyle_button">
+     <div id="kampyle_container">
+      <a href="//www.dal.ca/contact_us.html" id="kampylink" title="Contact us"> <span id="kampyle_span"> &nbsp; </span> </a>
+     </div>
+    </div>
+    <div id="kampyle_button_responsive">
+     <a href="//www.dal.ca/contact_us.html" id="kampylelink_responsive" title="Contact us"></a>
+    </div>
+   </div>
+  </div>
+  <noscript>
+   <div style="display: inline;">
+    <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1027188514/?value=0&amp;label=Ceo_CMqN_wUQos7m6QM&amp;guid=ON&amp;script=0">
+   </div>
+  </noscript>
+ </body>
+</html>

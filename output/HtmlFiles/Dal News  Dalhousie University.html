@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="Dal News publishes stories showcasing Dalhousie University's research, teaching and community impact in Nova Scotia, Canada, and around the world.">
+  <meta name="coveoDate" content="2023-07-26T14:30:06Z">
+  <link rel="icon" sizes="192x192" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-192x192.png.lt_52d8b16a1d0bc6e6e2f65bda92d6c7fa.res/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-180x180.png.lt_0769fa00e34e46c4d1386dc7853ec114.res/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-167x167.png.lt_96c78712ff221466887c36a6900b4720.res/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-152x152.png.lt_e2fc5ffdbb67d4dafbf41c0162fb0f33.res/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/favicon/apple-touch-icon-120x120.png.lt_a2a46a9537b9255c5c750a3ad0350c09.res/apple-touch-icon-120x120.png">
+  <meta name="msapplication-square310x310logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-310x310.png">
+  <meta name="msapplication-wide310x150logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-310x150.png">
+  <meta name="msapplication-square150x150logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-150x150.png">
+  <meta name="msapplication-square70x70logo" content="/etc/designs/dalhousie/clientlibs/global/default/images/favicon/icon-70x70.png">
+  <meta property="og:title" content="Dal News">
+  <meta property="og:type" content="school">
+  <meta property="og:url" content="https://www.dal.ca/news.html">
+  <meta property="og:image" content="https://cdn.dal.ca/_jcr_content/og_image.adaptive.full.high.jpg/1655131802257.jpg">
+  <meta property="og:image:alt" content="Dal horizontal logo">
+  <meta property="og:site_name" content="Dalhousie University">
+  <meta property="og:description" content="">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:site" content="@dalhousieu">
+  <meta name="twitter:creator" content="@dalhousieu">
+  <script type="application/ld+json">
+        {"@context":"http://schema.org","@type":"WebSite","url":"https://www.dal.ca/news.html","potentialAction":{"@type":"SearchAction","target":"https://www.dal.ca/news/search.html#q={search_term_string}","query-input":"required name=search_term_string"},"isPartOf":{"@context":"http://schema.org","@type":"WebSite","url":"https://www.dal.ca/","potentialAction":{"@type":"SearchAction","target":"https://www.dal.ca/search.html#q={search_term_string}","query-input":"required name=search_term_string"}}}</script>
+  <title>Dal News - Dalhousie University</title>
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery-ui.lt_39f0d37a60fbd501f32c59f84fd34f75.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/jquery-ui.lt_d15c3c2fe8bb0b57e2fd329b0ba8ab7c.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/selectNav.lt_5135b360db8e63ccf56b2a5b98325d90.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default.lt_d1ffb378fdfb2645b954f3ae6d711df6.min.css" type="text/css">
+  <script src="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery.lt_1fc733054ddb2e2fcd4a0f763671047b.min.js"></script>
+  <script src="https://cdn.dal.ca/etc.clientlibs/clientlibs/granite/jquery-ui.lt_99d8b552b0168e049b4d8a2d5568e57e.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/jquery.uniform.lt_7dc7bb06854120382202ad7d19325443.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/selectNav.lt_84c84a606a4e81f8b597406bf7043c5d.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/purl.lt_53badcd063ce67004f6c8ed95110a740.min.js"></script>
+  <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default.lt_41cfd59d5a7becfcdec68fdaf716a9df.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/themes/default-theme.lt_d2a466252c6d5b7b09cad65e9e909f9f.min.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!--  Analytics -->
+  <script type="text/javascript">
+    dataLayer = [{
+        'Full Page Path': window.location.host + window.location.pathname,
+        'Site' : 'www.dal.ca/news.html'
+    }];
+
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({
+            'gtm.start': new Date().getTime(),event:'gtm.js'
+        });
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MXNRGKP');
+
+    </script>
+ </head>
+ <body>
+  <div class="tool-navigation-menu iparsys parsys">
+   <div class="section">
+    <div class="new"></div>
+   </div>
+   <div class="iparys_inherited">
+    <div class="tool-navigation-menu iparsys parsys">
+     <div class="aaPlainText parbase section">
+      <div id="AppArmorAlertID_15"></div>
+      <script type="text/javascript" src="https://dal.apparmor.com/Notifications/Feeds/Javascript/?AlertID=15" async></script>
+     </div>
+     <div class="toolsNavigationHeader section">
+      <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/toolsNavigationHeader/toolsNavigationHeader.lt_eef32f46f7e250ab2d22a8001ce2384e.min.css" type="text/css">
+      <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/toolsNavigationHeader/toolsNavigationHeader.lt_1c0a22b9445571ff7dc9f81e09c8d86f.min.js"></script>
+      <div class="blk-menu">
+       <div class="ctn-boundary">
+        <ul class="navbar navbar-desktop">
+         <li class=""><a href="https://alumniapps2.dal.ca/giving/index">Support Dal</a></li>
+         <li class=""><a href="https://www.dal.ca/current_students.html">Current Students</a></li>
+         <li class=""><a href="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</a></li>
+         <li class=""><a href="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</a></li>
+         <li class="navbar_submenu"><a href="#">Campuses</a>
+          <ul>
+           <li><a href="https://www.dal.ca/about-dal/agricultural-campus.html">Agricultural Campus (Truro)</a></li>
+           <li><a href="https://www.dal.ca/about-dal/campus-experience/halifax-campuses.html">Halifax Campuses</a></li>
+          </ul></li>
+         <li class=""><a href="https://directory.dal.ca/">Directory</a></li>
+         <li class=""><a href="http://campusmap.dal.ca/">Campus Maps</a></li>
+         <li class=""><a href="https://my.dal.ca"><i>my</i>Dal</a></li>
+         <li class=""><a href="https://dalonline.dal.ca">Dal Online</a></li>
+         <li class=""><a href="http://www.dal.ca/brightspace">Brightspace</a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="blk-menu mobile">
+       <div class="ctn-boundary">
+        <ul class="navbar navbar-mobile">
+         <li><a href="https://my.dal.ca"><i>my</i>Dal</a></li>
+         <li><a href="https://directory.dal.ca/">Directory</a></li>
+         <li><a href="http://campusmap.dal.ca/">Maps</a></li>
+         <ul class="navbar-mobile-dropdown">
+          <li><a href="http://www.dal.ca/brightspace">Brightspace</a></li>
+          <li><a href="https://dalonline.dal.ca">Dal Online</a></li>
+          <li><a href="https://www.dal.ca/current_students.html">Students</a></li>
+          <li><a href="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</a></li>
+          <li><a href="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</a></li>
+          <li><a href="https://alumniapps2.dal.ca/giving/index">Support Dal</a></li>
+         </ul>
+        </ul>
+        <div class="selector">
+         <span>&nbsp;</span> <select class="mobile-more nofancy"> <option value="#" class="empty_menu_item">&nbsp;</option> <option value="http://www.dal.ca/brightspace">Brightspace</option> <option value="https://dalonline.dal.ca">Dal Online</option> <option value="https://www.dal.ca/current_students.html">Students</option> <option value="https://www.dal.ca/faculty_staff.html">Faculty &amp; Staff</option> <option value="https://www.dal.ca/parents-and-families.html">Family &amp; Friends</option> <option value="https://alumniapps2.dal.ca/giving/index">Support Dal</option> </select>
+        </div>
+       </div>
+      </div>
+      <div class="clearfloat"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="header">
+   <div class="ctn-boundary">
+    <div class="mainLogo">
+     <h2><a href="https://www.dal.ca/" title="Back to Dalhousie University Home Page">Dalhousie University</a></h2>
+    </div>
+    <div class="siteSearch">
+     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4710/css/CoveoFullSearch.css">
+     <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/search/search.lt_27c602bb703d5050d14b73299e90d330.min.css" type="text/css">
+     <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/search/search.lt_b540e34729769208bc6f31e58aea040c.min.js"></script>
+     <div id="searchbox" class="siteSearchBox" data-organization="dalhousieuniversityproductionqax94e5b" data-key="xxdf863a33-5689-4a01-bbee-828fae6c81f5" data-endpoint="https://platform.cloud.coveo.com/rest/search" data-search-page="//www.dal.ca/news/search.html">
+      <div class="CoveoAnalytics" data-search-hub="Dal News"></div><!-- The `coveo-search-section` class is for alignment purpose only -->
+      <div class="coveo-search-section">
+       <!-- Setting `data-enable-omnibox` and `data-enable-query-suggest-addon` to `true` is not necessary in version 2.x -->
+       <div class="CoveoSearchbox" data-enable-omnibox="true" data-enable-query-suggest-addon="true" data-placeholder="Search Dal News"></div>
+      </div>
+     </div>
+     <style>
+    div#searchbox .coveo-search-section {
+        margin: initial;
+    }
+</style>
+    </div>
+    <div class="mobile_site_search_wrapper">
+     <div class="mobile_site_search"></div>
+    </div>
+    <div class="mobileMainNav">
+     <div class="selector">
+      <span>&nbsp;</span> <select class="mobile_dal_menu nofancy" id="mobile_dal_menu"> <option value="https://www.dal.ca/about-dal.html">About</option> <option value="https://www.dal.ca/admissions.html">Admissions</option> <option value="https://www.dal.ca/academics.html">Academics</option> <option value="https://www.dal.ca/campus_life.html">Campus Life</option> <option value="https://www.dal.ca/libraries.html">Libraries</option> <option value="https://www.dal.ca/research.html">Research &amp; Innovation</option> <option value="https://www.dal.ca/alumni.html">Alumni</option> <option value="https://www.dal.ca/news.html" selected>News &amp; Events</option> <option value="https://www.dal.ca/search.html">Search Dal.ca</option> </select>
+     </div>
+    </div>
+   </div><!-- end-of ctn-boundary -->
+  </div><!-- Header -->
+  <div class="mainnav">
+   <div class="mn-wrapper">
+    <nav class="ctn-boundary" aria-label="Main Navigation">
+     <a href="https://www.dal.ca/about-dal.html">About</a> <a href="https://www.dal.ca/admissions.html">Admissions</a> <a href="https://www.dal.ca/academics.html">Academics</a> <a href="https://www.dal.ca/campus_life.html">Campus Life</a> <a href="https://www.dal.ca/libraries.html">Libraries</a> <a href="https://www.dal.ca/research.html">Research &amp; Innovation</a> <a href="https://www.dal.ca/alumni.html">Alumni</a> <a href="https://www.dal.ca/news.html" class="active">News &amp; Events</a> <a href="https://www.dal.ca/search.html">Search Dal.ca</a>
+    </nav>
+   </div>
+  </div><!-- Main Navigation -->
+  <div id="wrapper">
+   <div class="banner">
+    <div class="background-adaptive-image backgroundAdaptiveImage">
+     <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/dal/components/content/backgroundAdaptiveImage/clientlibs.lt_46bd1424ade08286c64f45ae06759fc3.min.css" type="text/css">
+     <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/adaptiveImages.lt_255c26b17911c49aa9cebe541dfa21b7.min.js"></script><img src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/default/images/defaultBackground1280x566.png.lt_5748677e2393e218d0630384abc12a96.res/defaultBackground1280x566.png" alt="">
+    </div>
+   </div><!-- Banner -->
+   <div class="content" id="skipContent">
+    <div class="ctn-boundary">
+     <div class="ctn-wrapper">
+      <div class="subsite-header">
+       <div class="subsiteHeader">
+        <div class="subsiteHeader-content">
+         <h2 class="subsiteHeader-title"><a href="https://www.dal.ca/news.html" title="Back to Dal News">Dal News</a></h2>
+        </div>
+       </div>
+       <div class="subsite-mainnav">
+        <ul>
+         <li class=""><a href="https://www.dal.ca/news/news.html">News</a></li>
+         <li class=""><a href="https://www.dal.ca/news/today.html">Today@Dal</a></li>
+         <li class=""><a href="https://www.dal.ca/news/student-life.html">Student Life</a></li>
+         <li class=""><a href="https://www.dal.ca/news/community.html">Community</a></li>
+         <li class=""><a href="https://www.dal.ca/news/sports.html">Sports</a></li>
+         <li class=""><a href="https://www.dal.ca/news/research.html">Research</a></li>
+         <li class=""><a href="https://www.dal.ca/news/alumni.html">Alumni</a></li>
+         <li class=""><a href="https://www.dal.ca/news/events.html">Events</a></li>
+         <li class=""><a href="https://www.dal.ca/news/media.html">Media Centre</a></li>
+         <li class=""><a href="https://www.dal.ca/news/dal-magazine.html">DAL Magazine</a></li>
+        </ul>
+        <script type="text/javascript"> var onNavHome = true; </script>
+       </div>
+      </div>
+      <div class="subsite-content">
+       <div class="breadcrumb">
+        <nav aria-label="Breadcrumb">
+         <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumb_pre_nav" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.dal.ca/" itemprop="item"><span itemprop="name">Dal.ca Home</span></a>
+           <meta itemprop="position" content="1"></li>
+          <li class="breadcrumb_current_page" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="name">News &amp; Events</span>
+           <meta itemprop="position" content="2"></li>
+         </ol>
+        </nav><a href="/news.rss.html" class="rssLink">Subscribe to Dal News</a>
+       </div>
+       <div class="sidebar">
+        <div class="rightTopPar parsys">
+         <div class="pictureOfWeek featuredContent textimage parbase section">
+          <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/nlc/components/content/featuredContent/clientlibs.lt_cdcbe495a06a0424b79ae52d29684a0a.min.css" type="text/css">
+          <div class="sb-box doPrint">
+           <div class="sb-highlight-box sb-highlight-box-nopadding">
+            <a href="/news/dal-magazine.html"> <img src="https://cdn.dal.ca/news/_jcr_content/rightTopPar/pictureofweek_1483723128/image.adaptive.242.high.jpg/1686225338637.jpg" alt="DALMag-cover-360-S23" title="DALMag-cover-360-S23" class=""> </a>
+            <div class="sb-highlight-box-content clearfix">
+             <h3></h3>
+             <div>
+              <p>The Spring/Summer 2023 issue of&nbsp;<b>DAL Magazine</b>&nbsp;is here! Read about Dal’s innovative thinkers, groundbreaking research, influential alumni and so much more. <a href="https://www.dal.ca/news/dal-magazine.html">Browse through the latest issue in full</a> and <a href="https://www.dal.ca/news/dal-magazine/all-issues.html">explore our back issues</a>.</p>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="text parbase section">
+          <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/wcm/foundation/clientlibs/accessibility.lt_7f64d7918e126c44b6d7cafa10b85ef1.min.css" type="text/css">
+          <h3>Media Highlights</h3>
+         </div>
+         <div class="text parbase section">
+          <ul>
+           <li><a href="https://www.economist.com/podcasts/2023/07/12/could-mining-the-seabed-help-in-the-transition-to-green-energy">Could mining the seabed help in the transition to green energy?</a><br>
+             The Economist</li>
+           <li><a href="https://www.cbc.ca/news/canada/newfoundland-labrador/dog-poop-disposal-tony-walker-1.6902986">Discarded dog poop bags are such a problem that this university professor wrote a paper about it</a><br>
+             CBC Newfoundland and Labrador</li>
+           <li><a href="https://www.eco-business.com/news/un-urges-reduction-of-human-caused-ocean-noise/">UN urges reduction of human-caused ocean noise</a><br>
+             Eco-Business</li>
+           <li><a href="https://globalnews.ca/video/9814315/local-reaction-to-global-news-ipsos-poll-that-shows-conservatives-ahead-of-liberals-in-voter-support/">Local reaction to Global News Ipsos poll that shows Conservatives ahead of Liberals in voter support</a><br>
+             Global News</li>
+           <li><a href="https://www.cbc.ca/news/canada/nova-scotia/nova-scotia-safe-space-atlantic-whitefish-bridgewater-tagged-1.6898144">Seeking a safe place for one of Canada's most endangered freshwater fish</a><br>
+             CBC</li>
+          </ul>
+         </div>
+         <div class="pictureOfWeek featuredContent textimage parbase section">
+          <div class="sb-box doPrint">
+           <div class="sb-highlight-box sb-highlight-box-nopadding">
+            <div class="sb-highlight-box-content clearfix">
+             <h3></h3>
+             <div>
+              <h3>About Dal News<br></h3>
+              <p><a href="http://www.dal.ca/news/contact.html">Learn more about our team</a> — and how to contact us with <b>your ideas or suggestions for stories</b>.</p>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="rightPar parsys"></div>
+       </div><!-- Side Bar -->
+       <div class="maincontent">
+        <div class="featureSlider parsys">
+         <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/flexslider2.lt_8f455d675b36440c275c11813414d975.min.css" type="text/css">
+         <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/nlc/components/content/featureSlider/featureSlider.lt_576af484e729eee7678364c16d2346a1.min.css" type="text/css">
+         <script src="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/flexslider2.lt_d2c415bf29f09ec97f97bcd9c3e994fc.min.js"></script>
+         <script src="https://cdn.dal.ca/etc.clientlibs/dalhousie/nlc/components/content/featureSlider/featureSlider.lt_4ce9a9edf2973c3b167f9e47c500d19a.min.js"></script>
+         <noscript>
+          <div class="no-js">
+           <div class="flexslider mainSlider " data-slideshowspeed="7500" data-noautostart="false" data-transitioneffect="slide">
+            <div class="slides">
+             <div class="featureSlide section">
+              <a href="/news/2023/07/19/dalhousie-new-president-2023.html"> <img srcset="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1879485209/image.adaptive.320.high.jpg/1689776639512.jpg 320w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1879485209/image.adaptive.480.high.jpg/1689776639512.jpg 480w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1879485209/image.adaptive.579.high.jpg/1689776639512.jpg 579w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1879485209/image.adaptive.620.high.jpg/1689776639512.jpg 620w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1879485209/image.adaptive.910.high.jpg/1689776639512.jpg 910w" sizes="(max-width: 640px) calc(100vw - 20px), (max-width: 999px) calc(100vw - 290px - 18px), 579px" src="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1879485209/image.adaptive.910.high.jpg/1689776639512.jpg" alt="Kim Brooks" title="Kim Brooks"> </a>
+              <div class="flex-caption">
+               <div class="slideDescriptionPadding">
+                <a class="headingLink" href="/news/2023/07/19/dalhousie-new-president-2023.html">
+                 <h2>Meet Dal's new president</h2></a> <a class="subheadingLink captionSubHeading" href="/news/2023/07/19/dalhousie-new-president-2023.html">
+                 <h3>Kim Brooks appointed as Dalhousie’s 13th president and vice-chancellor.</h3></a>
+                <div class="mobileReadMore">
+                 <h3 class="captionReadMore">Read More...</h3>
+                 <h3 class="captionsubHeadingMore" style="display:none">Kim Brooks appointed as Dalhousie’s 13th president and vice-chancellor.</h3>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="featureSlide section">
+              <a href="/news/2023/07/25/dal-s-ai-lead-aims-to-spark-conversation-and-connection-on-our-r.html"> <img srcset="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide/image.adaptive.320.high.jpg/1690381806078.jpg 320w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide/image.adaptive.480.high.jpg/1690381806078.jpg 480w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide/image.adaptive.579.high.jpg/1690381806078.jpg 579w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide/image.adaptive.620.high.jpg/1690381806078.jpg 620w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide/image.adaptive.910.high.jpg/1690381806078.jpg 910w" sizes="(max-width: 640px) calc(100vw - 20px), (max-width: 999px) calc(100vw - 290px - 18px), 579px" src="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide/image.adaptive.910.high.jpg/1690381806078.jpg" alt="AIblouin-01" title="AIblouin-01"> </a>
+              <div class="flex-caption">
+               <div class="slideDescriptionPadding">
+                <a class="headingLink" href="/news/2023/07/25/dal-s-ai-lead-aims-to-spark-conversation-and-connection-on-our-r.html">
+                 <h2>Dal's artificial intelligence lead opens up</h2></a> <a class="subheadingLink captionSubHeading" href="/news/2023/07/25/dal-s-ai-lead-aims-to-spark-conversation-and-connection-on-our-r.html">
+                 <h3>Dr. Christian Blouin sparks conversation about rapidly evolving information future.</h3></a>
+                <div class="mobileReadMore">
+                 <h3 class="captionReadMore">Read More...</h3>
+                 <h3 class="captionsubHeadingMore" style="display:none">Dr. Christian Blouin sparks conversation about rapidly evolving information future.</h3>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="featureSlide section">
+              <a href="/news/2023/07/21/photos--proudly-raising-the-pride-flag.html"> <img srcset="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_438648460/image.adaptive.320.high.jpg/1689945688694.jpg 320w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_438648460/image.adaptive.480.high.jpg/1689945688694.jpg 480w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_438648460/image.adaptive.579.high.jpg/1689945688694.jpg 579w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_438648460/image.adaptive.620.high.jpg/1689945688694.jpg 620w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_438648460/image.adaptive.910.high.jpg/1689945688694.jpg 910w" sizes="(max-width: 640px) calc(100vw - 20px), (max-width: 999px) calc(100vw - 290px - 18px), 579px" src="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_438648460/image.adaptive.910.high.jpg/1689945688694.jpg" alt="prideflag02" title="prideflag02"> </a>
+              <div class="flex-caption">
+               <div class="slideDescriptionPadding">
+                <a class="headingLink" href="/news/2023/07/21/photos--proudly-raising-the-pride-flag.html">
+                 <h2>Proudly raising the Pride flag</h2></a> <a class="subheadingLink captionSubHeading" href="/news/2023/07/21/photos--proudly-raising-the-pride-flag.html">
+                 <h3>Check out photos from last week's flag raising and BBQ.</h3></a>
+                <div class="mobileReadMore">
+                 <h3 class="captionReadMore">Read More...</h3>
+                 <h3 class="captionsubHeadingMore" style="display:none">Check out photos from last week's flag raising and BBQ.</h3>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="featureSlide section">
+              <a href="/news/2023/07/21/engineering-indigenous-pathways-dalhousie.html"> <img srcset="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2054004530/image.adaptive.320.high.jpg/1689945590700.jpg 320w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2054004530/image.adaptive.480.high.jpg/1689945590700.jpg 480w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2054004530/image.adaptive.579.high.jpg/1689945590700.jpg 579w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2054004530/image.adaptive.620.high.jpg/1689945590700.jpg 620w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2054004530/image.adaptive.910.high.jpg/1689945590700.jpg 910w" sizes="(max-width: 640px) calc(100vw - 20px), (max-width: 999px) calc(100vw - 290px - 18px), 579px" src="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2054004530/image.adaptive.910.high.jpg/1689945590700.jpg" alt="Ulnooweg Dal" title="Ulnooweg Dal"> </a>
+              <div class="flex-caption">
+               <div class="slideDescriptionPadding">
+                <a class="headingLink" href="/news/2023/07/21/engineering-indigenous-pathways-dalhousie.html">
+                 <h2>Pathways to engineering</h2></a> <a class="subheadingLink captionSubHeading" href="/news/2023/07/21/engineering-indigenous-pathways-dalhousie.html">
+                 <h3>Dal Engineering partners with Indigenous group to improve educational opportunities.</h3></a>
+                <div class="mobileReadMore">
+                 <h3 class="captionReadMore">Read More...</h3>
+                 <h3 class="captionsubHeadingMore" style="display:none">Dal Engineering partners with Indigenous group to improve educational opportunities.</h3>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="featureSlide section">
+              <a href="/news/2023/07/13/dal-becomes-first-university-in-atlantic-canada-to-offer-gender-.html"> <img srcset="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_176296205/image.adaptive.320.high.jpg/1689600315827.jpg 320w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_176296205/image.adaptive.480.high.jpg/1689600315827.jpg 480w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_176296205/image.adaptive.579.high.jpg/1689600315827.jpg 579w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_176296205/image.adaptive.620.high.jpg/1689600315827.jpg 620w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_176296205/image.adaptive.910.high.jpg/1689600315827.jpg 910w" sizes="(max-width: 640px) calc(100vw - 20px), (max-width: 999px) calc(100vw - 290px - 18px), 579px" src="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_176296205/image.adaptive.910.high.jpg/1689600315827.jpg" alt="GAcare-01" title="GAcare-01"> </a>
+              <div class="flex-caption">
+               <div class="slideDescriptionPadding">
+                <a class="headingLink" href="/news/2023/07/13/dal-becomes-first-university-in-atlantic-canada-to-offer-gender-.html">
+                 <h2>Compassionate care and support</h2></a> <a class="subheadingLink captionSubHeading" href="/news/2023/07/13/dal-becomes-first-university-in-atlantic-canada-to-offer-gender-.html">
+                 <h3>Dal now offers gender‑affirming care at on‑campus clinic.</h3></a>
+                <div class="mobileReadMore">
+                 <h3 class="captionReadMore">Read More...</h3>
+                 <h3 class="captionsubHeadingMore" style="display:none">Dal now offers gender‑affirming care at on‑campus clinic.</h3>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="featureSlide section">
+              <a href="/news/2023/07/12/dalhousie-university-teaching-awards-2023.html"> <img srcset="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2005455401/image.adaptive.320.high.jpg/1689168483939.jpg 320w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2005455401/image.adaptive.480.high.jpg/1689168483939.jpg 480w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2005455401/image.adaptive.579.high.jpg/1689168483939.jpg 579w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2005455401/image.adaptive.620.high.jpg/1689168483939.jpg 620w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2005455401/image.adaptive.910.high.jpg/1689168483939.jpg 910w" sizes="(max-width: 640px) calc(100vw - 20px), (max-width: 999px) calc(100vw - 290px - 18px), 579px" src="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_2005455401/image.adaptive.910.high.jpg/1689168483939.jpg" alt="Teaching Awards_2023" title="Teaching Awards_2023"> </a>
+              <div class="flex-caption">
+               <div class="slideDescriptionPadding">
+                <a class="headingLink" href="/news/2023/07/12/dalhousie-university-teaching-awards-2023.html">
+                 <h2>Celebrating teaching excellence</h2></a> <a class="subheadingLink captionSubHeading" href="/news/2023/07/12/dalhousie-university-teaching-awards-2023.html">
+                 <h3>Meet this year's recipients of Dal's University-Wide Teaching Awards.</h3></a>
+                <div class="mobileReadMore">
+                 <h3 class="captionReadMore">Read More...</h3>
+                 <h3 class="captionsubHeadingMore" style="display:none">Meet this year's recipients of Dal's University-Wide Teaching Awards.</h3>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="featureSlide section">
+              <a href="/news/2023/07/13/activity-trackers-for-aquatic-life--what-researchers-plan-to-lea.html"> <img srcset="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1721589884/image.adaptive.320.high.jpg/1689255522775.jpg 320w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1721589884/image.adaptive.480.high.jpg/1689255522775.jpg 480w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1721589884/image.adaptive.579.high.jpg/1689255522775.jpg 579w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1721589884/image.adaptive.620.high.jpg/1689255522775.jpg 620w,
+                https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1721589884/image.adaptive.910.high.jpg/1689255522775.jpg 910w" sizes="(max-width: 640px) calc(100vw - 20px), (max-width: 999px) calc(100vw - 290px - 18px), 579px" src="https://cdn.dal.ca/news/_jcr_content/featureSlider/featureSlider/featureslide_1721589884/image.adaptive.910.high.jpg/1689255522775.jpg" alt="whalestracking-579" title="whalestracking-579"> </a>
+              <div class="flex-caption">
+               <div class="slideDescriptionPadding">
+                <a class="headingLink" href="/news/2023/07/13/activity-trackers-for-aquatic-life--what-researchers-plan-to-lea.html">
+                 <h2>Activity trackers for aquatic life</h2></a> <a class="subheadingLink captionSubHeading" href="/news/2023/07/13/activity-trackers-for-aquatic-life--what-researchers-plan-to-lea.html">
+                 <h3>What researchers plan to learn by tagging marine giants with Fitbit‑like devices</h3></a>
+                <div class="mobileReadMore">
+                 <h3 class="captionReadMore">Read More...</h3>
+                 <h3 class="captionsubHeadingMore" style="display:none">What researchers plan to learn by tagging marine giants with Fitbit‑like devices</h3>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <noscript></noscript>
+          </div>
+         </noscript>
+        </div>
+        <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/nlc/components/content/containerTwoColumn/containerTwoColumn.lt_9fd0a600fa39094b6454080eef4e9114.min.css" type="text/css">
+        <div class="cols2 clearfix">
+         <div class="col-first">
+          <div class="col-content">
+           <div class="leftCol parsys">
+            <div class="newsTopNewsItems section">
+             <div class="h4-placeholder">
+              <h4>News</h4>
+              <ul>
+               <li><a href="https://www.dal.ca/news/2023/07/25/dal-s-ai-lead-aims-to-spark-conversation-and-connection-on-our-r.html">Dal's AI lead aims to spark conversation and connection on our rapidly evolving information future</a></li>
+               <li><a href="https://www.dal.ca/news/2023/07/12/dalhousie-university-teaching-awards-2023.html">Introducing the 2023 Dalhousie University‑Wide Teaching Award recipients</a></li>
+               <li><a href="https://www.dal.ca/news/2023/06/28/dalhousie-enters-world-s-top-20-per-cent-in-latest-qs-world-univ.html">Dalhousie enters world’s top 20 per cent in latest QS World University Rankings</a></li>
+              </ul><a href="https://www.dal.ca/news/news.html">View More</a>
+             </div>
+            </div>
+            <div class="newsTopNewsItems section">
+             <div class="h4-placeholder">
+              <h4>Community</h4>
+              <ul>
+               <li><a href="https://www.dal.ca/news/2023/07/13/dal-becomes-first-university-in-atlantic-canada-to-offer-gender-.html">Providing gender‑affirming care at on‑campus clinics</a></li>
+               <li><a href="https://www.dal.ca/news/2023/07/21/photos--proudly-raising-the-pride-flag.html">Photos: Proudly raising the Pride Flag</a></li>
+               <li><a href="https://www.dal.ca/news/2023/07/21/engineering-indigenous-pathways-dalhousie.html">Dal Engineering partners with Indigenous group to improve educational opportunities</a></li>
+              </ul><a href="https://www.dal.ca/news/community.html">View More</a>
+             </div>
+            </div>
+            <div class="newsTopNewsItems section">
+             <div class="h4-placeholder">
+              <h4>Alumni</h4>
+              <ul>
+               <li><a href="https://www.dal.ca/news/2023/07/20/matthew-martel-black-business-initiative.html">An expansive vision for empowering Black business leaders in Canada</a></li>
+               <li><a href="https://www.dal.ca/news/2023/07/07/dash-hudson-artificial-intelligence-technology-alumni.html">Dal alum embraces brave new tech future with optimism</a></li>
+               <li><a href="https://www.dal.ca/news/2023/03/15/in-memoriam---dr--joan-glode.html">Remembering Joan Glode</a></li>
+              </ul><a href="https://www.dal.ca/news/alumni.html">View More</a>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="col-last">
+          <div class="col-content">
+           <div class="rightCol parsys">
+            <div class="newsTopNewsItems section">
+             <div class="h4-placeholder">
+              <h4>Student Life</h4>
+              <ul>
+               <li><a href="https://www.dal.ca/news/2023/06/12/spring-convocation-2023-conor-scott.html">Firefighter grad helps save elderly man in week of staggering blazes</a></li>
+               <li><a href="https://www.dal.ca/news/2023/06/09/spring-convocation-2023-marie-jones.html">A wish fulfilled: Long sidetracked by family matters, 92‑year‑old finally receives Dal degree</a></li>
+               <li><a href="https://www.dal.ca/news/2023/05/29/dalhousie-convocation-spring-2023.html">Hats off to our newest grads!</a></li>
+              </ul><a href="https://www.dal.ca/news/student-life.html">View More</a>
+             </div>
+            </div>
+            <div class="newsTopNewsItems section">
+             <div class="h4-placeholder">
+              <h4>Research</h4>
+              <ul>
+               <li><a href="https://www.dal.ca/news/2023/07/13/activity-trackers-for-aquatic-life--what-researchers-plan-to-lea.html">Activity trackers for aquatic life: What researchers plan to learn by tagging marine giants with Fitbit‑like devices</a></li>
+               <li><a href="https://www.dal.ca/news/2023/06/30/humans-predators-ecosystem-toll-study.html">Humans exact 'supersized' toll on world's ecosystems, international study finds</a></li>
+               <li><a href="https://www.dal.ca/news/2023/06/23/jeff-dahn-olin-palladium-award-2023-dalhousie.html">Long‑lasting impact: Battery research icon earns top international award</a></li>
+              </ul><a href="https://www.dal.ca/news/research.html">View More</a>
+             </div>
+            </div>
+            <div class="newsTopNewsItems section">
+             <div class="h4-placeholder">
+              <h4>Sports</h4>
+              <ul>
+               <li><a href="https://www.dal.ca/news/2023/05/19/three-new-additions-to-the-tigers-hall-of-fame.html">Three new additions to the Tigers Hall of Fame</a></li>
+               <li><a href="https://www.dal.ca/news/2023/04/06/2023-dalhousie-tigers-varsity-athletic-awards.html">Congrats, Tigers! Celebrating varsity athletic excellence at the 2023 Black and Gold awards banquet</a></li>
+               <li><a href="https://www.dal.ca/news/2023/03/22/vydykhan-named-subway-aus-athlete-of-the-week.html">Vydykhan named Subway AUS Athlete of the Week</a></li>
+              </ul><a href="https://www.dal.ca/news/sports.html">View More</a>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="contentPar parsys"></div>
+       </div><!-- Main Content -->
+      </div><!-- Subsite Content -->
+      <div class="ctn-bottom maincontent-full">
+       <div class="ctn-bottom-title">
+        <h4>The Dal News Community</h4><a href="/news.rss.html" class="rssLink">Subscribe to Dal News</a>
+       </div>
+       <div class="ctn-bottom-content">
+        <div class="ctnBottomContent parsys">
+         <div class="aaPlainText parbase section">
+          <style>
+.ctnBottomContent iframe,
+.ctnBottomContent .fb-page.fb_iframe_widget,
+.ctnBottomContent .fb-page.fb_iframe_widget > span {
+    max-width:100% !important;
+}
+
+@media (max-width: 640px) {
+    .ctnBottomContent .cols3 .col-content {
+        margin-bottom: 25px;
+    }
+}
+</style>
+         </div>
+         <div class="containerThreeColumn section">
+          <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/nlc/components/content/containerThreeColumn/containerThreeColumn.lt_4db8743ae222373b3f2b90833d5dc329.min.css" type="text/css">
+          <div class="cols3 clearfix ">
+           <div class="col-first">
+            <div class="col-content">
+             <div class="threeColumnCol1 parsys">
+              <div class="facebookLikeBox section">
+               <div id="fb-root"></div>
+               <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+               <div class="fb-page" data-href="https://www.facebook.com/DalhousieU/" data-adapt-container-width="true" data-hide-cover="false" data-height="500" data-show-posts="true">
+                <div class="fb-xfbml-parse-ignore">
+                 <blockquote cite="https://www.facebook.com/DalhousieU/">
+                  <a href="https://www.facebook.com/DalhousieU/">Facebook</a>
+                 </blockquote>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="col">
+            <div class="col-content">
+             <div class="threeColumnCol2 parsys">
+              <div class="twitterUserTimeline section">
+               <a class="twitter-timeline" href="https://twitter.com/DalhousieU" data-widget-id="277078834019450881" data-theme="light" data-dnt="true" data-link-color="#FFD400" height="500">Tweets from @https://twitter.com/DalhousieU</a>
+               <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="col-last">
+            <div class="col-content">
+             <div class="threeColumnCol3 parsys">
+              <div class="mostCommentedNewsWidget section">
+               <script type="text/javascript">
+    
+        function mostCommented_721dd4e4f16345b5944fc25198364eacctnBottomContentcontainerthreecolumnthreeColumnCol3mostcommentednewswid() {
+            var url = "https://disqus.com/api/3.0/threads/listPopular.jsonp?api_key=Tc2qIariY3ZwM6mGGNu0EG6jknjgxIWdwgrns0YI4dC76s2SOT3QTU1SsDUfDhxY&forum=dalnews&interval=30d&limit=6&callback=?";
+            $j.getJSON(url ,function(data) {
+                addMostCommented_721dd4e4f16345b5944fc25198364eacctnBottomContentcontainerthreecolumnthreeColumnCol3mostcommentednewswid(data.response, 0);
+            });
+        }
+    
+        function addMostCommented_721dd4e4f16345b5944fc25198364eacctnBottomContentcontainerthreecolumnthreeColumnCol3mostcommentednewswid(response, index) {
+            if ($j("#mostCommentedList_721dd4e4f16345b5944fc25198364eacctnBottomContentcontainerthreecolumnthreeColumnCol3mostcommentednewswid").children().size() >= 4 || index >= response.length) return;
+            var posts = "";
+            
+            var html = "<li><a href=\""+response[index].link+"\">"+response[index].title+"</a> "+posts+"</li>"
+            $j("#mostCommentedList_721dd4e4f16345b5944fc25198364eacctnBottomContentcontainerthreecolumnthreeColumnCol3mostcommentednewswid").append(html);
+            addMostCommented_721dd4e4f16345b5944fc25198364eacctnBottomContentcontainerthreecolumnthreeColumnCol3mostcommentednewswid(response, ++index);
+    
+        }
+        setTimeout('mostCommented_721dd4e4f16345b5944fc25198364eacctnBottomContentcontainerthreecolumnthreeColumnCol3mostcommentednewswid()',1000);
+    </script>
+               <div class="h2-placeholder">
+                <h2>Most Commented</h2>
+                <ul id="mostCommentedList_721dd4e4f16345b5944fc25198364eacctnBottomContentcontainerthreecolumnthreeColumnCol3mostcommentednewswid"></ul>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div><!-- Wrapper -->
+    </div><!-- Boundary -->
+   </div><!-- Content -->
+  </div><!-- end-of wrapper -->
+  <div class="footerComp footer">
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc.clientlibs/dalhousie/foundation/components/content/footer/footerClientLib.lt_478d088086840a1bc1d76de662a1ef10.min.css" type="text/css">
+   <div id="main_footer">
+    <div class="ctn-boundary">
+     <div class="cols2">
+      <div class="col-first">
+       <div class="col-content">
+        <h4>Dalhousie University</h4>
+        <p>Halifax, Nova Scotia, Canada&nbsp; B3H 4R2<br>
+          1-902-494-2211</p>
+        <p><b>Agricultural Campus </b><br>
+          Truro, Nova Scotia, Canada&nbsp; B2N 5E3<br>
+          1-902-893-6600</p>
+       </div>
+      </div>
+      <div class="col-last">
+       <div class="col-content">
+        <ul>
+         <li style="text-align: right;"><a href="/contact_us.html">Contact Us</a></li>
+         <li style="text-align: right;"><a href="http://directory.dal.ca">Campus Directory</a></li>
+         <li style="text-align: right;"><a href="/campus_life/career-and-leadership.html">Student Career Services</a></li>
+         <li style="text-align: right;"><a href="/dept/hr/careers_dalhousie.html">Employment with Dalhousie<br></a></li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+         <li style="text-align: right;"><a href="/campus_life/orientation/family.html">For Parents</a></li>
+         <li style="text-align: right;"><a href="/hire-dal.html">For Employers</a></li>
+         <li style="text-align: right;"><a href="/news/media.html">Media Centre</a></li>
+         <li style="text-align: right;"><a href="/terms_of_use/privacy-statement.html">Privacy Statement</a></li>
+         <li style="text-align: right;"><a href="/terms_of_use.html">Terms of Use</a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="responsive_footer">
+    <div class="ctn-boundary">
+     <ul>
+      <li><a href="/contact_us.html">Contact Us</a></li>
+      <li><a href="/current_students.html">Current Students</a></li>
+      <li><a href="/faculty_staff.html">Faculty &amp; Staff</a></li>
+     </ul>
+     <p><b>Dalhousie University</b><br>
+       Halifax, Nova Scotia, Canada B3H 4R2<br>
+       1.902.494.2211</p>
+    </div>
+   </div><!-- Footer -->
+   <link rel="stylesheet" href="https://cdn.dal.ca/etc/designs/dalhousie/clientlibs/global/feedback.lt_0da98b229a26e86d440689f37bf4b53d.min.css" type="text/css">
+   <div class="feedback_container">
+    <div id="kampyle_button">
+     <div id="kampyle_container">
+      <a href="//www.dal.ca/contact_us.html" id="kampylink" title="Contact us"> <span id="kampyle_span"> &nbsp; </span> </a>
+     </div>
+    </div>
+    <div id="kampyle_button_responsive">
+     <a href="//www.dal.ca/contact_us.html" id="kampylelink_responsive" title="Contact us"></a>
+    </div>
+   </div>
+  </div>
+  <noscript>
+   <div style="display: inline;">
+    <img height="1" width="1" style="border-style: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1027188514/?value=0&amp;label=Ceo_CMqN_wUQos7m6QM&amp;guid=ON&amp;script=0">
+   </div>
+  </noscript>
+ </body>
+</html>

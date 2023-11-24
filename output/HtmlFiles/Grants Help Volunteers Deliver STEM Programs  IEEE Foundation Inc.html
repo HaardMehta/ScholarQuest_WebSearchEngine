@@ -1,0 +1,1400 @@
+<!doctype html>
+<html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#">
+ <head>
+  <meta charset="UTF-8">
+  <script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script>
+  <script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}});
+</script>
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+  <title>Grants Help Volunteers Deliver STEM Programs | IEEE Foundation, Inc.</title>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2C400%2C700%2C700%7CFira%20Sans%20Condensed%3A700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2C400%2C700%2C700%7CFira%20Sans%20Condensed%3A700&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2C400%2C700%2C700%7CFira%20Sans%20Condensed%3A700&amp;display=swap">
+  </noscript><!-- All in One SEO Pro 4.4.2 - aioseo.com -->
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="canonical" href="https://www.ieeefoundation.org/grants-help-volunteers-deliver-stem-programs/">
+  <meta name="generator" content="All in One SEO Pro (AIOSEO) 4.4.2">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="IEEE Foundation, Inc. |">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Grants Help Volunteers Deliver STEM Programs | IEEE Foundation, Inc.">
+  <meta property="og:description" content="IEEE Foundation partnered with IEEE Educational Activities and TryEngineering to add a new, impactful fund to the Foundation’s portfolio of funds. Now, IEEE volunteer groups can apply for grants which encourage local IEEE groups to offer STEM events in their community. TryEngineering empowers the next generation of technology innovators. Through its robust STEM web portal, educators and students">
+  <meta property="og:url" content="https://www.ieeefoundation.org/grants-help-volunteers-deliver-stem-programs/">
+  <meta property="og:image" content="https://www.ieeefoundation.org/wp-content/uploads/2022/10/Copy-of-Newsletter-Image-317-x-231.jpg">
+  <meta property="og:image:secure_url" content="https://www.ieeefoundation.org/wp-content/uploads/2022/10/Copy-of-Newsletter-Image-317-x-231.jpg">
+  <meta property="og:image:width" content="317">
+  <meta property="og:image:height" content="231">
+  <meta property="article:published_time" content="2022-09-28T19:34:45+00:00">
+  <meta property="article:modified_time" content="2022-12-15T00:10:23+00:00">
+  <meta property="article:publisher" content="https://www.facebook.com/IEEEFoundation">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@IEEEFoundation">
+  <meta name="twitter:title" content="Grants Help Volunteers Deliver STEM Programs | IEEE Foundation, Inc.">
+  <meta name="twitter:description" content="IEEE Foundation partnered with IEEE Educational Activities and TryEngineering to add a new, impactful fund to the Foundation’s portfolio of funds. Now, IEEE volunteer groups can apply for grants which encourage local IEEE groups to offer STEM events in their community. TryEngineering empowers the next generation of technology innovators. Through its robust STEM web portal, educators and students">
+  <meta name="twitter:creator" content="@IEEEFoundation">
+  <meta name="twitter:image" content="https://www.ieeefoundation.org/wp-content/uploads/2022/10/Copy-of-Newsletter-Image-317-x-231.jpg">
+  <meta name="google" content="nositelinkssearchbox">
+  <script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#article","name":"Grants Help Volunteers Deliver STEM Programs | IEEE Foundation, Inc.","headline":"Grants Help Volunteers Deliver STEM Programs","author":{"@id":"https:\/\/www.ieeefoundation.org\/author\/rich-allen\/#author"},"publisher":{"@id":"https:\/\/www.ieeefoundation.org\/#organization"},"image":{"@type":"ImageObject","url":"https:\/\/www.ieeefoundation.org\/wp-content\/uploads\/2022\/10\/Copy-of-Newsletter-Image-317-x-231.jpg","width":317,"height":231},"datePublished":"2022-09-28T19:34:45-04:00","dateModified":"2022-12-15T00:10:23-05:00","inLanguage":"en-US","mainEntityOfPage":{"@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#webpage"},"isPartOf":{"@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#webpage"},"articleSection":"Program Impact, Educate, TryEngineering"},{"@type":"BreadcrumbList","@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.ieeefoundation.org\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.ieeefoundation.org\/","name":"Home","description":"As the IEEE philanthropic partner, the IEEE Foundation inspires charitable investment that advance the impact of IEEE\u2019s humanitarian & philanthropic values.","url":"https:\/\/www.ieeefoundation.org\/"},"nextItem":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#listItem","position":2,"item":{"@type":"WebPage","@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/","name":"Grants Help Volunteers Deliver STEM Programs","url":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/"},"previousItem":"https:\/\/www.ieeefoundation.org\/#listItem"}]},{"@type":"Organization","@id":"https:\/\/www.ieeefoundation.org\/#organization","name":"IEEE Foundation, Inc.","url":"https:\/\/www.ieeefoundation.org\/","sameAs":["https:\/\/www.facebook.com\/IEEEFoundation","https:\/\/twitter.com\/IEEEFoundation","https:\/\/www.linkedin.com\/company\/ieee-foundation"]},{"@type":"Person","@id":"https:\/\/www.ieeefoundation.org\/author\/rich-allen\/#author","url":"https:\/\/www.ieeefoundation.org\/author\/rich-allen\/","name":"Rich Allen","image":{"@type":"ImageObject","@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#authorImage","url":"https:\/\/secure.gravatar.com\/avatar\/a6d964091192329b12e22841dc68d73e?s=96&d=mm&r=g","width":96,"height":96,"caption":"Rich Allen"}},{"@type":"WebPage","@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#webpage","url":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/","name":"Grants Help Volunteers Deliver STEM Programs | IEEE Foundation, Inc.","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/www.ieeefoundation.org\/#website"},"breadcrumb":{"@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#breadcrumblist"},"author":{"@id":"https:\/\/www.ieeefoundation.org\/author\/rich-allen\/#author"},"creator":{"@id":"https:\/\/www.ieeefoundation.org\/author\/rich-allen\/#author"},"image":{"@type":"ImageObject","url":"https:\/\/www.ieeefoundation.org\/wp-content\/uploads\/2022\/10\/Copy-of-Newsletter-Image-317-x-231.jpg","@id":"https:\/\/www.ieeefoundation.org\/#mainImage","width":317,"height":231},"primaryImageOfPage":{"@id":"https:\/\/www.ieeefoundation.org\/grants-help-volunteers-deliver-stem-programs\/#mainImage"},"datePublished":"2022-09-28T19:34:45-04:00","dateModified":"2022-12-15T00:10:23-05:00"},{"@type":"WebSite","@id":"https:\/\/www.ieeefoundation.org\/#website","url":"https:\/\/www.ieeefoundation.org\/","name":"IEEE Foundation, Inc.","inLanguage":"en-US","publisher":{"@id":"https:\/\/www.ieeefoundation.org\/#organization"}}]}
+		</script><!-- All in One SEO Pro -->
+  <link rel="dns-prefetch" href="//netdna.bootstrapcdn.com">
+  <link rel="dns-prefetch" href="//www.google.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//www.gstatic.com">
+  <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+  <link rel="alternate" type="application/rss+xml" title="IEEE Foundation, Inc. » Feed" href="https://www.ieeefoundation.org/feed/">
+  <link rel="alternate" type="application/rss+xml" title="IEEE Foundation, Inc. » Comments Feed" href="https://www.ieeefoundation.org/comments/feed/">
+  <link rel="alternate" type="text/calendar" title="IEEE Foundation, Inc. » iCal Feed" href="https://www.ieeefoundation.org/events/?ical=1"><!-- This site uses the Google Analytics by MonsterInsights plugin v8.18 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+  <script src="//www.googletagmanager.com/gtag/js?id=G-65LKC85C4J" data-cfasync="false" data-wpfc-render="false" async></script>
+  <script data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '8.18';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-65LKC85C4J',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+										__gtagTracker('config', 'G-65LKC85C4J', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script><!-- / Google Analytics by MonsterInsights -->
+  <style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+  <link rel="stylesheet" id="tribe-events-pro-mini-calendar-block-styles-css" href="https://www.ieeefoundation.org/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-mini-calendar-block.min.css?ver=6.1.1" media="all">
+  <link rel="stylesheet" id="wp-block-library-css" href="https://www.ieeefoundation.org/wp-includes/css/dist/block-library/style.min.css?ver=6.1.3" media="all">
+  <style id="wp-block-library-theme-inline-css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:"0 0 1em 0"}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
+</style>
+  <link rel="stylesheet" id="classic-theme-styles-css" href="https://www.ieeefoundation.org/wp-includes/css/classic-themes.min.css?ver=1" media="all">
+  <style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+  <link data-minify="1" rel="stylesheet" id="font-awesome-5-css" href="https://www.ieeefoundation.org/wp-content/cache/min/1/wp-content/plugins/bb-plugin/fonts/fontawesome/5.15.4/css/all.min.css?ver=1689788787" media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="https://www.ieeefoundation.org/wp-content/plugins/bb-plugin/fonts/fontawesome/5.15.4/css/v4-shims.min.css?ver=2.7.1" media="all">
+  <link data-minify="1" rel="stylesheet" id="fl-builder-layout-bundle-ce6a3b1b6ae13c7204b2d7fcae360498-css" href="https://www.ieeefoundation.org/wp-content/cache/min/1/wp-content/uploads/bb-plugin/cache/ce6a3b1b6ae13c7204b2d7fcae360498-layout-bundle.css?ver=1689788980" media="all">
+  <link rel="stylesheet" id="jquery-magnificpopup-css" href="https://www.ieeefoundation.org/wp-content/plugins/bb-plugin/css/jquery.magnificpopup.min.css?ver=2.7.1" media="all">
+  <link rel="stylesheet" id="base-4-css" href="https://www.ieeefoundation.org/wp-content/themes/bb-theme/css/base-4.min.css?ver=1.7.13" media="all">
+  <link data-minify="1" rel="stylesheet" id="fl-automator-skin-css" href="https://www.ieeefoundation.org/wp-content/cache/min/1/wp-content/uploads/bb-theme/skin-6407ae919306d.css?ver=1689788787" media="all">
+  <link rel="stylesheet" id="pp-animate-css" href="https://www.ieeefoundation.org/wp-content/plugins/bbpowerpack/assets/css/animate.min.css?ver=3.5.1" media="all">
+  <link rel="stylesheet" id="bbi-login-styles-css" href="https://www.ieeefoundation.org/wp-content/plugins/bbwp-functions-plugin/assets/css/bbi-frontend-styles.min.css?ver=6.1.3" media="all">
+  <style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.ieeefoundation.org/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+  <script src="https://www.ieeefoundation.org/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.18" id="monsterinsights-frontend-script-js" defer></script>
+  <script data-cfasync="false" data-wpfc-render="false" id="monsterinsights-frontend-script-js-extra">var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/www.ieeefoundation.org","hash_tracking":"false","v4_id":"G-65LKC85C4J"};</script>
+  <script src="https://www.ieeefoundation.org/wp-includes/js/jquery/jquery.min.js?ver=3.6.1" id="jquery-core-js"></script>
+  <script src="https://www.ieeefoundation.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js" defer></script>
+  <script src="https://www.ieeefoundation.org/wp-includes/js/imagesloaded.min.js?ver=6.1.3" id="imagesloaded-js"></script>
+  <script type="rocketlazyloadscript" data-rocket-src="https://www.ieeefoundation.org/wp-content/plugins/bbwp-functions-plugin/assets/js/bbwp-module-script.min.js?ver=6.1.3" id="bbwp-module-script-js" defer></script>
+  <link rel="https://api.w.org/" href="https://www.ieeefoundation.org/wp-json/">
+  <link rel="alternate" type="application/json" href="https://www.ieeefoundation.org/wp-json/wp/v2/posts/2636">
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ieeefoundation.org/xmlrpc.php?rsd">
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.ieeefoundation.org/wp-includes/wlwmanifest.xml">
+  <meta name="generator" content="WordPress 6.1.3">
+  <link rel="shortlink" href="https://www.ieeefoundation.org/?p=2636">
+  <link rel="alternate" type="application/json+oembed" href="https://www.ieeefoundation.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ieeefoundation.org%2Fgrants-help-volunteers-deliver-stem-programs%2F">
+  <link rel="alternate" type="text/xml+oembed" href="https://www.ieeefoundation.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ieeefoundation.org%2Fgrants-help-volunteers-deliver-stem-programs%2F&amp;format=xml">
+  <script type="rocketlazyloadscript">
+			var bb_powerpack = {
+				ajaxurl: 'https://www.ieeefoundation.org/wp-admin/admin-ajax.php',
+				search_term: '',
+				callback: function() {}
+			};
+		</script>
+  <link rel="shortcut icon" href="https://www.ieeefoundation.org/wp-content/uploads/2023/01/21-FOUN-2003_50_bug_only_RGB.png">
+  <meta name="tec-api-version" content="v1">
+  <meta name="tec-api-origin" content="https://www.ieeefoundation.org">
+  <link rel="alternate" href="https://www.ieeefoundation.org/wp-json/tribe/events/v1/">
+  <noscript>
+   <style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style>
+  </noscript>
+ </head>
+ <body class="post-template-default single single-post postid-2636 single-format-standard tribe-no-js page-template-beaver-builder-theme fl-theme-builder-singular fl-theme-builder-singular-single-posts fl-theme-builder-footer fl-theme-builder-footer-footer fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-part fl-theme-builder-part-omnibar-2 fl-framework-base-4 fl-preset-default fl-full-width fl-scroll-to-top fl-search-active has-blocks" itemscope itemtype="https://schema.org/WebPage">
+  <a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+   <defs>
+    <filter id="wp-duotone-dark-grayscale">
+     <fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+     <fecomponenttransfer color-interpolation-filters="sRGB">
+      <fefuncr type="table" tablevalues="0 0.49803921568627" />
+      <fefuncg type="table" tablevalues="0 0.49803921568627" />
+      <fefuncb type="table" tablevalues="0 0.49803921568627" />
+      <fefunca type="table" tablevalues="1 1" />
+     </fecomponenttransfer>
+     <fecomposite in2="SourceGraphic" operator="in" />
+    </filter>
+   </defs>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+   <defs>
+    <filter id="wp-duotone-grayscale">
+     <fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+     <fecomponenttransfer color-interpolation-filters="sRGB">
+      <fefuncr type="table" tablevalues="0 1" />
+      <fefuncg type="table" tablevalues="0 1" />
+      <fefuncb type="table" tablevalues="0 1" />
+      <fefunca type="table" tablevalues="1 1" />
+     </fecomponenttransfer>
+     <fecomposite in2="SourceGraphic" operator="in" />
+    </filter>
+   </defs>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+   <defs>
+    <filter id="wp-duotone-purple-yellow">
+     <fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+     <fecomponenttransfer color-interpolation-filters="sRGB">
+      <fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765" />
+      <fefuncg type="table" tablevalues="0 1" />
+      <fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431" />
+      <fefunca type="table" tablevalues="1 1" />
+     </fecomponenttransfer>
+     <fecomposite in2="SourceGraphic" operator="in" />
+    </filter>
+   </defs>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+   <defs>
+    <filter id="wp-duotone-blue-red">
+     <fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+     <fecomponenttransfer color-interpolation-filters="sRGB">
+      <fefuncr type="table" tablevalues="0 1" />
+      <fefuncg type="table" tablevalues="0 0.27843137254902" />
+      <fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902" />
+      <fefunca type="table" tablevalues="1 1" />
+     </fecomponenttransfer>
+     <fecomposite in2="SourceGraphic" operator="in" />
+    </filter>
+   </defs>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+   <defs>
+    <filter id="wp-duotone-midnight">
+     <fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+     <fecomponenttransfer color-interpolation-filters="sRGB">
+      <fefuncr type="table" tablevalues="0 0" />
+      <fefuncg type="table" tablevalues="0 0.64705882352941" />
+      <fefuncb type="table" tablevalues="0 1" />
+      <fefunca type="table" tablevalues="1 1" />
+     </fecomponenttransfer>
+     <fecomposite in2="SourceGraphic" operator="in" />
+    </filter>
+   </defs>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+   <defs>
+    <filter id="wp-duotone-magenta-yellow">
+     <fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+     <fecomponenttransfer color-interpolation-filters="sRGB">
+      <fefuncr type="table" tablevalues="0.78039215686275 1" />
+      <fefuncg type="table" tablevalues="0 0.94901960784314" />
+      <fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412" />
+      <fefunca type="table" tablevalues="1 1" />
+     </fecomponenttransfer>
+     <fecomposite in2="SourceGraphic" operator="in" />
+    </filter>
+   </defs>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+   <defs>
+    <filter id="wp-duotone-purple-green">
+     <fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+     <fecomponenttransfer color-interpolation-filters="sRGB">
+      <fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745" />
+      <fefuncg type="table" tablevalues="0 1" />
+      <fefuncb type="table" tablevalues="0.44705882352941 0.4" />
+      <fefunca type="table" tablevalues="1 1" />
+     </fecomponenttransfer>
+     <fecomposite in2="SourceGraphic" operator="in" />
+    </filter>
+   </defs>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+   <defs>
+    <filter id="wp-duotone-blue-orange">
+     <fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+     <fecomponenttransfer color-interpolation-filters="sRGB">
+      <fefuncr type="table" tablevalues="0.098039215686275 1" />
+      <fefuncg type="table" tablevalues="0 0.66274509803922" />
+      <fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725" />
+      <fefunca type="table" tablevalues="1 1" />
+     </fecomponenttransfer>
+     <fecomposite in2="SourceGraphic" operator="in" />
+    </filter>
+   </defs>
+  </svg>
+  <div class="fl-page">
+   <div class="fl-builder-content fl-builder-content-1710 fl-builder-global-templates-locked" data-post-id="1710" data-type="part">
+    <div id="omnibar" class="fl-row fl-row-full-width fl-row-bg-color fl-node-531jgvqz67ul fl-row-default-height fl-row-align-center" data-node="531jgvqz67ul">
+     <div class="fl-row-content-wrap">
+      <div class="fl-row-content fl-row-full-width fl-node-content">
+       <div class="fl-col-group fl-node-dva0fn3oeguz fl-col-group-custom-width" data-node="dva0fn3oeguz">
+        <div class="fl-col fl-node-lfo1y8cs2kub fl-col-small-custom-width" data-node="lfo1y8cs2kub">
+         <div class="fl-col-content fl-node-content">
+          <div id="utility-menu" class="fl-module fl-module-pp-advanced-menu fl-node-2e53lnz1ibr4" data-node="2e53lnz1ibr4">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse pp-menu-default pp-menu-align-left">
+             <div class="pp-clear"></div>
+             <nav class="pp-menu-nav" aria-label="Top IEEE Menu" itemscope itemtype="https://schema.org/SiteNavigationElement">
+              <ul class="menu pp-advanced-menu-horizontal pp-toggle-none">
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.ieee.org/" tabindex="0" role="link"><span class="menu-item-text">IEEE.org</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://ieeexplore.ieee.org/" tabindex="0" role="link"><span class="menu-item-text">IEEE Xplore Digital Library</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://standards.ieee.org/" tabindex="0" role="link"><span class="menu-item-text">IEEE Standards</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://spectrum.ieee.org/" tabindex="0" role="link"><span class="menu-item-text">IEEE Spectrum</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.ieee.org/sitemap.html" tabindex="0" role="link"><span class="menu-item-text">More Sites</span></a></li>
+              </ul>
+             </nav>
+            </div>
+            <div class="pp-advanced-menu-mobile">
+             <button class="pp-advanced-menu-mobile-toggle text" tabindex="0" role="button" aria-label="More IEEE Sites"> <span class="pp-advanced-menu-mobile-toggle-label">More IEEE Sites</span> </button>
+            </div>
+            <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse off-canvas">
+             <div class="pp-clear"></div>
+             <nav class="pp-menu-nav pp-off-canvas-menu pp-menu-left" aria-label="Top IEEE Menu" itemscope itemtype="https://schema.org/SiteNavigationElement">
+              <a href="javascript:void(0)" class="pp-menu-close-btn" aria-label="Close the menu" role="button">×</a>
+              <ul class="menu pp-advanced-menu-horizontal pp-toggle-none">
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.ieee.org/" tabindex="0" role="link"><span class="menu-item-text">IEEE.org</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://ieeexplore.ieee.org/" tabindex="0" role="link"><span class="menu-item-text">IEEE Xplore Digital Library</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://standards.ieee.org/" tabindex="0" role="link"><span class="menu-item-text">IEEE Standards</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://spectrum.ieee.org/" tabindex="0" role="link"><span class="menu-item-text">IEEE Spectrum</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.ieee.org/sitemap.html" tabindex="0" role="link"><span class="menu-item-text">More Sites</span></a></li>
+              </ul>
+             </nav>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div id="utility-right" class="fl-col fl-node-4s51i0vegjha fl-col-small fl-col-small-custom-width" data-node="4s51i0vegjha">
+         <div class="fl-col-content fl-node-content">
+          <div class="fl-module fl-module-pp-image fl-node-6uswjma7zdfe float-right" data-node="6uswjma7zdfe">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-photo-container">
+             <div class="pp-photo pp-photo-align-center pp-photo-align-responsive-default" itemscope itemtype="http://schema.org/ImageObject">
+              <div class="pp-photo-content">
+               <div class="pp-photo-content-inner">
+                <a href="https://www.ieee.org/" target="_blank" itemprop="url" rel="noopener"> <picture decoding="async" class="pp-photo-img wp-image-1681 size-full" itemprop="image" title="IEEE MB White RGB">
+                  <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2018/09/IEEE_MB_white_RGB.png.webp" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20117'%3E%3C/svg%3E">
+                  <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20117'%3E%3C/svg%3E" alt="IEEE" itemprop="image" height="117" width="400" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2018/09/IEEE_MB_white_RGB.png">
+                 </picture>
+                 <noscript>
+                  <picture decoding="async" class="pp-photo-img wp-image-1681 size-full" itemprop="image" title="IEEE MB White RGB">
+                   <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2018/09/IEEE_MB_white_RGB.png.webp">
+                   <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2018/09/IEEE_MB_white_RGB.png" alt="IEEE" itemprop="image" height="117" width="400">
+                  </picture>
+                 </noscript>
+                 <div class="pp-overlay-bg"></div></a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div id="search" class="fl-module fl-module-pp-search-form fl-node-kicagn362yeb fl-visible-desktop float-right" data-node="kicagn362yeb">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-search-form-wrap pp-search-form--style-classic pp-search-form--button-type-icon">
+             <form class="pp-search-form" role="search" action="https://www.ieeefoundation.org" method="get">
+              <div class="pp-search-form__container">
+               <input placeholder="Search the Foundation Site" class="pp-search-form__input" type="search" name="s" title="Search" value=""> <button class="pp-search-form__submit" type="submit"> <i class="fa fa-search" aria-hidden="true"></i> <span class="pp-screen-reader-text">Search</span> </button>
+              </div>
+             </form>
+            </div>
+           </div>
+          </div>
+          <div class="fl-module fl-module-pp-search-form fl-node-f8wq14n57ze6 fl-visible-large fl-visible-medium float-right" data-node="f8wq14n57ze6">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-search-form-wrap pp-search-form--style-full_screen pp-search-form--button-type-icon">
+             <form class="pp-search-form" role="search" action="https://www.ieeefoundation.org" method="get">
+              <div class="pp-search-form__toggle">
+               <i class="fa fa-search" aria-hidden="true"></i> <span class="pp-screen-reader-text">Search</span>
+              </div>
+              <div class="pp-search-form__container">
+               <input placeholder="Search" class="pp-search-form__input" type="search" name="s" title="Search" value="">
+               <div class="pp-search-form--lightbox-close">
+                <span class="pp-icon-close" aria-hidden="true">
+                 <svg viewbox="0 0 40 40">
+                  <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+                 </svg></span> <span class="pp-screen-reader-text">Close</span>
+               </div>
+              </div>
+             </form>
+            </div>
+           </div>
+          </div>
+          <div class="fl-module fl-module-pp-search-form fl-node-hzb6owjf4q5a fl-visible-mobile float-right" data-node="hzb6owjf4q5a">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-search-form-wrap pp-search-form--style-full_screen pp-search-form--button-type-icon">
+             <form class="pp-search-form" role="search" action="https://www.ieeefoundation.org" method="get">
+              <div class="pp-search-form__toggle">
+               <i class="fa fa-search" aria-hidden="true"></i> <span class="pp-screen-reader-text">Search</span>
+              </div>
+              <div class="pp-search-form__container">
+               <input placeholder="Search" class="pp-search-form__input" type="search" name="s" title="Search" value="">
+               <div class="pp-search-form--lightbox-close">
+                <span class="pp-icon-close" aria-hidden="true">
+                 <svg viewbox="0 0 40 40">
+                  <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+                 </svg></span> <span class="pp-screen-reader-text">Close</span>
+               </div>
+              </div>
+             </form>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <header class="fl-builder-content fl-builder-content-1701 fl-builder-global-templates-locked" data-post-id="1701" data-type="header" data-sticky="1" data-sticky-on="desktop-medium" data-sticky-breakpoint="medium" data-shrink="0" data-overlay="1" data-overlay-bg="transparent" data-shrink-image-height="50px" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+    <div id="header" class="fl-row fl-row-full-width fl-row-bg-none fl-node-3h2ntmujo6v8 fl-row-default-height fl-row-align-center" data-node="3h2ntmujo6v8">
+     <div class="fl-row-content-wrap">
+      <div class="fl-row-content fl-row-full-width fl-node-content">
+       <div class="fl-col-group fl-node-tk73zfquhm95 fl-col-group-custom-width" data-node="tk73zfquhm95">
+        <div class="fl-col fl-node-ncv702awrsil fl-col-small fl-col-small-custom-width" data-node="ncv702awrsil">
+         <div class="fl-col-content fl-node-content">
+          <div class="fl-module fl-module-pp-image fl-node-ja3fo9vcnksh logo-white" data-node="ja3fo9vcnksh">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-photo-container">
+             <div class="pp-photo pp-photo-align-left pp-photo-align-responsive-default" itemscope itemtype="http://schema.org/ImageObject">
+              <div class="pp-photo-content">
+               <div class="pp-photo-content-inner">
+                <a href="https://www.ieeefoundation.org/" target="_self" itemprop="url"> <picture decoding="async" class="pp-photo-img wp-image-2543 size-full" itemprop="image" title="50th Logo Notag White">
+                  <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/09/50th-logo-notag-white.png.webp" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20121'%3E%3C/svg%3E">
+                  <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20121'%3E%3C/svg%3E" alt="50th Logo Notag White" itemprop="image" height="121" width="600" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2022/09/50th-logo-notag-white.png">
+                 </picture>
+                 <noscript>
+                  <picture decoding="async" class="pp-photo-img wp-image-2543 size-full" itemprop="image" title="50th Logo Notag White">
+                   <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/09/50th-logo-notag-white.png.webp">
+                   <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2022/09/50th-logo-notag-white.png" alt="50th Logo Notag White" itemprop="image" height="121" width="600">
+                  </picture>
+                 </noscript>
+                 <div class="pp-overlay-bg"></div></a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="fl-module fl-module-pp-image fl-node-nbmfi9jwoae2 logo-color" data-node="nbmfi9jwoae2">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-photo-container">
+             <div class="pp-photo pp-photo-align-left pp-photo-align-responsive-default" itemscope itemtype="http://schema.org/ImageObject">
+              <div class="pp-photo-content">
+               <div class="pp-photo-content-inner">
+                <a href="https://www.ieeefoundation.org/" target="_self" itemprop="url"> <picture decoding="async" class="pp-photo-img wp-image-2544 size-full" itemprop="image" title="50th Logo Notag Color">
+                  <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/06/50th-logo-notag-color.png.webp" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20121'%3E%3C/svg%3E">
+                  <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20121'%3E%3C/svg%3E" alt="50th Logo Notag Color" itemprop="image" height="121" width="600" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2022/06/50th-logo-notag-color.png">
+                 </picture>
+                 <noscript>
+                  <picture decoding="async" class="pp-photo-img wp-image-2544 size-full" itemprop="image" title="50th Logo Notag Color">
+                   <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/06/50th-logo-notag-color.png.webp">
+                   <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2022/06/50th-logo-notag-color.png" alt="50th Logo Notag Color" itemprop="image" height="121" width="600">
+                  </picture>
+                 </noscript>
+                 <div class="pp-overlay-bg"></div></a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="fl-col fl-node-wsb8tvfu71dc fl-col-small-custom-width" data-node="wsb8tvfu71dc">
+         <div class="fl-col-content fl-node-content">
+          <div id="main-menu" class="fl-module fl-module-pp-advanced-menu fl-node-62cvpw0myzfi" data-node="62cvpw0myzfi">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse pp-menu-default pp-menu-align-right">
+             <div class="pp-clear"></div>
+             <nav class="pp-menu-nav" aria-label="Primary Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+              <ul class="menu pp-advanced-menu-horizontal pp-toggle-none">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu">
+                <div class="pp-has-submenu-container">
+                 <a href="https://www.ieeefoundation.org/our-supporters/" tabindex="0" role="link"><span class="menu-item-text">Our Supporters<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="Our Supporters: submenu" role="button"></span></span></a>
+                </div>
+                <ul class="sub-menu">
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/our-supporters/donors/" tabindex="0" role="link"><span class="menu-item-text">Meet our Donors</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/our-supporters/heritage-circle/" tabindex="0" role="link"><span class="menu-item-text">IEEE Heritage Circle</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/our-supporters/ieee-goldsmith-legacy-league/" tabindex="0" role="link"><span class="menu-item-text">Goldsmith Legacy League</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/donor-bill-of-rights/" tabindex="0" role="link"><span class="menu-item-text">Donor Bill of Rights</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/our-supporters/board-of-directors/" tabindex="0" role="link"><span class="menu-item-text">Board of Directors</span></a></li>
+                </ul></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/impact/" tabindex="0" role="link"><span class="menu-item-text">Impact</span></a></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/ways-to-give/" tabindex="0" role="link"><span class="menu-item-text">Ways to Give</span></a></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu">
+                <div class="pp-has-submenu-container">
+                 <a href="https://www.ieeefoundation.org/about/" tabindex="0" role="link"><span class="menu-item-text">About<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="About: submenu" role="button"></span></span></a>
+                </div>
+                <ul class="sub-menu">
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/50th/" tabindex="0" role="link"><span class="menu-item-text">50th Anniversary Celebration</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/about/mission-vision-values/" tabindex="0" role="link"><span class="menu-item-text">Mission/Vision/Values</span></a></li>
+                 <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.ieeefoundation.org/history/" tabindex="0" role="link"><span class="menu-item-text">History</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/about/staff/" tabindex="0" role="link"><span class="menu-item-text">Staff</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/about/financials/" tabindex="0" role="link"><span class="menu-item-text">Financial Information</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/about/governance/" tabindex="0" role="link"><span class="menu-item-text">Governance &amp; Oversight</span></a></li>
+                </ul></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children pp-has-submenu">
+                <div class="pp-has-submenu-container">
+                 <a href="https://www.ieeefoundation.org/news/" tabindex="0" role="link"><span class="menu-item-text">News<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="News: submenu" role="button"></span></span></a>
+                </div>
+                <ul class="sub-menu">
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/news/" tabindex="0" role="link"><span class="menu-item-text">News</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/news/foundationfocus/" tabindex="0" role="link"><span class="menu-item-text">IEEE Foundation Focus</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/news/annualreport/" tabindex="0" role="link"><span class="menu-item-text">IEEE Foundation Annual Report</span></a></li>
+                </ul></li>
+               <li class="donate menu-item menu-item-type-custom menu-item-object-custom"><a href="https://secure.ieeefoundation.org/site/Donation2;jsessionid=00000000.app30124a?1400.donation=form1&amp;df_id=1400&amp;mfc_pref=T&amp;NONCE_TOKEN=C39B36563AF61D19A96420614FD1C398" tabindex="0" role="link"><span class="menu-item-text">Donate</span></a></li>
+              </ul>
+             </nav>
+            </div>
+            <div class="pp-advanced-menu-mobile">
+             <button class="pp-advanced-menu-mobile-toggle hamburger" tabindex="0" role="button" aria-label="MENU">
+              <div class="pp-hamburger">
+               <div class="pp-hamburger-box">
+                <div class="pp-hamburger-inner"></div>
+               </div>
+              </div></button>
+            </div>
+            <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse off-canvas">
+             <div class="pp-clear"></div>
+             <nav class="pp-menu-nav pp-off-canvas-menu pp-menu-right" aria-label="Primary Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+              <a href="javascript:void(0)" class="pp-menu-close-btn" aria-label="Close the menu" role="button">×</a>
+              <ul class="menu pp-advanced-menu-horizontal pp-toggle-none">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu">
+                <div class="pp-has-submenu-container">
+                 <a href="https://www.ieeefoundation.org/our-supporters/" tabindex="0" role="link"><span class="menu-item-text">Our Supporters<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="Our Supporters: submenu" role="button"></span></span></a>
+                </div>
+                <ul class="sub-menu">
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/our-supporters/donors/" tabindex="0" role="link"><span class="menu-item-text">Meet our Donors</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/our-supporters/heritage-circle/" tabindex="0" role="link"><span class="menu-item-text">IEEE Heritage Circle</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/our-supporters/ieee-goldsmith-legacy-league/" tabindex="0" role="link"><span class="menu-item-text">Goldsmith Legacy League</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/donor-bill-of-rights/" tabindex="0" role="link"><span class="menu-item-text">Donor Bill of Rights</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/our-supporters/board-of-directors/" tabindex="0" role="link"><span class="menu-item-text">Board of Directors</span></a></li>
+                </ul></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/impact/" tabindex="0" role="link"><span class="menu-item-text">Impact</span></a></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/ways-to-give/" tabindex="0" role="link"><span class="menu-item-text">Ways to Give</span></a></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu">
+                <div class="pp-has-submenu-container">
+                 <a href="https://www.ieeefoundation.org/about/" tabindex="0" role="link"><span class="menu-item-text">About<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="About: submenu" role="button"></span></span></a>
+                </div>
+                <ul class="sub-menu">
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/50th/" tabindex="0" role="link"><span class="menu-item-text">50th Anniversary Celebration</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/about/mission-vision-values/" tabindex="0" role="link"><span class="menu-item-text">Mission/Vision/Values</span></a></li>
+                 <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.ieeefoundation.org/history/" tabindex="0" role="link"><span class="menu-item-text">History</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/about/staff/" tabindex="0" role="link"><span class="menu-item-text">Staff</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/about/financials/" tabindex="0" role="link"><span class="menu-item-text">Financial Information</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/about/governance/" tabindex="0" role="link"><span class="menu-item-text">Governance &amp; Oversight</span></a></li>
+                </ul></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children pp-has-submenu">
+                <div class="pp-has-submenu-container">
+                 <a href="https://www.ieeefoundation.org/news/" tabindex="0" role="link"><span class="menu-item-text">News<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="News: submenu" role="button"></span></span></a>
+                </div>
+                <ul class="sub-menu">
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/news/" tabindex="0" role="link"><span class="menu-item-text">News</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/news/foundationfocus/" tabindex="0" role="link"><span class="menu-item-text">IEEE Foundation Focus</span></a></li>
+                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/news/annualreport/" tabindex="0" role="link"><span class="menu-item-text">IEEE Foundation Annual Report</span></a></li>
+                </ul></li>
+               <li class="donate menu-item menu-item-type-custom menu-item-object-custom"><a href="https://secure.ieeefoundation.org/site/Donation2;jsessionid=00000000.app30124a?1400.donation=form1&amp;df_id=1400&amp;mfc_pref=T&amp;NONCE_TOKEN=C39B36563AF61D19A96420614FD1C398" tabindex="0" role="link"><span class="menu-item-text">Donate</span></a></li>
+              </ul>
+             </nav>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+   <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+    <div class="fl-builder-content fl-builder-content-258 fl-builder-global-templates-locked" data-post-id="258">
+     <div class="fl-row fl-row-full-width fl-row-bg-gradient fl-node-enla72tgypqb fl-row-default-height fl-row-align-center" data-node="enla72tgypqb">
+      <div class="fl-row-content-wrap">
+       <div class="fl-row-content fl-row-fixed-width fl-node-content">
+        <div class="fl-col-group fl-node-sp92zmeciv5h" data-node="sp92zmeciv5h">
+         <div class="fl-col fl-node-zexp432qvho9" data-node="zexp432qvho9">
+          <div class="fl-col-content fl-node-content">
+           <div class="fl-module fl-module-pp-heading fl-node-v5ahi4ye6nzk" data-node="v5ahi4ye6nzk">
+            <div class="fl-module-content fl-node-content">
+             <div class="pp-heading-content">
+              <div class="pp-heading  pp-left">
+               <h1 class="heading-title"><span class="title-text pp-primary-title">News</span></h1>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5acd383a4849b fl-row-default-height fl-row-align-center" data-node="5acd383a4849b">
+      <div class="fl-row-content-wrap">
+       <div class="fl-row-content fl-row-fixed-width fl-node-content">
+        <div class="fl-col-group fl-node-0a64frwcqmxj" data-node="0a64frwcqmxj">
+         <div class="fl-col fl-node-r1hfv8m3w24j" data-node="r1hfv8m3w24j">
+          <div class="fl-col-content fl-node-content">
+           <div class="fl-module fl-module-pp-heading fl-node-ujzawqm3iv17 category-label" data-node="ujzawqm3iv17">
+            <div class="fl-module-content fl-node-content">
+             <div class="pp-heading-content">
+              <div class="pp-heading  pp-left">
+               <span class="heading-title text-inline-block"> <span class="title-text pp-primary-title"><a href="https://www.ieeefoundation.org/category/program-impact/" rel="tag" class="program-impact">Program Impact</a></span> </span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="fl-module fl-module-heading fl-node-5ace2e6803485" data-node="5ace2e6803485">
+            <div class="fl-module-content fl-node-content">
+             <h2 class="fl-heading"><span class="fl-heading-text">Grants Help Volunteers Deliver STEM Programs</span></h2>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="fl-col-group fl-node-ohcg5ubwv78j" data-node="ohcg5ubwv78j">
+         <div class="fl-col fl-node-s0elim5jkfn8" data-node="s0elim5jkfn8">
+          <div class="fl-col-content fl-node-content">
+           <div class="fl-module fl-module-fl-post-info fl-node-5ace2e7ab7c7d" data-node="5ace2e7ab7c7d">
+            <div class="fl-module-content fl-node-content">
+             <span class="fl-post-info-date">28 September 2022</span><span class="fl-post-info-sep"> | </span><span class="fl-post-info-terms"><a href="https://www.ieeefoundation.org/tag/educate/" rel="tag" class="educate">Educate</a>, <a href="https://www.ieeefoundation.org/tag/tryengineering/" rel="tag" class="tryengineering">TryEngineering</a></span>
+            </div>
+           </div>
+           <div class="fl-module fl-module-pp-image fl-node-y3s91u08pbta" data-node="y3s91u08pbta">
+            <div class="fl-module-content fl-node-content">
+             <div class="pp-photo-container">
+              <div class="pp-photo pp-photo-align-left pp-photo-align-responsive-default" itemscope itemtype="http://schema.org/ImageObject">
+               <div class="pp-photo-content">
+                <div class="pp-photo-content-inner">
+                 <picture decoding="async" class="pp-photo-img wp-image-2638 size-full" itemprop="image" title="Copy Of Newsletter Image 317 X 231">
+                  <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/10/Copy-of-Newsletter-Image-317-x-231.jpg.webp" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20317%20231'%3E%3C/svg%3E">
+                  <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20317%20231'%3E%3C/svg%3E" alt="Copy Of Newsletter Image 317 X 231" itemprop="image" height="231" width="317" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2022/10/Copy-of-Newsletter-Image-317-x-231.jpg">
+                 </picture>
+                 <noscript>
+                  <picture decoding="async" class="pp-photo-img wp-image-2638 size-full" itemprop="image" title="Copy Of Newsletter Image 317 X 231">
+                   <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/10/Copy-of-Newsletter-Image-317-x-231.jpg.webp">
+                   <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2022/10/Copy-of-Newsletter-Image-317-x-231.jpg" alt="Copy Of Newsletter Image 317 X 231" itemprop="image" height="231" width="317">
+                  </picture>
+                 </noscript>
+                 <div class="pp-overlay-bg"></div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="fl-module fl-module-fl-post-content fl-node-5acd37d667e72" data-node="5acd37d667e72">
+            <div class="fl-module-content fl-node-content">
+             <p>IEEE Foundation partnered with IEEE Educational Activities and TryEngineering to add a new, impactful fund to the Foundation’s portfolio of funds. Now, IEEE volunteer groups can apply for grants which encourage local IEEE groups to offer STEM events in their community.&nbsp;<br>
+              &nbsp;<br><strong><a href="https://tryengineering.org/" target="_blank" rel="noreferrer noopener">TryEngineering</a></strong>&nbsp;empowers the next generation of technology innovators. Through its&nbsp;<strong><a href="https://tryengineering.org/volunteer-stem-portal/about/" target="_blank" rel="noreferrer noopener">robust STEM web portal</a></strong>, educators and students have access to free resources, lesson plans and activities that engage and inspire pre-university students. In addition to creating and posting the information, TryEngineering now supports IEEE’s technology experts who volunteer to bring these resources to their communities around the world.&nbsp;<br>
+              &nbsp;<br>
+              TryEngineering helps community-based IEEE volunteers to leverage the resources of the TryEngineering portal to meet the needs of their community by delivering innovative, compelling STEM outreach activities in their community. To support IEEE volunteer groups who lack the funds needed to deploy these critically important STEM centered activities, IEEE Educational Activities launched the&nbsp;<strong><a href="https://tryengineering.org/volunteer-stem-portal/stem-portal-grant/" target="_blank" rel="noreferrer noopener">IEEE STEM Outreach Grant program</a></strong>&nbsp;in 2021. Donor support of the new IEEE TryEngineering STEM Outreach Grant Fund of the IEEE Foundation will help scale the number of grants awarded each year to make a larger and more robust impact around the globe.<br>
+              &nbsp;<br>
+              Read about the&nbsp;<strong><a href="https://tryengineering.org/news/ieee-pre-university-stem-portal-grant-recipients-2022/" target="_blank" rel="noreferrer noopener">2022 STEM Portal Grant Recipients</a></strong>. The 2023 grant cycle will begin in January. By&nbsp;<strong><a href="https://www.ieeefoundation.org/pages/what-to-support/tryengineering" target="_blank" rel="noreferrer noopener">donating to TryEngineering</a></strong>&nbsp;you will help provide fresh content to the TryEngineering site and expand its reach and impact through IEEE STEM grants. Thank you for supporting TryEngineering.</p>
+            </div>
+           </div>
+           <div class="fl-module fl-module-pp-heading fl-node-fcwa37h1i59o" data-node="fcwa37h1i59o">
+            <div class="fl-module-content fl-node-content">
+             <div class="pp-heading-content">
+              <div class="pp-heading  pp-left">
+               <h4 class="heading-title"><span class="title-text pp-primary-title">Share This:</span></h4>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="fl-module fl-module-pp-social-share fl-node-f0ay6luk3exd" data-node="f0ay6luk3exd">
+            <div class="fl-module-content fl-node-content">
+             <div class="pp-social-share-content pp-share-buttons-view-icon-text pp-share-buttons-skin-gradient pp-share-buttons-shape-square pp-social-share-col-0 pp-share-buttons-align-left pp-share-buttons-color-official">
+              <div class="pp-social-share-inner">
+               <div class="pp-share-grid-item">
+                <div class="pp-share-button pp-share-button-facebook">
+                 <a class="pp-share-button-link" href="https://www.facebook.com/sharer.php?u=https://www.ieeefoundation.org/grants-help-volunteers-deliver-stem-programs/&amp;title=Grants+Help+Volunteers+Deliver+STEM+Programs"> <span class="pp-share-button-icon"> <i class="fab fa-facebook" aria-hidden="true"></i> <span class="pp-screen-only">Share on Facebook</span> </span>
+                  <div class="pp-share-button-text">
+                   <span class="pp-share-button-title">Facebook</span>
+                  </div></a>
+                </div>
+               </div>
+               <div class="pp-share-grid-item">
+                <div class="pp-share-button pp-share-button-twitter">
+                 <a class="pp-share-button-link" href="https://twitter.com/intent/tweet?url=https://www.ieeefoundation.org/grants-help-volunteers-deliver-stem-programs/&amp;text=Grants+Help+Volunteers+Deliver+STEM+Programs"> <span class="pp-share-button-icon"> <i class="fab fa-twitter" aria-hidden="true"></i> <span class="pp-screen-only">Share on Twitter</span> </span>
+                  <div class="pp-share-button-text">
+                   <span class="pp-share-button-title">Twitter</span>
+                  </div></a>
+                </div>
+               </div>
+               <div class="pp-share-grid-item">
+                <div class="pp-share-button pp-share-button-linkedin">
+                 <a class="pp-share-button-link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ieeefoundation.org/grants-help-volunteers-deliver-stem-programs/&amp;title=Grants+Help+Volunteers+Deliver+STEM+Programs"> <span class="pp-share-button-icon"> <i class="fab fa-linkedin" aria-hidden="true"></i> <span class="pp-screen-only">Share on Linkedin</span> </span>
+                  <div class="pp-share-button-text">
+                   <span class="pp-share-button-title">Linkedin</span>
+                  </div></a>
+                </div>
+               </div>
+               <div class="pp-share-grid-item">
+                <div class="pp-share-button pp-share-button-email">
+                 <a class="pp-share-button-link" href="mailto:?body=https://www.ieeefoundation.org/grants-help-volunteers-deliver-stem-programs/"> <span class="pp-share-button-icon"> <i class="fas fa-envelope" aria-hidden="true"></i> <span class="pp-screen-only">Share on Email</span> </span>
+                  <div class="pp-share-button-text">
+                   <span class="pp-share-button-title">Email</span>
+                  </div></a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="fl-col fl-node-xslwmbp143ny fl-col-small" data-node="xslwmbp143ny">
+          <div class="fl-col-content fl-node-content">
+           <div class="fl-module fl-module-pp-heading fl-node-t19qwkoreyj3" data-node="t19qwkoreyj3">
+            <div class="fl-module-content fl-node-content">
+             <div class="pp-heading-content">
+              <div class="pp-heading  pp-left">
+               <h5 class="heading-title"><span class="title-text pp-primary-title">Related Stories</span></h5>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="fl-module fl-module-pp-content-grid fl-node-n1vl8baqzou2" data-node="n1vl8baqzou2">
+            <div class="fl-module-content fl-node-content">
+             <div class="pp-posts-wrapper">
+              <div class="pp-content-posts">
+               <div class="pp-content-post-grid pp-masonry-active clearfix" itemscope itemtype="https://schema.org/Blog">
+                <div class="pp-content-post pp-content-grid-post pp-grid-default post-5573 post type-post status-publish format-standard has-post-thumbnail hentry category-program-impact tag-fellowships tag-history-center tag-life-members" itemscope itemtype="https://schema.org/BlogPosting" data-id="5573">
+                 <meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.ieeefoundation.org/2023-24-ieee-life-member-history-fellowship-winner-named/" content="2023/24 IEEE Life Member History Fellowship Winner Named">
+                 <meta itemprop="datePublished" content="2023-07-13">
+                 <meta itemprop="dateModified" content="2023-07-13">
+                 <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                  <meta itemprop="name" content="IEEE Foundation, Inc.">
+                 </div>
+                 <div itemscope itemprop="author" itemtype="https://schema.org/Person">
+                  <meta itemprop="url" content="https://www.ieeefoundation.org/author/k-galuchie/">
+                  <meta itemprop="name" content="Karen Galuchie">
+                 </div>
+                 <div itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
+                  <meta itemprop="url" content="https://www.ieeefoundation.org/wp-content/uploads/2023/07/2023-24-History-Fellowship-winner-Aaron-Gluck-Thaler.png">
+                  <meta itemprop="width" content="400">
+                  <meta itemprop="height" content="379">
+                 </div>
+                 <div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="https://schema.org/CommentAction">
+                  <meta itemprop="userInteractionCount" content="0">
+                 </div><a class="pp-post-link" href="https://www.ieeefoundation.org/2023-24-ieee-life-member-history-fellowship-winner-named/" title="2023/24 IEEE Life Member History Fellowship Winner Named"></a>
+                 <div class="pp-content-grid-image pp-post-image">
+                  <div class="pp-post-featured-img">
+                   <div class="fl-photo fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+                    <div class="fl-photo-content fl-photo-img-png">
+                     <picture decoding="async" class="fl-photo-img wp-image-5574 size-full pp-post-img no-lazyload" itemprop="image" data-no-lazy="1" title="2023 24 History Fellowship Winner Aaron Gluck Thaler">
+                      <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2023/07/2023-24-History-Fellowship-winner-Aaron-Gluck-Thaler.png.webp">
+                      <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2023/07/2023-24-History-Fellowship-winner-Aaron-Gluck-Thaler.png" alt="2023 24 History Fellowship Winner Aaron Gluck Thaler" itemprop="image" data-no-lazy="1" height="379" width="400">
+                     </picture>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="pp-content-grid-inner pp-content-body clearfix">
+                  <div class="pp-content-post-data">
+                   <h4 class="pp-content-grid-title pp-post-title" itemprop="headline">2023/24 IEEE Life Member History Fellowship Winner Named</h4>
+                  </div>
+                 </div>
+                </div>
+                <div class="pp-content-post pp-content-grid-post pp-post-2n pp-grid-default post-5543 post type-post status-publish format-standard has-post-thumbnail hentry category-program-impact tag-education tag-ieee-smart-village" itemscope itemtype="https://schema.org/BlogPosting" data-id="5543">
+                 <meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.ieeefoundation.org/ieee-smart-village-preparing-students-to-be-productive-participants-in-increasingly-technology-based-economies/" content="IEEE Smart Village: Preparing Students to Be Productive Participants in Increasingly Technology-Based Economies">
+                 <meta itemprop="datePublished" content="2023-07-05">
+                 <meta itemprop="dateModified" content="2023-07-05">
+                 <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                  <meta itemprop="name" content="IEEE Foundation, Inc.">
+                 </div>
+                 <div itemscope itemprop="author" itemtype="https://schema.org/Person">
+                  <meta itemprop="url" content="https://www.ieeefoundation.org/author/k-galuchie/">
+                  <meta itemprop="name" content="Karen Galuchie">
+                 </div>
+                 <div itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
+                  <meta itemprop="url" content="https://www.ieeefoundation.org/wp-content/uploads/2023/07/IMG20230408100556-scaled.jpg">
+                  <meta itemprop="width" content="2048">
+                  <meta itemprop="height" content="921">
+                 </div>
+                 <div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="https://schema.org/CommentAction">
+                  <meta itemprop="userInteractionCount" content="0">
+                 </div><a class="pp-post-link" href="https://www.ieeefoundation.org/ieee-smart-village-preparing-students-to-be-productive-participants-in-increasingly-technology-based-economies/" title="IEEE Smart Village: Preparing Students to Be Productive Participants in Increasingly Technology-Based Economies"></a>
+                 <div class="pp-content-grid-image pp-post-image">
+                  <div class="pp-post-featured-img">
+                   <div class="fl-photo fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+                    <div class="fl-photo-content fl-photo-img-jpg">
+                     <picture decoding="async" class="fl-photo-img wp-image-5544 size-full pp-post-img no-lazyload" itemprop="image" data-no-lazy="1" title="IMG20230408100556">
+                      <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2023/07/IMG20230408100556-scaled.jpg.webp 2048w, https://www.ieeefoundation.org/wp-content/uploads/2023/07/IMG20230408100556-768x345.jpg.webp 768w" sizes="(max-width: 2048px) 100vw, 2048px">
+                      <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2023/07/IMG20230408100556-scaled.jpg" alt="IMG20230408100556" itemprop="image" data-no-lazy="1" height="921" width="2048" srcset="https://www.ieeefoundation.org/wp-content/uploads/2023/07/IMG20230408100556-scaled.jpg 2048w, https://www.ieeefoundation.org/wp-content/uploads/2023/07/IMG20230408100556-768x345.jpg 768w" sizes="(max-width: 2048px) 100vw, 2048px">
+                     </picture>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="pp-content-grid-inner pp-content-body clearfix">
+                  <div class="pp-content-post-data">
+                   <h4 class="pp-content-grid-title pp-post-title" itemprop="headline"><strong>IEEE Smart Village: Preparing Students to Be Productive Participants in Increasingly Technology-Based Economies</strong></h4>
+                  </div>
+                 </div>
+                </div>
+                <div class="pp-content-post pp-content-grid-post pp-grid-default post-5433 post type-post status-publish format-standard has-post-thumbnail hentry category-program-impact tag-educate tag-education tag-eta-kappa-nu tag-hkn tag-scholarship tag-scholarships" itemscope itemtype="https://schema.org/BlogPosting" data-id="5433">
+                 <meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.ieeefoundation.org/moving-forward-and-giving-back/" content="Moving Forward and Giving Back">
+                 <meta itemprop="datePublished" content="2023-06-26">
+                 <meta itemprop="dateModified" content="2023-06-28">
+                 <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                  <meta itemprop="name" content="IEEE Foundation, Inc.">
+                 </div>
+                 <div itemscope itemprop="author" itemtype="https://schema.org/Person">
+                  <meta itemprop="url" content="https://www.ieeefoundation.org/author/patricia-cats/">
+                  <meta itemprop="name" content="Patricia Cats">
+                 </div>
+                 <div itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
+                  <meta itemprop="url" content="https://www.ieeefoundation.org/wp-content/uploads/2023/06/smaller-dan.jpg">
+                  <meta itemprop="width" content="500">
+                  <meta itemprop="height" content="333">
+                 </div>
+                 <div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
+                  <meta itemprop="interactionType" content="https://schema.org/CommentAction">
+                  <meta itemprop="userInteractionCount" content="0">
+                 </div><a class="pp-post-link" href="https://www.ieeefoundation.org/moving-forward-and-giving-back/" title="Moving Forward and Giving Back"></a>
+                 <div class="pp-content-grid-image pp-post-image">
+                  <div class="pp-post-featured-img">
+                   <div class="fl-photo fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+                    <div class="fl-photo-content fl-photo-img-jpg">
+                     <picture decoding="async" class="fl-photo-img wp-image-5497 size-full pp-post-img no-lazyload" itemprop="image" data-no-lazy="1" title="Smaller Dan">
+                      <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2023/06/smaller-dan.jpg.webp">
+                      <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2023/06/smaller-dan.jpg" alt="Smaller Dan" itemprop="image" data-no-lazy="1" height="333" width="500">
+                     </picture>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="pp-content-grid-inner pp-content-body clearfix">
+                  <div class="pp-content-post-data">
+                   <h4 class="pp-content-grid-title pp-post-title" itemprop="headline">Moving Forward and Giving Back</h4>
+                  </div>
+                 </div>
+                </div>
+                <div class="pp-grid-space"></div>
+               </div>
+               <div class="fl-clear"></div>
+              </div><!-- .pp-content-posts -->
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div><!-- .fl-page-content -->
+   <footer class="fl-builder-content fl-builder-content-934 fl-builder-global-templates-locked" data-post-id="934" data-type="footer" itemscope itemtype="http://schema.org/WPFooter">
+    <div class="fl-row fl-row-full-width fl-row-bg-color fl-node-jdq4f83v0hlr fl-row-default-height fl-row-align-center" data-node="jdq4f83v0hlr">
+     <div class="fl-row-content-wrap">
+      <div class="fl-row-content fl-row-fixed-width fl-node-content">
+       <div class="fl-col-group fl-node-hxi3eypjbdac fl-col-group-equal-height fl-col-group-align-top fl-col-group-custom-width" data-node="hxi3eypjbdac">
+        <div class="fl-col fl-node-407umzwj316q fl-col-small fl-col-small-custom-width fl-col-has-cols" data-node="407umzwj316q">
+         <div class="fl-col-content fl-node-content">
+          <div class="fl-module fl-module-pp-image fl-node-25zisqrdfg07" data-node="25zisqrdfg07">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-photo-container">
+             <div class="pp-photo pp-photo-align-left pp-photo-align-responsive-left" itemscope itemtype="http://schema.org/ImageObject">
+              <div class="pp-photo-content">
+               <div class="pp-photo-content-inner">
+                <picture decoding="async" class="pp-photo-img wp-image-2926 size-full" itemprop="image" title="21 FOUN 2003 New Wordmark WHITE">
+                 <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/10/21-FOUN-2003_new_wordmark_WHITE.png.webp" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20292%2066'%3E%3C/svg%3E">
+                 <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20292%2066'%3E%3C/svg%3E" alt="21 FOUN 2003 New Wordmark WHITE" itemprop="image" height="66" width="292" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2022/10/21-FOUN-2003_new_wordmark_WHITE.png">
+                </picture>
+                <noscript>
+                 <picture decoding="async" class="pp-photo-img wp-image-2926 size-full" itemprop="image" title="21 FOUN 2003 New Wordmark WHITE">
+                  <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/10/21-FOUN-2003_new_wordmark_WHITE.png.webp">
+                  <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2022/10/21-FOUN-2003_new_wordmark_WHITE.png" alt="21 FOUN 2003 New Wordmark WHITE" itemprop="image" height="66" width="292">
+                 </picture>
+                </noscript>
+                <div class="pp-overlay-bg"></div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="fl-module fl-module-rich-text fl-node-fbxoeha31kj6" data-node="fbxoeha31kj6">
+           <div class="fl-module-content fl-node-content">
+            <div class="fl-rich-text">
+             <p>445 Hoes Lane, Piscataway, NJ 08854, U.S.A.<br>
+               Phone: +1 732-562-5349<br><a href="mailto:donate@ieee.org">Email: donate@ieee.org</a><br>
+               EIN 23-7310664</p>
+            </div>
+           </div>
+          </div>
+          <div class="fl-col-group fl-node-z04ondi3qavs fl-col-group-nested fl-col-group-custom-width" data-node="z04ondi3qavs">
+           <div class="fl-col fl-node-p4r5oke0hm1z fl-col-small fl-col-small-custom-width" data-node="p4r5oke0hm1z">
+            <div class="fl-col-content fl-node-content">
+             <div class="fl-module fl-module-pp-image fl-node-o5nlms9dugy2 float-left" data-node="o5nlms9dugy2">
+              <div class="fl-module-content fl-node-content">
+               <div class="pp-photo-container">
+                <div class="pp-photo pp-photo-align-left pp-photo-align-responsive-left" itemscope itemtype="http://schema.org/ImageObject">
+                 <div class="pp-photo-content">
+                  <div class="pp-photo-content-inner">
+                   <a href="https://www.guidestar.org/profile/23-7310664" target="_blank" itemprop="url" rel="noopener"> <picture decoding="async" class="pp-photo-img wp-image-5101 size-full" itemprop="image" title="Candid Seal Platinum 2023">
+                     <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/08/candid-seal-platinum-2023.png.webp 522w" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20522%20522'%3E%3C/svg%3E" data-lazy-sizes="(max-width: 522px) 100vw, 522px">
+                     <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20522%20522'%3E%3C/svg%3E" alt="Candid Seal Platinum 2023" itemprop="image" height="522" width="522" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/08/candid-seal-platinum-2023.png 522w, https://www.ieeefoundation.org/wp-content/uploads/2022/08/candid-seal-platinum-2023-150x150.png 150w" data-lazy-sizes="(max-width: 522px) 100vw, 522px" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2022/08/candid-seal-platinum-2023.png">
+                    </picture>
+                    <noscript>
+                     <picture decoding="async" class="pp-photo-img wp-image-5101 size-full" itemprop="image" title="Candid Seal Platinum 2023">
+                      <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/08/candid-seal-platinum-2023.png.webp 522w" sizes="(max-width: 522px) 100vw, 522px">
+                      <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2022/08/candid-seal-platinum-2023.png" alt="Candid Seal Platinum 2023" itemprop="image" height="522" width="522" srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/08/candid-seal-platinum-2023.png 522w, https://www.ieeefoundation.org/wp-content/uploads/2022/08/candid-seal-platinum-2023-150x150.png 150w" sizes="(max-width: 522px) 100vw, 522px">
+                     </picture>
+                    </noscript>
+                    <div class="pp-overlay-bg"></div></a>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="fl-col fl-node-exhsp7i81g24 fl-col-small-custom-width" data-node="exhsp7i81g24">
+            <div class="fl-col-content fl-node-content">
+             <div class="fl-module fl-module-pp-image fl-node-04kwlycta9db" data-node="04kwlycta9db">
+              <div class="fl-module-content fl-node-content">
+               <div class="pp-photo-container">
+                <div class="pp-photo pp-photo-align-left pp-photo-align-responsive-left" itemscope itemtype="http://schema.org/ImageObject">
+                 <div class="pp-photo-content">
+                  <div class="pp-photo-content-inner">
+                   <a href="https://www.charitynavigator.org/ein/237310664" target="_blank" itemprop="url" rel="noopener"> <picture decoding="async" class="pp-photo-img wp-image-3400 size-full" itemprop="image" title="Four Star Rating Badge Full Color">
+                     <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color.png.webp 2000w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-1400x1400.png.webp 1400w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-768x768.png.webp 768w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-760x760.png.webp 760w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-1536x1536.png.webp 1536w" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202000%202000'%3E%3C/svg%3E" data-lazy-sizes="(max-width: 2000px) 100vw, 2000px">
+                     <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202000%202000'%3E%3C/svg%3E" alt="Four Star Rating Badge Full Color" itemprop="image" height="2000" width="2000" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color.png 2000w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-1400x1400.png 1400w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-150x150.png 150w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-768x768.png 768w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-760x760.png 760w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-1536x1536.png 1536w" data-lazy-sizes="(max-width: 2000px) 100vw, 2000px" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color.png">
+                    </picture>
+                    <noscript>
+                     <picture decoding="async" class="pp-photo-img wp-image-3400 size-full" itemprop="image" title="Four Star Rating Badge Full Color">
+                      <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color.png.webp 2000w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-1400x1400.png.webp 1400w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-768x768.png.webp 768w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-760x760.png.webp 760w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-1536x1536.png.webp 1536w" sizes="(max-width: 2000px) 100vw, 2000px">
+                      <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color.png" alt="Four Star Rating Badge Full Color" itemprop="image" height="2000" width="2000" srcset="https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color.png 2000w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-1400x1400.png 1400w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-150x150.png 150w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-768x768.png 768w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-760x760.png 760w, https://www.ieeefoundation.org/wp-content/uploads/2022/12/Four-Star-Rating-Badge-Full-Color-1536x1536.png 1536w" sizes="(max-width: 2000px) 100vw, 2000px">
+                     </picture>
+                    </noscript>
+                    <div class="pp-overlay-bg"></div></a>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="fl-col fl-node-p3cfdqg1hkmo fl-col-small fl-col-small-custom-width fl-col-has-cols" data-node="p3cfdqg1hkmo">
+         <div class="fl-col-content fl-node-content">
+          <div class="fl-col-group fl-node-f8sg6yzjwk1c fl-col-group-nested" data-node="f8sg6yzjwk1c">
+           <div class="fl-col fl-node-olxi4r5zkp7n fl-col-small" data-node="olxi4r5zkp7n">
+            <div class="fl-col-content fl-node-content">
+             <div class="fl-module fl-module-button fl-node-up1a47zdir03" data-node="up1a47zdir03">
+              <div class="fl-module-content fl-node-content">
+               <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                <a href="https://www.ieeefoundation.org/ways-to-give/" target="_self" class="fl-button"> <span class="fl-button-text">Give</span> </a>
+               </div>
+              </div>
+             </div>
+             <div class="fl-module fl-module-button fl-node-y7rg5we4v2l3" data-node="y7rg5we4v2l3">
+              <div class="fl-module-content fl-node-content">
+               <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                <a href="https://www.ieeefoundation.org/impact/" target="_self" class="fl-button"> <span class="fl-button-text">Learn</span> </a>
+               </div>
+              </div>
+             </div>
+             <div class="fl-module fl-module-button fl-node-7qb2f80j49xh" data-node="7qb2f80j49xh">
+              <div class="fl-module-content fl-node-content">
+               <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                <a href="https://www.ieeefoundation.org/about/establish-an-ieee-foundation-fund/" target="_self" class="fl-button"> <span class="fl-button-text">Establish a Fund</span> </a>
+               </div>
+              </div>
+             </div>
+             <div class="fl-module fl-module-button fl-node-dh6gxk4froye" data-node="dh6gxk4froye">
+              <div class="fl-module-content fl-node-content">
+               <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                <a href="https://www.ieeefoundation.org/funding-requests/" target="_self" class="fl-button"> <span class="fl-button-text">Funding Requests</span> </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="fl-col fl-node-q4ni5f9augwm fl-col-small" data-node="q4ni5f9augwm">
+            <div class="fl-col-content fl-node-content">
+             <div class="fl-module fl-module-button fl-node-0dv5rjfaliy1" data-node="0dv5rjfaliy1">
+              <div class="fl-module-content fl-node-content">
+               <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                <a href="https://www.ieeefoundation.org/brand-toolkit/" target="_self" class="fl-button"> <span class="fl-button-text">Brand Toolkit</span> </a>
+               </div>
+              </div>
+             </div>
+             <div class="fl-module fl-module-button fl-node-d2kqwu8m3g5n" data-node="d2kqwu8m3g5n">
+              <div class="fl-module-content fl-node-content">
+               <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                <a href="https://ethw.org/IEEE_Foundation_History" target="_blank" class="fl-button" rel="noopener"> <span class="fl-button-text">Newsletter Archive</span> </a>
+               </div>
+              </div>
+             </div>
+             <div class="fl-module fl-module-button fl-node-10rbf784emkq" data-node="10rbf784emkq">
+              <div class="fl-module-content fl-node-content">
+               <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                <a href="https://www.ieeefoundation.org/faqs/" target="_self" class="fl-button"> <span class="fl-button-text">FAQs</span> </a>
+               </div>
+              </div>
+             </div>
+             <div class="fl-module fl-module-button fl-node-dmtf4yk0bxlq" data-node="dmtf4yk0bxlq">
+              <div class="fl-module-content fl-node-content">
+               <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                <a href="https://www.ieeefoundation.org/contact/" target="_self" class="fl-button"> <span class="fl-button-text">CONTACT</span> </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="fl-col fl-node-q0ybpv1e283t fl-col-small fl-col-small-custom-width social-column" data-node="q0ybpv1e283t">
+         <div class="fl-col-content fl-node-content">
+          <div class="fl-module fl-module-pp-heading fl-node-10zs79egichn clear" data-node="10zs79egichn">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-heading-content">
+             <div class="pp-heading  pp-left">
+              <h4 class="heading-title"><span class="title-text pp-primary-title">Stay Connected</span></h4>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="fl-module fl-module-bbwp-social-menu fl-node-dm891kopya6j float-left" data-node="dm891kopya6j">
+           <div class="fl-module-content fl-node-content">
+            <nav class="bbi-nav-social bbi-nav-social-center">
+             <ul class="bbi-nav">
+              <li class="item with-title"><a href="https://www.linkedin.com/company/ieee-foundation" class="title" target="_blank"> <i class="fab fa-linkedin-in" title="LinkedIn"></i> <span class="sr-only">Visit our LinkedIn page</span> </a></li>
+              <li class="item with-title"><a href="https://www.facebook.com/IEEEFoundation" class="title" target="_blank"> <i class="fab fa-facebook-f" title="Facebook"></i> <span class="sr-only">Visit our Facebook page</span> </a></li>
+              <li class="item with-title"><a href="https://twitter.com/IEEEFoundation" class="title" target="_blank"> <i class="fab fa-twitter" title="Twitter"></i> <span class="sr-only">Visit our Twitter page</span> </a></li>
+              <li class="item with-title"><a href="https://vimeo.com/ieeefoundation" class="title" target="_blank"> <i class="fab fa-vimeo-v" title="Vimeo"></i> <span class="sr-only">Visit our Vimeo page</span> </a></li>
+             </ul>
+            </nav><!-- blogger-b : Blogger
+blogger : Blogger (Square Icon)
+facebook-f : Facebook
+facebook : Facebook (Square Icon)
+flickr : Flickr
+google-plus-g : Google+
+google-plus : Google+ (Circle Icon)
+google-plus-square : Google+ (Square Icon)
+instagram : Instagram
+linkedin-in : LinkedIn
+linkedin : LinkedIn (Square Icon)
+pinterest-p : Pinterest
+pinterest-square : Pinterest (Square Icon)
+pinterest : Pinterest (Circle Icon)
+tumblr : Tumblr
+tumblr-square : Tumblr (Square Icon)
+twitter : Twitter
+twitter-square : Twitter (Square Icon)
+vimeo-v : Vimeo
+vimeo-square : Vimeo (Square Icon)
+wordpress : WordPress
+youtube : YouTube
+youtube-square : YouTube (Square Icon) --> <!-- blogger-b : &f37d; Blogger
+blogger : &f37c; Blogger (Square Icon)
+facebook-f : &#xf230; Facebook
+facebook-square : &#xf082; Facebook (Square Icon)
+flickr : &#xf16e; Flickr
+google-plus-g : &#xf2b3; Google+
+google-plus : &#xf2b3; Google+ (Circle Icon)
+google-plus-square : &#xf0d4; Google+ (Square Icon)
+instagram : &#xf16d; Instagram
+linkedin-in : &#xf0e1; LinkedIn
+linkedin : &#xf08c; LinkedIn (Square Icon)
+pinterest-p : &#xf231; Pinterest
+pinterest-square : &#xf0d3; Pinterest (Square Icon)
+pinterest : &#xf0d2; Pinterest (Circle Icon)
+tumblr : &#xf173; Tumblr
+tumblr-square : &#xf174; Tumblr (Square Icon)
+twitter : &#xf099; Twitter
+twitter-square : &#xf081; Twitter (Square Icon)
+vimeo-v : &#xf27d; Vimeo
+vimeo-square : &#xf194; Vimeo (Square Icon)
+wordpress : &#xf19a; WordPress
+youtube : &#xf167; YouTube
+youtube-square : &#xf431; YouTube (Square Icon) -->
+           </div>
+          </div>
+          <div id="ct" class="fl-module fl-module-pp-image fl-node-n91suivbfhq2 float-left" data-node="n91suivbfhq2">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-photo-container">
+             <div class="pp-photo pp-photo-align-center pp-photo-align-responsive-default" itemscope itemtype="http://schema.org/ImageObject">
+              <div class="pp-photo-content">
+               <div class="pp-photo-content-inner">
+                <a href="https://ieee-collabratec.ieee.org/app/community/75/IEEE-Foundation/activities" target="_blank" itemprop="url" rel="noopener"> <picture decoding="async" class="pp-photo-img wp-image-2142 size-full" itemprop="image" title="Ct Icon">
+                  <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2018/09/ct-icon.png.webp" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2083%2098'%3E%3C/svg%3E">
+                  <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2083%2098'%3E%3C/svg%3E" alt="CT Icon" itemprop="image" height="98" width="83" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2018/09/ct-icon.png">
+                 </picture>
+                 <noscript>
+                  <picture decoding="async" class="pp-photo-img wp-image-2142 size-full" itemprop="image" title="Ct Icon">
+                   <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2018/09/ct-icon.png.webp">
+                   <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2018/09/ct-icon.png" alt="CT Icon" itemprop="image" height="98" width="83">
+                  </picture>
+                 </noscript>
+                 <div class="pp-overlay-bg"></div></a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="fl-module fl-module-button fl-node-hnd2e1p7cwli clear" data-node="hnd2e1p7cwli">
+           <div class="fl-module-content fl-node-content">
+            <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+             <a href="http://secure.ieeefoundation.org/site/Survey?ACTION_REQUIRED=URI_ACTION_USER_REQUESTS&amp;SURVEY_ID=1162" target="_self" class="fl-button"> <span class="fl-button-text">Receive IEEE Foundation News</span> </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="fl-row fl-row-full-width fl-row-bg-color fl-node-97mzriwcex6l fl-row-default-height fl-row-align-center" data-node="97mzriwcex6l">
+     <div class="fl-row-content-wrap">
+      <div class="fl-row-content fl-row-fixed-width fl-node-content">
+       <div class="fl-col-group fl-node-clkwn3ev148h" data-node="clkwn3ev148h">
+        <div class="fl-col fl-node-b3dz4cfa8wvj" data-node="b3dz4cfa8wvj">
+         <div class="fl-col-content fl-node-content">
+          <div class="fl-module fl-module-pp-line-separator fl-node-56gtef94mwch" data-node="56gtef94mwch">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-line-separator-wrap">
+             <div class="pp-line-separator-inner pp-line-only">
+              <span class="pp-line-separator pp-line-only"></span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="fl-col-group fl-node-2gzn6rl5fd9e fl-col-group-equal-height fl-col-group-align-center" data-node="2gzn6rl5fd9e">
+        <div class="fl-col fl-node-p0l8bvfasd76" data-node="p0l8bvfasd76">
+         <div class="fl-col-content fl-node-content">
+          <div class="fl-module fl-module-pp-advanced-menu fl-node-lb4hjd93s8mu" data-node="lb4hjd93s8mu">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse pp-menu-default pp-menu-align-left">
+             <div class="pp-clear"></div>
+             <nav class="pp-menu-nav" aria-label="Footer Utility" itemscope itemtype="https://schema.org/SiteNavigationElement">
+              <ul class="menu pp-advanced-menu-horizontal pp-toggle-arrows">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://www.ieeefoundation.org/" tabindex="0" role="link"><span class="menu-item-text">Home</span></a></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/contact/" tabindex="0" role="link"><span class="menu-item-text">Contact</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.ieee.org/accessibility_statement.html" tabindex="0" role="link"><span class="menu-item-text">Accessibility</span></a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.ieee.org/p9-26.html" tabindex="0" role="link"><span class="menu-item-text">Nondiscrimination Policy</span></a></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy"><a href="https://www.ieeefoundation.org/privacy-policy/" tabindex="0" role="link"><span class="menu-item-text">Privacy Policy</span></a></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ieeefoundation.org/disclosures/" tabindex="0" role="link"><span class="menu-item-text">Disclosures</span></a></li>
+              </ul>
+             </nav>
+            </div>
+           </div>
+          </div>
+          <div class="fl-module fl-module-rich-text fl-node-b1rwzx4ldhmv" data-node="b1rwzx4ldhmv">
+           <div class="fl-module-content fl-node-content">
+            <div class="fl-rich-text">
+             <p>© Copyright 2023 IEEE – All rights reserved. Use of this Web site signifies your agreement to the <a href="http://www.ieee.org/site_terms_conditions.html" target="_blank" rel="noopener">IEEE Terms and Conditions</a>.<br>
+               A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="fl-col fl-node-ebwta87gunrc fl-col-small" data-node="ebwta87gunrc">
+         <div class="fl-col-content fl-node-content">
+          <div class="fl-module fl-module-pp-image fl-node-57ucowvpxbrm" data-node="57ucowvpxbrm">
+           <div class="fl-module-content fl-node-content">
+            <div class="pp-photo-container">
+             <div class="pp-photo pp-photo-align-right pp-photo-align-responsive-left" itemscope itemtype="http://schema.org/ImageObject">
+              <div class="pp-photo-content">
+               <div class="pp-photo-content-inner">
+                <picture decoding="async" class="pp-photo-img wp-image-1681 size-full" itemprop="image" title="IEEE MB White RGB">
+                 <source type="image/webp" data-lazy-srcset="https://www.ieeefoundation.org/wp-content/uploads/2018/09/IEEE_MB_white_RGB.png.webp" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20117'%3E%3C/svg%3E">
+                 <img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20117'%3E%3C/svg%3E" alt="IEEE" itemprop="image" height="117" width="400" data-lazy-src="https://www.ieeefoundation.org/wp-content/uploads/2018/09/IEEE_MB_white_RGB.png">
+                </picture>
+                <noscript>
+                 <picture decoding="async" class="pp-photo-img wp-image-1681 size-full" itemprop="image" title="IEEE MB White RGB">
+                  <source type="image/webp" srcset="https://www.ieeefoundation.org/wp-content/uploads/2018/09/IEEE_MB_white_RGB.png.webp">
+                  <img decoding="async" src="https://www.ieeefoundation.org/wp-content/uploads/2018/09/IEEE_MB_white_RGB.png" alt="IEEE" itemprop="image" height="117" width="400">
+                 </picture>
+                </noscript>
+                <div class="pp-overlay-bg"></div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div><!-- .fl-page -->
+  <script type="rocketlazyloadscript">
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script><a href="#" id="fl-to-top"><span class="sr-only">Scroll To Top</span><i class="fas fa-chevron-up" aria-hidden="true"></i></a>
+  <script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script>
+  <script src="https://www.ieeefoundation.org/wp-content/plugins/bb-plugin/js/jquery.ba-throttle-debounce.min.js?ver=2.7.1" id="jquery-throttle-js" defer></script>
+  <script src="https://www.ieeefoundation.org/wp-content/plugins/bb-plugin/js/jquery.fitvids.min.js?ver=1.2" id="jquery-fitvids-js" defer></script>
+  <script src="https://www.ieeefoundation.org/wp-content/plugins/bbpowerpack/assets/js/isotope.pkgd.min.js?ver=3.0.1" id="jquery-isotope-js" defer></script>
+  <script src="https://www.ieeefoundation.org/wp-content/uploads/bb-plugin/cache/22d6a5b848f4512829d15d79711d8379-layout-bundle.js?ver=2.7.1-1.4.6.2" id="fl-builder-layout-bundle-22d6a5b848f4512829d15d79711d8379-js"></script>
+  <script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+  <script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/login|\/bb-login|\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.ieeefoundation.org","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+  <script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+  <script src="https://www.ieeefoundation.org/wp-content/plugins/bb-plugin/js/jquery.magnificpopup.min.js?ver=2.7.1" id="jquery-magnificpopup-js"></script>
+  <script id="fl-automator-js-extra">
+var themeopts = {"medium_breakpoint":"992","mobile_breakpoint":"768","scrollTopPosition":"800"};
+</script>
+  <script type="rocketlazyloadscript" data-rocket-src="https://www.ieeefoundation.org/wp-content/themes/bb-theme/js/theme.min.js?ver=1.7.13" id="fl-automator-js" defer></script>
+  <script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.ieeefoundation.org/wp-content/cache/min/1/bootstrap/3.4.1/js/bootstrap.min.js?ver=1689788787" id="bootstrap-js" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script><!-- fde7478964242c542017d9127fa8cf23 -->
+  <script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script>
+  <script data-no-minify="1" async src="https://www.ieeefoundation.org/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+  <script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+  <script type="rocketlazyloadscript">(function(d){var s = d.createElement("script");s.setAttribute("data-account", "ygVy4bzdIV");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script>
+  <noscript>
+   Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a>
+  </noscript><!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1690375463 -->
+ </body>
+</html>

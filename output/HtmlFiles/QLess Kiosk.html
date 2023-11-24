@@ -1,0 +1,648 @@
+<!doctype html>
+<html id="appTop" lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="initial-scale=1.0,minimal-ui=true">
+  <link rel="shortcut icon" href="/kiosk/res/images/q.ico?b=2.91.0">
+  <title data-bind="text: docTitle">QLess Kiosk</title>
+  <script>
+			window.dataLayer = window.dataLayer || [];
+		</script><!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+				w[l] = w[l] || []; w[l].push({
+					'gtm.start':
+						new Date().getTime(), event: 'gtm.js'
+				}); var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+						'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-K2H5P6D');</script><!-- End Google Tag Manager -->
+  <script src="/kiosk/res/js/app/iemobile10Fix.js?b=2.91.0"></script>
+  <link rel="stylesheet" href="/qless/css/opensans/opensans.css?b=2.91.0">
+  <link rel="stylesheet" href="/kiosk/res/css/kiosk.css?b=2.91.0">
+  <link rel="stylesheet" href="/kiosk/res/css/kiosk_desktop.css?b=2.91.0" media="screen and (min-width: 600px)">
+  <link rel="stylesheet" href="/kiosk/res/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="/kiosk/res/css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" id="themestyle">
+  <link rel="stylesheet" id="queuestyle">
+  <script>
+			window._dc = 'ms_1690384225663';
+			window.isHomeKiosk = true;
+			window.locationId = '19643';
+			window.appVersion = '2.91.0';
+			//window.appVersion = '';
+			window.appletVersion = '1.1a2.11.0';
+			window.rescheduleApptCode = '';
+			window.rescheduleApptStatus = '';
+		</script>
+  <script src="/kiosk/res/js/misc/polyfills.js?b=2.91.0"></script>
+  <script src="/kiosk/res/js/misc/deployJava.js?b=2.91.0"></script>
+  <script src="/kiosk/res/js/misc/JsBarcode.all.min.js?b=2.91.0"></script>
+  <script src="https://cdn.ravenjs.com/3.25.2/raven.min.js?b=2.91.0" crossorigin="anonymous"></script>
+  <script src="/kiosk/res/js/misc/raven.js?b=2.91.0"></script>
+  <script>
+			// Configure RequireJS to append cache-busting parameter
+			// when requesting  resources (such as the main script via `data-main`)
+			// See https://requirejs.org/docs/api.html#config-urlArgs
+			require = { urlArgs: "b=2.91.0" };
+		</script>
+  <script data-main="/kiosk/res/js/main.js" src="/kiosk/res/js/misc/require-2.3.5.min.js?b=2.91.0"></script>
+ </head>
+ <body id="body" class="is-preload" data-bind="css: bodyClass">
+  <noscript>
+   Please enable JavaScript in order to use this application.
+  </noscript>
+  <div class="logo-loader-container">
+   <img class="logo-loader" id="logoLoader" src="/kiosk/res/images/blank.gif" alt="Loading location logo" aria-hidden="true">
+  </div>
+  <div class="wrapper">
+   <div class="kiosk-status" data-bind="text: kioskStatusMessage"></div>
+   <header class="branding">
+    <a target="_self" class="header-logo" title="QLess" data-bind="attr: { 'href': logoLink(), 'target': logoLinkTarget() }"> <span>QLess</span> </a> <span class="location-title" id="locationTitle" data-bind="html: locationDesc"></span> <span class="location-name is-hidden" id="locationName" data-bind="html: locationName"></span>
+   </header><!-- ko if: 1 === 2 -->
+   <div id="page_unsupported" class="unsupportedMsg is-hidden">
+    <div class="q-unsupportedBrowser">
+     This application does not currently support this browser version: &nbsp; <span id="unsupportedBrowserInfo" class="q-unsupportedBrowserInfoMsg"></span> &nbsp; Please upgrade to at least version &nbsp; <span id="expectedBrowserInfo" class="q-expectedBrowserInfoMsg"></span> &nbsp; or try a different browser.
+    </div>
+   </div><!-- /ko -->
+   <div id="pageContainer" class="container content" role="main" aria-live="polite">
+    <!-- ko if: isPage('splash') -->
+    <div id="page_splash" class="view view-preload">
+     <h1 id="splashTitle" data-bind="message: 'splashTitle'">Loading, please hang on...</h1>
+     <div class="loadingAnimation" id="loadingAnimation" data-bind="attr: { 'title': messagesWS.get('splashTitle') }">
+      <div class="ball1"></div>
+      <div class="ball2"></div>
+      <div class="ball3"></div>
+      <div class="ball4"></div>
+     </div>
+     <p id="splashMsg" class="preload-text" data-bind="message: 'splashPromo'">QLess replaces physical lines and waiting with virtual, mobile lines. Roam freely while you wait wherever you want, however you want. QLess simply alerts you on your phone as your turn is approaching.</p>
+    </div><!-- /ko --> <!-- ko if: isPage('intro') -->
+    <div id="page_intro" class="view view-intro is-hidden">
+     <h1 id="welcomeMsg" data-bind="locationMessage: 'welcome'">Touch the screen to get in line!</h1>
+     <div id="touchMeContainer" class="touchMeContainer">
+      <p id="welcomeTouchMeMsg" class="qTouchMeMsg" data-bind="message: 'touchMe'"></p>
+     </div>
+    </div><!-- /ko --> <!-- ko if: isPage('selectLanguage') -->
+    <div id="page_selectLanguage" class="view is-hidden">
+     <p id="selectLanguaugeWelcomeMsg" data-bind="locationMessage: 'welcome'"></p>
+     <h1 id="selectLanguageMsg" data-bind="message: 'selectLanguage'">Select a language to begin.</h1><!-- ko if: showLanguageSelect -->
+     <div>
+      <select name="" id="" data-bind="
+		event: { change: $root.handleChangeLanguageSelect },
+		value: selectedLanguage,
+		options: languages,
+		optionsText: 'name',
+		optionsCaption: $root.messagesWS.get('selectLanguage'),
+		optionsValue: 'lang',
+		attr: { 'aria-label': $root.messagesWS.get('selectLanguage') } 
+		"></select>
+     </div><!-- /ko --> <!-- ko if: showLanguageButtons -->
+     <div id="selectLanguageOptions" class="item-group">
+      <!-- ko foreach: languages --> <button class="btn-item" data-bind="text: name, value: lang, click: $root.handleClickLanguageButton, attr: {'id': 'lang-' + lang } "></button> <!-- ko if: $index() === 1 -->
+      <div style="flex-basis: 100%"></div><!-- /ko --> <!-- /ko -->
+     </div><!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('consumerInfo') -->
+    <div id="page_consumerInfo" class="view is-hidden">
+     <!-- ko if: phoneEnablingForecastDuration() != null && skipPhone() === true -->
+     <p id="consumerInfoForecastWait" data-bind="text: forecastWaitTime()"></p><!-- /ko -->
+     <h1 id="consumerInfoMsg" data-bind="message: (queueingAdditional() === true) ? 'consumerInfoAdditional' : 'consumerInfo'"></h1>
+     <div id="consumerInfoFields" data-bind="foreach: consumerFields">
+      <div class="input-container" data-bind="css: {'phoneentry-container': $data.type === 'tel'}">
+       <!-- Show an error if there is one-->
+       <div role="alert" aria-live="assertive">
+        <!-- ko if: $parent.consumerFieldObservable(name).error -->
+        <p class="customscreen-error" data-bind="
+            text: $parent.consumerFieldObservable(name).error,
+            attr: $parent.consumerFieldObservable(name).error.attr"></p><!-- /ko -->
+       </div><input data-bind="
+          css: 'input_'+ type,
+          textInput: $parent.consumerFieldObservable(name),
+          event: { input: $parent.consumerFieldObservable(name).dirtyInput },
+          placeholdr: label,
+          attr: $parent.consumerFieldObservable(name).attr,
+          trackFocus,
+          valueMask: inputMask,
+          placeholder: label"> <!-- ko if: $data.type === 'tel' && !window.isHomeKiosk -->
+       <div class="no-phone">
+        <button class="btn" data-bind="message: 'noPhone', click: $root.noPhoneClicked"></button>
+       </div><!-- /ko -->
+      </div>
+     </div><!-- ko if: noPhone -->
+     <p id="consumerInfoWatchMonitorMsg" class="q-watchMonitorReminderMsg" data-bind="message: 'watchMonitorReminder'"></p><!-- /ko --> <!-- ko if: hasPhoneConsumerField -->
+     <p class="disclaimer" data-bind="message: 'enterPhone.charges'"></p><!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('queueConsumerInfo') -->
+    <div id="page_queueConsumerInfo" class="view is-hidden">
+     <!-- ko if: phoneEnablingForecastDuration() != null && skipPhone() === true -->
+     <p id="consumerInfoForecastWait" data-bind="text: forecastWaitTime()"></p><!-- /ko -->
+     <h1 id="consumerInfoMsg" data-bind="message: (queueingAdditional() === true) ? 'consumerInfoAdditional' : 'consumerInfo'"></h1><!-- TODO make consumerFieldsForSelectedQueues -->
+     <div id="consumerInfoFields" data-bind="foreach: consumerFieldsForSelectedQueues">
+      <div class="input-container" data-bind="css: {'phoneentry-container': $data.type === 'tel'}">
+       <!-- Show an error if there is one-->
+       <div role="alert" aria-live="assertive">
+        <!-- ko if: $parent.consumerFieldObservable(name).error -->
+        <p class="customscreen-error" data-bind="
+            text: $parent.consumerFieldObservable(name).error,
+            attr: $parent.consumerFieldObservable(name).error.attr"></p><!-- /ko -->
+       </div><input data-bind="
+          css: 'input_'+ type,
+          textInput: $parent.consumerFieldObservable(name),
+          event: { input: $parent.consumerFieldObservable(name).dirtyInput },
+          placeholdr: label,
+          attr: $parent.consumerFieldObservable(name).attr,
+          trackFocus,
+          valueMask: inputMask,
+          placeholder: label"> <!-- ko if: $data.type === 'tel' && !window.isHomeKiosk -->
+       <div class="no-phone">
+        <button class="btn" data-bind="message: 'noPhone', click: $root.noPhoneClicked"></button>
+       </div><!-- /ko -->
+      </div>
+     </div><!-- ko if: noPhone -->
+     <p id="consumerInfoWatchMonitorMsg" class="q-watchMonitorReminderMsg" data-bind="message: 'watchMonitorReminder'"></p><!-- /ko --> <!-- ko if: hasPhoneConsumerField -->
+     <p class="disclaimer" data-bind="message: 'enterPhone.charges'"></p><!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('enterPhone') -->
+    <div id="page_phone" class="view is-hidden">
+     <div class="columnContainer phone-container">
+      <!-- ko if: enableLargeNoPhoneButton() && !($root.phoneValid() || $root.needPhoneForAppointment)-->
+      <div id="phoneEntryLargeNoPhone" class="phoneentry-largenophone">
+       <button class="btn" id="largeNoPhoneButton" data-bind="html: largeNoPhoneMsg, click: $root.noPhoneClicked, "></button>
+      </div><!-- /ko -->
+      <div id="phoneEntryMain">
+       <!-- ko if: phoneEnablingForecastDuration() != null -->
+       <p id="phoneEntryWaitForecast" data-bind="text: forecastWaitTime()"></p><!-- /ko -->
+       <h1 id="phoneEntryMsg"><span id="phoneEntryMsg1" data-bind="text: phoneEnterMsg"></span><!-- ko if: requirePhone !== true --> <span id="phoneEntryMsg2" data-bind="message: 'enterPhone.2'"></span><!-- /ko --></h1>
+       <div id="phoneEntryFields" class="input-container phoneentry-container">
+        <input type="tel" name="consumerfield_phone" pattern="\d*" class="input_tel" autocomplete="off" data-bind="
+            value: consumerfield_phone, 
+            placeholdr: messagesWS.get('phoneField'), 
+            valueUpdate: ['keypress', 'afterkeydown', 'input'], 
+            valueMask: phoneMask, 
+            attr: { 
+              title: messagesWS.get('phoneField'), 
+              'aria-label': messagesWS.get('phoneField'),
+             'placeholder': messagesWS.get('phoneField') 
+            }
+          ">
+        <div class="no-phone">
+         <button class="btn" data-bind="html: largeNoPhoneMsg, click: $root.noPhoneClicked"></button>
+        </div>
+       </div>
+       <p id="phoneEntryDisclaimer" class="disclaimer" data-bind="message: 'enterPhone.charges'"></p>
+      </div>
+     </div>
+    </div><!-- /ko --> <!-- ko if: isPage('partySize') -->
+    <div id="page_partySize" class="view is-hidden">
+     <h1 id="partySizeMsg" data-bind="message: 'partySize'"></h1>
+     <div id="partySizeButtons" class="item-group group-size" data-bind="foreach: partySizer.partySizeButtons">
+      <button class="btn-item" data-bind="text: $data, click: $root.setPartySize.bind($data)"></button>
+     </div>
+     <div id="partySizePaginationMobile" class="group-size-pagination">
+      <button class="btn" data-bind="css: { 'btn-disabled': $root.partySizer.isFirstPage }, click: $root.partySizer.prevPage">-</button> <button class="btn" data-bind="css: { 'btn-disabled': $root.partySizer.isLastPage},click: $root.partySizer.nextPage">+</button>
+     </div>
+    </div><!-- /ko --> <!-- ko if: isPage('customScreens') -->
+    <div id="page_customScreens" class="view is-hidden">
+     <!-- ko with : customScreen -->
+     <h1 id="customScreensMsg" data-bind="text: title"></h1><!-- ko if: $root.customPropError() -->
+     <p id="customScreenErr" class="customscreen-error" data-bind="text: $root.customPropError"></p><!-- /ko -->
+     <div id="customScreensFields" class="input-container" data-bind="foreach: fields, css: {'button-container': onlyButtons() }">
+      <div class="custom-input-container">
+       <!-- ko if: hidden() --> <input type="hidden" data-type="hidden" data-bind="
+				value: $root.customScreenFieldObservable(name),
+				attr: { name: formElementName,  id: formElementName}"> <!-- /ko --> <!-- ko if: !hidden() --> <!-- ko if: (type == 'button') --> <!-- ko if: $data.options().length > 0 -->
+       <p><label data-bind="text: label"></label></p><!-- ko foreach: $data.options --> <!-- ko if: $parent.rawOptions[$index()].queueIds --> <button class="btn" data-bind="text: $data, click: $root.filterQueues"></button> <!-- /ko --> <!-- ko if: !$parent.rawOptions[$index()].queueIds --> <button class="btn" data-bind="text: $data, click: $root.screenNext"></button> <!-- /ko --> <!-- /ko --> <!-- /ko --> <!-- ko if: $data.options().length == 0 --> <!-- ko if: $data.queueIds --> <button class="btn" data-bind="text: label, click: $root.filterQueues"></button> <!-- /ko --> <!-- ko if: !$data.queueIds --> <button class="btn" data-bind="text: label, click: $root.screenNext"></button> <!-- /ko --> <!-- /ko --> <!-- /ko --> <!-- ko if: (type == 'radiobutton') -->
+       <p><label data-bind="text: label"></label></p><!-- ko foreach: options --> <input type="radio" class="is-hidden" data-bind="
+							checked: $root.customScreenFieldObservable($parent.name), 
+							attr: { 
+								name: $parent.formElementName,
+								id: $parent.formElementName,
+								'required': $parent.required,
+								value: $data
+							}"> <!-- ko if: $parent.rawOptions[$index()].queueIds --> <button class="btn" data-bind="
+							text: $data,
+							attr: {
+								id: $parent.name + $data 
+							},
+							click: function () { $root.customScreenFieldObservable($parent.name, $data); $root.filterQueues($data) }
+						"></button> <!-- /ko --> <!-- ko if: !$parent.rawOptions[$index()].queueIds --> <button class="btn" data-bind="
+							text: $data,
+							attr: {
+								id: $parent.name + $data 
+							},
+							click: function () { $root.customScreenFieldObservable($parent.name, $data); $root.delayPushConsumerForward() }
+						"></button> <!-- /ko --> <!-- /ko --> <!-- /ko --> <!-- ko if: (type == 'select') --> <!-- ko if: ($root.customKioskScreenShowNItems() > 1) --> <select data-bind="
+					value: $root.customScreenFieldObservable(name),
+					options: options,
+					attr: attr"></select> <!-- /ko --> <!-- ko if: ($root.customKioskScreenShowNItems() == 1) --> <select data-bind="
+					optionsCaption : label,
+					value: $root.customScreenFieldObservable(name),
+					options: options,
+					attr: attr"></select> <!-- /ko --> <!-- /ko --> <!-- ko if: (type == 'autocomplete') --> <input type="text" data-bind="
+						value: $root.customScreenFieldObservable(name),
+						autoComplete: { options: autocompleteOptions, id: id },
+						event: { change: handleChange, blur: handleBlur },
+						attr: attr"> <!-- /ko --> <!-- ko if: (type == 'checkbox') -->
+       <div class="checkbox">
+        <input type="checkbox" data-bind="
+						checked: $root.customScreenFieldObservable(name),
+						attr: { 
+							name: formElementName,
+							id: formElementName,
+							'required': required,
+							'aria-checked': $root.customScreenFieldObservable(name)
+						},
+						event: { change: handleChange, blur: handleBlur }" aria-checked="false"> <label data-bind="text: label, attr: { for: formElementName }"></label>
+       </div><!-- /ko --> <!-- ko if: (type == 'text' || type == 'number') && prefix() != '' -->
+       <div class="custom-field-container">
+        <input type="text" data-bind="
+					value: $root.customScreenFieldObservable(name),
+					valueUpdate: ['keyup', 'afterkeydown'],
+					event: { keydown: checkInputLength, blur: handleBlur, change: handleChange },
+					'attr': attr,
+					css: { 'has-error': isInvalid },
+					trackFocus,
+					valueMask: inputMask,
+					placeholdr: inputMask,
+					"> <!-- ko if: prefix() !== '' -->
+        <div class="custom-field-prefix" data-bind="text: prefix"></div><!-- /ko -->
+       </div><!-- /ko --> <!-- ko if: (type == 'text' || type == 'number') && prefix() == '' -->
+       <div style="width:100%;">
+        <input type="text" data-bind="
+					value: $root.customScreenFieldObservable(name),
+					valueUpdate: ['keyup', 'afterkeydown'],
+					event: { change: handleChange, keydown: checkInputLength, blur: handleBlur, click: $root.overrideKeyboardFocus },
+					'attr': attr,
+					css: { 'has-error': isInvalid },
+					placeholdr: label,
+					trackFocus,
+					valueMask: inputMask
+					">
+       </div><!-- /ko -->
+       <p data-bind="
+          text: errorMessage,
+          visible: showErrorMessage, 
+          attr: { id: errorMessageId }
+        " role="alert" class="customscreen-error"></p><!-- /ko -->
+      </div>
+     </div><!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('selectQueue') -->
+    <div id="page_selectQueue" class="view view-queue-select is-hidden">
+     <h1 id="selectQueueMsg" data-bind="message: (!$root.hasExceededMaxQueues()) ? 'selectQueue' : 'alreadyQueued'"></h1><!-- ko if: !$root.hasExceededMaxQueues() -->
+     <div id="selectQueueFields" class="queue-item-container">
+      <!-- ko foreach: queues --> <!-- ko if: (( $root.paramQueues().length > 0 || shownByDefault !== false ) && $root.queueIsInAvailableQueues( $data )) --> <button style="cursor:pointer" class="queue-item" type="button" data-bind="css: cssClass,  attr: { 'name': id, 'id': 'btnQueue_' + id , 'style': 'background-image:url('+ backgroundImage() +');' }, click: $parent.selectQueue">
+       <div class="queue-item-context" data-bind="html: descWithInfo()"></div></button> <!-- /ko --> <!-- /ko --> <!-- ko foreach: queues --> <!-- ko if: ( $root.paramQueues().length > 0 || shownByDefault !== false ) && !$root.queueIsInAvailableQueues( $data ) --> <button style="cursor:pointer" class="queue-item" data-bind="css: cssClass,  attr: { 'name': id, 'id': 'btnQueue_' + id , 'style': 'background-image:url(/qless/image/queue/'+ id +'); background-size: 100%' }, click: $parent.selectQueue" aria-disabled="true">
+       <div class="queue-item-context" data-bind="html: descWithInfo()"></div></button> <!-- /ko --> <!-- /ko -->
+     </div><!-- /ko -->
+     <p id="queuesMessageSupplemental" data-bind="message: 'queues.message.supplemental'"></p>
+    </div><!-- /ko --> <!-- ko if: isPage('checkIn') -->
+    <div id="page_checkIn" class="view is-hidden">
+     <h1 id="checkInMsg" data-bind="message: 'checkInTitle'"></h1>
+     <div id="checkInFields" class="input-container">
+      <input type="tel" class="phonefull" data-bind="
+				value: consumerfield_phone,
+				placeholdr: messagesWS.get('phoneField'),
+				valueUpdate: ['keypress', 'afterkeydown', 'input'],
+				valueMask: phoneMask,
+				attr: {	
+					'placeholder': messagesWS.get('phoneField'),
+					'aria-label': messagesWS.get('phoneField') 
+				}" autofocus>
+     </div>
+     <p id="checkInDisclaimer" class="disclaimer" data-bind="message: 'enterPhone.charges'"></p>
+    </div><!-- /ko --> <!-- ko if: isPage('checkInResults') -->
+    <div id="page_checkInResults" class="view is-hidden">
+     <h1 id="checkInResultsMsg" data-bind="html: checkInResultsTitle"></h1>
+    </div><!-- /ko --> <!-- ko if: isPage('transactionType') -->
+    <div id="page_transactionType" class="view is-hidden">
+     <h1 id="transactionTypeMsg" data-bind="message: 'selectTransactionType'"></h1>
+     <div id="transactionTypes" class="item-group" data-bind="foreach: availableTransactionTypes">
+      <button class="btn-item" data-match-height="transactionTypes" data-bind="click: $parent.selectTransactionType, attr: { 'id' : 'tt'+id, autofocus: $index === 0, disabled: disabled }, css: { 'tt-disabled': disabled}"> <span data-bind="text: $root.getLocalizedTransactionTypeName.call(null,$data)"></span> </button>
+     </div>
+    </div><!-- /ko --> <!-- ko if: isPage('appointmentOption') -->
+    <div id="page_appointmentOption" class="view is-hidden">
+     <!-- ko if: $root.hasExceededMaxQueues() -->
+     <h1 id="alreadyQueuedMsg" data-bind="message: 'alreadyQueued'"></h1><!-- /ko --> <!-- ko if: !$root.hasExceededMaxQueues() -->
+     <h1 id="appointmentOptionMsg" data-bind="text: appointmentOptionTitle"></h1><button id="appointmentOptionNow" class="btn btn-option join-now appt-option" data-bind="click: appointmentOptionClicked.bind(null, false), visible: showJoinNowButton"> <span data-bind="message: 'joinTheQueue'">Join the line to be seen as soon as possible</span> <!-- ko if: $root.showQueueForecasts() !== false --> <span class="join-wait-time"> <span class="wait-time" data-bind="text: currentQueueWaitTime"></span> </span> <!-- /ko --> </button> <button id="appointmentOptionLater" class="btn btn-option appt-option" data-bind="message: 'makeAnAppointment', click: appointmentOptionClicked.bind(null, true)">Schedule an appointment</button> <!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage( 'appointmentResource' ) -->
+    <div id="page_appointmentResource" class="view appointment-resource is-hidden">
+     <!-- ko if: !needsResource() && selectedResourceId() == null && !forceResourceSelection() -->
+     <div>
+      <h1 id="appointmentResourceTitle" data-bind="message: 'resource.selection.question'">Do you need to make an appointment with a specific resource?</h1>
+      <p class="action-buttons"><button class="btn btn-option" data-bind="message: 'yes', hint: 'yes', click: function () { kiosk.needsResource( true ) }">Yes</button> <button class="btn btn-option" data-bind="message: 'no', hint: 'no', click: advanceWithoutResource">No</button></p>
+     </div><!-- /ko --> <!-- ko if: needsResource() || selectedResourceId() != null || forceResourceSelection() -->
+     <div>
+      <h1 id="appointmentResourceTitle" data-bind="message: 'resource.selection.title'">Please select a resource to make an appointment</h1><select data-bind="
+			options: $root.availableResources,
+			optionsText: 'description',
+			optionsValue: 'id', 
+			optionsCaption: $root.messagesWS.get('appointment.resource.select.defaultOption'),
+			value: selectedResourceId, 
+			attr: {
+				'aria-labelledby': 'appointmentResourceTitle'
+			}"></select>
+     </div><!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('appointmentTime') -->
+    <div id="page_appointmentTime" class="view is-hidden">
+     <div class="timeZoneMismatchWarningOverlay" id="timeZoneMismatchWarningOverlay" data-bind="visible: showTimeZoneMisMatch">
+      <div class="timeZoneOptions">
+       <p class="timeZoneMismatch-message" data-bind="text: timeZoneMismatchMsg()"></p>
+       <div class="btn-group">
+        <button class="btn btn-option" data-bind="text: getTimeZoneName(selectedTimeZone()), click: selectTimeZone.bind(null, false)"></button> <button class="btn btn-option" data-bind="text: getTimeZoneName(locationTimeZone()), click: selectTimeZone.bind(null, true)"></button>
+       </div>
+      </div>
+     </div><!-- ko if: possibleTimeBlocksWS.noDaysAvailable() -->
+     <h1 id="appointmentTimeNonAvail" data-bind="message: 'noAppointmentDaysAvailable'"></h1><!-- /ko --> <!-- ko if: (possibleTimeBlocksWS.noDaysAvailable() !== true) --> <!-- ko if: msgQueueAtCapacity -->
+     <p id="appointmentTimeQueuesCapacityMsg" data-bind="text: msgQueueAtCapacity"></p><!-- /ko -->
+     <h1 id="appointmentTimeMsg" data-bind="message: 'selectAppointmentTime'"></h1>
+     <div id="dateSelectBar" class="dateselect-bar">
+      <div id="apptDateSelect" class="dateselect-date" data-bind="text: possibleTimeBlocksWS.appointmentDate" aria-live="assertive"></div><button id="apptTimePrevDate" class="dateselect-move dateselect-prev" data-bind="value: '⇦', click: possibleTimeBlocksWS.previousDate, css: {'btn-disabled': !possibleTimeBlocksWS.previousDateEnabled()}, attr: {'aria-disabled': !possibleTimeBlocksWS.previousDateEnabled()}" title="previous date" aria-label="previous date">&lt;</button> <button id="apptTimeNextDate" class="dateselect-move dateselect-next" data-bind="value: '⇨',  click: possibleTimeBlocksWS.nextDate, css: {'btn-disabled': !possibleTimeBlocksWS.nextDateEnabled()}, attr: {'aria-disabled': !possibleTimeBlocksWS.nextDateEnabled()}" title="next date" aria-label="next date">&gt;</button>
+     </div><!-- ko if: $root.possibleTimeBlocksWS.loading() -->
+     <p id="appointmentTimeLoadingMsg" data-bind="message: 'loading'"></p><!-- /ko --> <!-- ko if: $root.possibleTimeBlocksWS.blocks().length === 0 && !$root.possibleTimeBlocksWS.loading() && $root.possibleTimeBlocksWS.loadedOnce() == true -->
+     <p id="appointmentTimeNoDatesMsg" data-bind="message: 'noAppointmentDaysAvailable'"></p><!-- /ko --> <!-- ko if: !$root.possibleTimeBlocksWS.loading() -->
+     <div id="appointmentTimeBlocks" class="appointmentSelect-times" data-bind="foreach: $root.possibleTimeBlocksWS.blocksForAppointmentDate">
+      <button data-bind="text: timeDisplay, click: $root.selectAppointmentTime.bind(null,$data)"></button>
+     </div><!-- /ko -->
+     <div id="datepickerTooltip" class="datepicker-tooltip"></div>
+     <div id="datePicker" class="datepicker"></div><!-- /ko --> <!-- ko if: kiosk.debug == true -->
+     <div>
+      Yesterday <span data-bind="text: possibleTimeBlocksWS.yesterday"></span>
+     </div>
+     <div>
+      Today <span data-bind="text: possibleTimeBlocksWS.today"></span>
+     </div>
+     <div>
+      Tomorrow <span data-bind="text: possibleTimeBlocksWS.tomorrow"></span>
+     </div><!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('appointmentConsumerInfo') -->
+    <div id="page_appointmentConsumerInfo" class="view is-hidden">
+     <h1 id="appointmentConsumerInfoMsg" data-bind="message: (queueingAdditionalAppointment() === true) ? 'consumerInfoAdditional' : 'consumerInfo'"></h1>
+     <div id="appointmentConsumerInfoFields" class="input-container" data-bind="foreach: appointmentConsumerFields">
+      <input type="text" data-bind="value: $parent.apptConsumerFieldObservable(name), placeholdr: label, valueUpdate: ['keyup', 'afterkeydown'], attr: { name: 'apptconsumerfield_' + name, id: 'apptconsumerfield_' + name, type: type, placeholder: label, 'aria-label': label }, trackFocus, valueMask: inputMask">
+     </div>
+    </div><!-- /ko --> <!-- ko if: isPage('appointmentCustomScreens') -->
+    <div id="page_appointmentCustomScreens" class="view is-hidden">
+     <!-- ko with : customScreen -->
+     <h1 id="appointmentCustomScreensMsg" data-bind="text: title"></h1><!-- ko if: $root.customPropError() -->
+     <p id="customScreenErr" class="customscreen-error" data-bind="text: $root.customPropError"></p><!-- /ko -->
+     <div id="appointmentCustomScreensFields" class="input-container" data-bind="foreach: fields">
+      <div class="custom-input-container">
+       <!-- ko if: (type == 'select') --> <!-- ko if: ($root.customKioskScreenShowNItems() > 1) --> <select data-bind="
+				value: $root.customScreenFieldObservable(name),
+				options: options,
+				attr: attr"></select> <!-- /ko --> <!-- ko if: ($root.customKioskScreenShowNItems() == 1) --> <select data-bind="
+				optionsCaption : label,
+				value: $root.customScreenFieldObservable(name),
+				options: options,
+				attr: attr"></select> <!-- /ko --> <!-- /ko --> <!-- ko if: (type == 'autocomplete') --> <input type="text" data-bind="
+				value: $root.customScreenFieldObservable(name),
+				autoComplete: { options: autocompleteOptions, id: id },
+				event: { change: handleChange, blur: handleBlur },
+				attr: attr"> <!-- /ko --> <!-- ko if: (type == 'checkbox') -->
+       <div class="checkbox">
+        <input type="checkbox" data-bind="
+						checked: $root.customScreenFieldObservable(name),
+						attr: { 
+							name: formElementName,
+							id: formElementName,
+							'required': required,
+							'aria-checked': $root.customScreenFieldObservable(name)
+						},
+						event: { change: handleChange, blur: handleBlur }" aria-checked="false"> <label data-bind="text: label, attr: { for: formElementName }"></label>
+       </div><!-- /ko --> <!-- ko if: (type == 'text' || type == 'number') --> <input type="text" data-bind="
+					value: $root.customScreenFieldObservable(name),
+					valueUpdate: ['keyup', 'afterkeydown'],
+					placeholdr: label, 
+					attr: attr, 
+					trackFocus,
+					valueMask: inputMask, 
+					event: { keydown: checkInputLength, change: handleChange, blur: handleBlur }
+				"> <!-- /ko -->
+       <p data-bind="text: errorMessage, visible: showErrorMessage, attr: { id: errorMessageId }" role="alert" class="customscreen-error"></p>
+      </div>
+     </div><!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('appointmentReschedulerIntro') -->
+    <div id="page_appointmentReschedulerIntro" class="view is-hidden">
+     <!-- ko if: canRescheduleExistingAppointment() -->
+     <h1 id="appointmentReschedulerWelcomeMsg" data-bind="locationMessage: 'appt.rescheduler.intro.scheduled'"></h1><!-- /ko --> <!-- ko if: !canRescheduleExistingAppointment() -->
+     <h1 id="appointmentReschedulerCantMsg" data-bind="message: 'appt.rescheduler.intro.cant'"></h1><!-- /ko -->
+     <p id="appointmentReschedulerDetailsMsg" class="apptDetails" data-bind="with: appointmentRetrievalWS.jsonData"><span data-bind="locationMessage: 'appt.rescheduler.intro.details.location'"></span>: <span data-bind="text: $root.locationDesc"></span> <br><span data-bind="locationMessage: 'appt.rescheduler.intro.details.queue'"></span>: <span data-bind="text: $root.getExistingAppointmentQueue().description"></span> <br><span data-bind="locationMessage: 'appt.rescheduler.intro.details.date'"></span>: <span data-bind="text: $root.Dates.formatLocaleDateTimeString(start)"></span> <br><span data-bind="locationMessage: 'appt.rescheduler.intro.details.status'"></span>: <span data-bind="text: $root.messagesWS.get('enum.appointment.status.' + status.toUpperCase())"></span> <br><span data-bind="locationMessage: 'appt.rescheduler.intro.details.duration'"></span>: <span data-bind="text: serviceDuration.text"></span></p><!-- ko if: canRescheduleExistingAppointment() -->
+     <p id="appointmentReschedulerMsg" data-bind="message: 'appt.rescheduler.intro.select'"></p><!-- /ko -->
+     <div id="appointmentReschedulerOptions" class="item-group">
+      <!-- ko if: canKeepExistingAppointment() --> <button class="btn-item" data-bind="locationMessage: 'appt.rescheduler.intro.select.keep', click: keepExistingAppt"></button> <!-- /ko --> <!-- ko if: canRescheduleExistingAppointment() --> <button class="btn-item" data-bind="locationMessage: 'appt.rescheduler.intro.select.reschedule', click: rescheduleExistingAppt"></button> <!-- /ko --> <!-- ko if: canCancelExistingAppointment() --> <button class="btn-item" data-bind="locationMessage: 'appt.rescheduler.intro.select.cancel', click: confirmCancelExistingAppt"></button> <!-- /ko -->
+     </div>
+    </div><!-- /ko --> <!-- ko if: isPage('appointmentReschedulerCancel') -->
+    <div id="page_appointmentReschedulerCancel" class="view is-hidden">
+     <h1 id="appointmentReschedulerCancelConfirmMsg" data-bind="locationMessage: 'appt.rescheduler.cancel.confirm'"></h1>
+     <div id="appointmentReschedulerCancelOptions" class="item-group">
+      <button class="btn-item" data-bind="locationMessage: 'yes', click: doCancelExistingAppt"></button> <button class="btn-item" data-bind="locationMessage: 'noThanks', click: keepExistingAppt"></button>
+     </div>
+    </div><!-- /ko --> <!-- ko if: isPage('smsOptIn') -->
+    <div id="page_smsOptIn" class="view is-hidden">
+     <h1 id="smsOptInMsg" data-bind="locationMessage: 'smsOptIn'"></h1><button id="smsOptInYes" class="btn btn-option" data-bind="message: 'yes', click: smsOptIn.bind(null, true)">Yes</button> <button id="smsOptInNo" class="btn btn-option" data-bind="message: 'noThanks', click: smsOptIn.bind(null, false)">No</button>
+    </div><!-- /ko --> <!-- ko if: isPage('queueAdditional') -->
+    <div id="page_queueAdditional" class="view is-hidden">
+     <h1 id="queueAdditionalMsg" data-bind="message: 'queueAdditional'"></h1><button id="queueAdditionalYes" class="btn btn-option" data-bind="message: 'yes', click: selectQueueAdditional.bind(null, true)"></button> <button id="queueAdditionalNo" class="btn btn-option" data-bind="message: 'noThanks', click: selectQueueAdditional.bind(null, false)"></button>
+    </div><!-- /ko --> <!-- ko if: isPage('queueCustomScreen') -->
+    <div id="page_queueCustomScreen" class="view is-hidden">
+     <!-- ko with : queueCustomScreen -->
+     <h1 id="queueCustomScreensMsg" data-bind="text: title"></h1><!-- ko if : fields().length == 0 -->
+     <div id="customScreensFields" class="input-container ok-btn-container">
+      <button class="btn" data-bind="message: 'ok', click: kiosk.screenNext"></button>
+     </div><!-- /ko --> <!-- ko if : fields().length > 0 -->
+     <div id="customScreensFields" class="input-container" data-bind="foreach: fields">
+      <div class="custom-input-container">
+       <!-- ko if: hidden() --> <input type="hidden" data-type="hidden" data-bind="
+					value: $root.customScreenFieldObservable(name),
+					attr: { name: formElementName,  id: formElementName }
+				"> <!-- /ko --> <!-- ko if: !hidden() --> <!-- ko if: (type == 'select') --> <!-- ko if: ($root.customKioskScreenShowNItems() > 1) --> <select data-bind="
+				value: $root.customScreenFieldObservable(name),
+				options: options, 
+				attr: attr"></select> <!-- /ko --> <!-- ko if: ($root.customKioskScreenShowNItems() == 1) --> <select data-bind="
+				optionsCaption : label,
+				value: $root.customScreenFieldObservable(name),
+				options: options, 
+				attr: attr 
+			"></select> <!-- /ko --> <!-- /ko --> <!-- ko if: (type == 'autocomplete') --> <input type="text" data-bind="
+					value: $root.customScreenFieldObservable(name),
+					autoComplete: { options: autocompleteOptions, id: id },
+					event: { change: handleChange, blur: handleBlur },
+					attr: attr"> <!-- /ko --> <!-- ko if: (type == 'checkbox') -->
+       <div class="checkbox">
+        <input type="checkbox" data-bind="
+						checked: $root.customScreenFieldObservable(name),
+						attr: { 
+							name: formElementName,
+							id: formElementName,
+							'required': required,
+							'aria-checked': $root.customScreenFieldObservable(name)
+						},
+						event: { change: handleChange, blur: handleBlur }" aria-checked="false"> <label data-bind="text: label, attr: { for: formElementName }"></label>
+       </div><!-- /ko --> <!-- ko if: (type == 'text' || type == 'number') && prefix() != '' -->
+       <div class="custom-field-container">
+        <input type="text" data-bind="
+					value: $root.customScreenFieldObservable(name),
+					valueUpdate: ['keyup', 'afterkeydown'],
+					placeholdr: inputMask,
+					attr: attr,
+					trackFocus,
+					valueMask: inputMask,
+					event: { keydown: checkInputLength, blur: checkInputPadding }
+				"> <!-- ko if: prefix() !== '' -->
+        <div class="custom-field-prefix" data-bind="text: prefix"></div><!-- /ko -->
+       </div><!-- /ko --> <!-- ko if: (type == 'text' || type == 'number') && prefix() == '' --> <input type="text" data-bind="
+				value: $root.customScreenFieldObservable(name),
+				valueUpdate: ['keyup', 'afterkeydown'],
+				placeholdr: label,
+				attr: attr,
+				trackFocus,
+				valueMask: inputMask,
+				event: { keydown: checkInputLength, blur: checkInputPadding }"> <!-- /ko --> <!-- /ko -->
+       <p data-bind="text: errorMessage, visible: showErrorMessage, attr: { id: errorMessageId }" role="alert" class="customscreen-error"></p>
+      </div>
+     </div><!-- /ko --> <!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('success') -->
+    <div id="page_success" class="view is-hidden">
+     <!-- ko if: !successCustomMsg() && successPhoneMsg() -->
+     <h1 class="success-msg" id="successPhoneMsg" data-bind="html: successPhoneMsg"></h1><!-- /ko --> <!-- ko if: !successCustomMsg() && phoneValid() && queuedConfirmMsg() -->
+     <h1 class="success-msg" id="successQueuedMsg" data-bind="html: queuedConfirmMsg"></h1><!-- /ko --> <!-- ko if: !successCustomMsg() && !phoneValid() && successNoPhoneMsg() -->
+     <h1 class="success-msg" id="successNoPhoneMsg" data-bind="html: successNoPhoneMsg"></h1><!-- /ko --> <!-- ko if: !successCustomMsg() && apptConfirmMsg() -->
+     <h1 class="success-msg" id="successAppointmentMsg" data-bind="html: apptConfirmMsg"></h1><!-- /ko --> <!-- ko if: !successCustomMsg() && successCheckInMsg() -->
+     <h1 class="success-msg" id="successCheckInMsg" data-bind="html: successCheckInMsg"></h1><!-- /ko --> <!-- ko if: !successCustomMsg() && successReceiptMsg() -->
+     <h1 class="success-msg" id="successReceiptMsg" data-bind="html: successReceiptMsg"></h1><!-- /ko --> <!-- ko if: !successCustomMsg() && successReceiptAndPhoneMsg() -->
+     <h1 class="success-msg" id="successReceiptAndPhoneMsg" data-bind="html: successReceiptAndPhoneMsg"></h1><!-- /ko --> <!-- ko if: $root.ticketCode -->
+     <div class="success-ticketcode">
+      <span data-bind="message: 'successTitcketTitle'"></span> <span data-bind="text: $root.ticketCode()"></span>
+     </div><!-- /ko --> <!-- ko if: successCustomMsg() -->
+     <h1 class="success-msg" id="successCustom" data-bind="html: successCustomMsg"></h1><!-- /ko --> <!-- ko with: successVM --> <!-- ko if: showWaitTimes() --> <!-- ko if: waitTime() && !hasWaitTimesForQueues() -->
+     <div id="successForecast" class="success-forecast">
+      <span data-bind="message: 'forecast'"></span> <span data-bind="text: waitTime"></span>
+     </div><!-- /ko --> <!-- ko if: hasWaitTimesForQueues() -->
+     <div id="successForecast" class="success-forecast">
+      <span data-bind="message: 'successForecasts'"></span>
+      <ul class="forecastedWaitTimes" data-bind="foreach: waitTimesForQueues ">
+       <li><span class="forecastedQueue" data-bind="text: description"></span>: <span class="forecastedWaitTime" data-bind="text: time"></span></li>
+      </ul>
+     </div><!-- /ko --> <!-- /ko --> <!-- /ko --> <!-- ko if: showConfirmation -->
+     <div id="successConfirmation" class="item-group">
+      <button class="btn-item btn-print-confirmation" data-bind="message: 'printableConfirmation', click: showConfirmationPage(true)">Print Confirmation</button>
+     </div><!-- /ko --> <!-- ko if: ( (!isHomeKiosk || forceReload) && !showConfirmation() ) -->
+     <div id="successExit">
+      <!-- ko if: showTicketSuccess() === true -->
+      <div id="successTicket"></div><!-- /ko --> <!-- ko if: hideDoneSuccessOnTicket() !== true --> <button id="btnExit" class="btn btn-option" data-bind="message: 'done', click: startOver">Done</button> <!-- /ko -->
+     </div><!-- /ko -->
+    </div><!-- /ko --> <!-- ko if: isPage('closed') -->
+    <div id="page_closed" class="view is-hidden">
+     <h1 id="closedMsg" data-bind="html: closedOrInactiveMsg()"></h1>
+    </div><!-- /ko --> <!-- ko if: isPage('offline') -->
+    <div id="page_offline" class="view is-hidden">
+     <!-- ko if: connectivityCheck.status() === 'NO_NETWORK' -->
+     <h1 class="q-noNetworkMsg" data-bind="tk_i18n: 'server.status.noNetwork'"></h1><!-- /ko --> <!-- ko if: connectivityCheck.status() === 'SERVER_UNREACHABLE' -->
+     <h1 class="q-serverUnreachableMsg" data-bind="tk_i18n: 'server.status.unreachable'"></h1><!-- /ko --> <!-- ko if: connectivityCheck.status() === 'DEGRADED_PERFORMANCE' -->
+     <h1 class="q-serverDegradedPerfMsg" data-bind="tk_i18n: 'server.status.degradedPerf'"></h1><!-- /ko --> <!-- ko if: connectivityCheck.status() === 'PARTIAL_OUTAGE' -->
+     <h1 class="q-serverPartialOutageMsg" data-bind="tk_i18n: 'server.status.partialOutage'"></h1><!-- /ko --> <!-- ko if: connectivityCheck.status() === 'MAJOR_OUTAGE' -->
+     <h1 class="q-serverMajorOutageMsg" data-bind="tk_i18n: 'server.status.majorOutage'"></h1><!-- /ko --> <!-- ko if: connectivityCheck.status() === 'REPORTED_OPERATIONAL' -->
+     <h1 class="q-serverReportedOperational" data-bind="tk_i18n: 'server.status.reportedOperational'"></h1><!-- /ko --> <!-- ko if: connectivityCheck.status() === 'UNKNOWN_STATUS' -->
+     <h1 class="q-serverUnknownStatusMsg" data-bind="tk_i18n: 'server.status.unknownStatus'"></h1><!-- /ko --> <!-- ko if: connectivityCheck.details -->
+     <p class="q-serverDetaials" data-bind="html: connectivityCheck.details"></p><!-- /ko --> <!-- ko if: connectivityCheck.ok() -->
+     <p class="q-serverConnecting">Please Standby - Restoring QLess Server Connection</p><!-- /ko -->
+     <div class="q-serverConnActions">
+      <button class="btn" data-bind="click:kiosk.connectivityCheck.startRetry(true)">Retry connection</button>
+      <br>
+      <br>
+      <div data-bind="text: kiosk.connectivityCheck.retrying() ? 'Trying to connect...' : 'Server connection not available yet'"></div>
+     </div>
+    </div><!-- /ko --> <!-- ko if: isPage('errorPage') -->
+    <div id="error" class="view view-error is-hidden">
+     <h1 id="errorMsg" data-bind="html: errorMessage">ERROR</h1>
+    </div><!-- /ko --> <!-- ko if: isMobileRotate() -->
+    <div id="portraitOnly" class="view portrait-only is-hidden">
+     <img src="/kiosk/res/images/logo_kiosk_mobile.png" class="qless-logo" alt="QLess" data-uw-ignore-s3 data-uw-ignore-s6>
+     <p>Please rotate your device</p>
+    </div><!-- /ko -->
+   </div><!-- ko if: !isPage('offline') -->
+   <footer>
+    <!-- ko if: keyboardVisible() -->
+    <div id="keyboard" class="keyboardHolder only-desktop" data-bind="with: keyboard.currentKeyboard">
+     <ol class="q-simpleList q-keys q-keyboardEntry" data-bind="foreach: rows">
+      <li>
+       <ol>
+        <li data-bind="foreach: keys"><button class="q-btn btn-keyboard" data-bind="
+								html: $data.label || $data,
+								click: $root.keyboardInput,
+								disable: $data.disabled,
+								css: ($data.cssCls()) ? $data.cssCls : 'key_' + $data.key(),
+								disabledCss: $data.disabled,
+								hasFocus: $data.hasFocus
+							"></button></li>
+       </ol></li>
+     </ol>
+    </div>
+    <div id="numpad" class="q-phoneEntry-ct numpadHolder only-desktop" data-bind="with: numKeypad.currentKeyboard">
+     <div class="q-phoneEntry" data-bind="foreach: rows">
+      <div class="q-phoneEntry-row" data-bind="foreach: keys">
+       <button class="q-btn btn-keyboard" data-bind="
+						hasFocus: $data.hasFocus,
+						html: $data.label || $data,
+						click: $root.numberInput,
+						disable: $data.disabled,
+						css: ($data.cssCls()) ? $data.cssCls : 'key_' + $data.key(),
+						disabledCss: $data.disabled,
+						disableDoubleTapZoom,
+						attr: {'aria-hidden': $data.disabled, 'aria-label': $data.label },
+					"></button>
+      </div>
+     </div>
+    </div><!-- /ko -->
+    <div id="buttonBar" class="buttonbar" role="navigation">
+     <button class="btn btn-nav btn-back" id="qBtnBack" data-bind="
+				message: 'back',
+				click: screenBack,
+				css: {'btn-disabled': !buttonBackEnabled()},
+				attr: {
+					'disabled': !buttonBackEnabled(),
+					'tabindex': (buttonBackEnabled()) ? '':'-1'
+				}
+			">Back</button> <!-- ko if: startOverEnabled() --> <button id="qBtnStartOver" class="btn btn-nav btn-start-over only-desktop" data-bind="click: startOver, attr: { title: kiosk.messagesWS.get('startOver') }" aria-label="Start Over" title="Start Over"> <span data-bind="message: 'startOver'">Start Over</span> <img title="Start Over" alt="icon" class="btn-start-over-icon" src="/kiosk/res/images/blank.gif" width="24" height="26" align="absmiddle" data-bind="attr: { title: kiosk.messagesWS.get('startOver') }"> </button> <!-- /ko --> <!-- ko if: keyboardsAllowed() --> <button id="qBtnToggleKeyboard" class="btn btn-nav btn-toggle-keyboard only-desktop" data-bind="text: keyboardButtonMsg, click: doToggleKeyboard"></button> <!-- /ko --> <button class="btn btn-nav btn-next" id="qBtnNext" data-bind="
+				message: 'next',
+				click: screenNext,
+				css: {'btn-disabled': !buttonNextEnabled()},
+				attr: { 'aria-disabled': !buttonNextEnabled() }
+				">Next</button>
+    </div><!-- ko if: isMobile() -->
+    <script>
+	function getQueryParam ( sName ) {
+		var match = new RegExp('[?&]'+ sName +'=([^&]*)').exec(window.location.search);
+		return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+	};
+
+	if ( getQueryParam('whitelabel') == null ) {
+		document.write('<a href="http://www.qless.com/" target="_blank" class="footer-logo"><img src="/kiosk/res/images/blank.gif" class="qless-logo" alt="Qless" title="QLess" data-uw-ignore-s3 data-uw-ignore-s6></a>');
+	}
+	</script><!-- /ko --> <!-- ko if: classifiers().length > 0 -->
+    <div class="classifiers" id="classifiers" data-bind="foreach: classifiers">
+     <span> <!-- ko if: type === "checkbox" --> <input class="is-hidden" type="checkbox" data-bind="attr: { 'name' : name, 'id' : name, 'aria-checked': $root.classifierFieldObservable(name) }, checked: $root.classifierFieldObservable(name)" aria-checked="false"> <label aria-hidden="true" data-bind="attr: { for: name }" class="fake-checkbox">&nbsp;</label> <!-- ko if: hasImage --> <img aria-hidden="true" data-bind="attr: { 'src': classifierImage(), alt: label, title: label }" align="absmiddle"> <!-- /ko --> <!-- /ko --> <label for="name" data-bind="text: label"></label>&nbsp; <!-- ko if: type === "select" --> <select data-bind="attr : { 'name': name, 'id' : name, 'aria-label': label }, options: options, optionsCaption: ' ', value: $root['classifier_' + name]"> <option data-bind="attr : { value : $index}, text: $data"></option> </select> <!-- /ko --> </span>
+    </div><!-- /ko -->
+   </footer><!-- /ko --> <!-- ko if: showDisclaimer() -->
+   <div class="qless-disclaimer" data-bind="message: 'kiosk.text.charge.disclaimer'"></div><!-- /ko -->
+  </div><!-- ko if: showSpinner() -->
+  <div id="spinLoader" class="loading centered is-hidden">
+   <div class="loadingAnimation" id="loadingAnimation">
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+    <div class="ball3"></div>
+    <div class="ball4"></div>
+   </div>
+  </div><!-- /ko --> <!-- ko if: isMobile -->
+  <div class="appInstallOption appInstallOptionHidden">
+   <div class="appInstallOption-content">
+    Install the QLess app!<a href="javascript:void(0)" data-bind="click: appInstallOptionHide" class="ir closewin" aria-label="Close">X</a>
+   </div>
+  </div><!-- /ko --> <!-- Userway -->
+  <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "ETlulgSOR5");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2H5P6D" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript><!-- End Google Tag Manager (noscript) -->
+ </body>
+</html>
